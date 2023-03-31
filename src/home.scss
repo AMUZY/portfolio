@@ -1,0 +1,48 @@
+@keyframes scal {
+    0% {
+        transform : scale(1.07)
+    }
+    25% {
+        transform : scale(1.2)
+    }
+    50% {
+        transform : scale(1.07)
+    }
+    75% {
+        transform : scale(1.2)
+    }
+    100% {
+        transform : scale(1.07)
+    }
+}
+
+
+.bg {
+    background : url(../src/PICTURES/amunation_bg.png) 100% 100% repeat;
+    animation : scal 5s ease-in-out 0s infinite;
+}
+
+.vendor {
+    width : 250px;
+    height : 230px;
+    border-radius: 10px;
+    display : flex;
+    flex-flow : column wrap;
+    justify-content : space-between;
+    align-items : center;
+}
+
+@media only screen and (min-width : 768px) {
+    .vendor {
+        width : 300px;
+        height : 270px;
+    }
+}
+
+@media only screen and (min-width : 1440px) {
+    .vendor {
+        flex : 0 0 27%;
+        width : 340px;
+        height : 320px;
+    }
+}

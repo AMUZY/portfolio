@@ -1,0 +1,256 @@
+@use "theme";
+
+$style : inter;
+$c_align : center;
+$s_bold : 700;
+$norm : 400;
+
+.decor_none {
+    text-decoration: none;
+}
+
+.title {
+    font-style: $style;
+    font-size: 24px;
+    font-weight: $s_bold;
+    text-align: $c_align;
+    line-height: 32px;
+    letter-spacing: -2%;
+}
+
+.subtitle {
+    font-style: $style;
+    font-size: 16px;
+    font-weight: $norm;
+    text-align: $c_align;
+    line-height: 24px;
+    letter-spacing: -1.9%;
+}
+
+.subtitle_semibold {
+    font-style: $style;
+    font-size: 16px;
+    font-weight: $s-bold;
+    text-align: $c_align;
+    line-height: 24px;
+    letter-spacing: -1.9%;
+}
+
+.price {
+    font-style: $style;
+    font-size: 16px;
+    font-weight: $s-bold;
+    line-height: 24px;
+    letter-spacing: -1.9%;
+}
+
+.text {
+    @extend .decor_none;
+    font-style: $style;
+    font-size: 12px;
+    font-weight: $norm;
+    line-height: 18px;
+    letter-spacing: -0.6%;
+}
+
+.text_semibold {
+    font-style: $style;
+    font-size: 12px;
+    font-weight: $s_bold;
+    line-height: 18px;
+    letter-spacing: -0.6%;
+}
+
+.desc {
+    font-style: $style;
+    font-size: 10px;
+    font-weight: $norm; 
+    line-height: 16px;
+    letter-spacing: 0%;
+}
+
+.others {
+    font-style: $style;
+    font-size: 12px;
+    font-weight: $norm;
+    line-height: 20px;
+    letter-spacing: 0%;
+}
+
+.category {
+    font-style: $style;
+    font-size: 10px;
+    font-weight: $norm;
+    text-align: $c_align;
+    line-height: 24px;
+    letter-spacing: -0.6%;
+}
+
+.category_semibold {
+    font-style: $style;
+    font-size: 10px;
+    font-weight: $s_bold;
+    text-align: $c_align;
+    line-height: 24px;
+    letter-spacing: -0.6%;
+}
+
+//TABLET SCREEN SIZE
+
+@media only screen and (min-width : 768px) {
+    .title {
+        font-style: $style;
+        font-size: 24px;
+        font-weight: $s_bold;
+        text-align: $c_align;
+        line-height: 32px;
+        letter-spacing: -2%;
+    }
+    
+    .subtitle {
+        font-style: $style;
+        font-size: 20px;
+        font-weight: $norm;
+        text-align: $c_align;
+        line-height: 28px;
+        letter-spacing: -1.9%;
+    }
+    
+    .subtitle_semibold {
+        font-style: $style;
+        font-size: 20px;
+        font-weight: $s_bold;
+        text-align: $c_align;
+        line-height: 28px;
+        letter-spacing: -1.9%;
+    }
+
+    .price {
+        font-style: $style;
+        font-size: 20px;
+        font-weight: $s_bold;
+        line-height: 28px;
+        letter-spacing: -1.9%;
+    }
+    
+    .text {
+        font-style: $style;
+        font-size: 16px;
+        font-weight: $norm;
+        line-height: 20px;
+        letter-spacing: 0%;
+    }
+    
+    .text_semibold {
+        font-style: $style;
+        font-size: 16px;
+        font-weight: $s_bold;
+        line-height: 20px;
+        letter-spacing: 0%;
+    }
+    
+    .desc {
+        font-style: $style;
+        font-size: 12px;
+        font-weight: $norm;
+        line-height: 18px;
+        letter-spacing: 0%;
+    }
+    
+    .others {
+        font-style: $style;
+        font-size: 12px;
+        font-weight: $norm;
+        line-height: 20px;
+        letter-spacing: 0%;
+    }
+    
+    .category {
+        font-style: $style;
+        font-size: 12px;
+        font-weight: $norm;
+        text-align: $c_align;
+        line-height: 24px;
+        letter-spacing: -0.6%;
+    }
+    
+    .category_semibold {
+        font-style: $style;
+        font-size: 12px;
+        font-weight: $s_bold;
+        text-align: $c_align;
+        line-height: 24px;
+        letter-spacing: -0.6%;
+    }
+}
+
+//DESKTOP SCREEN SIZE 
+
+@media only screen and (min-width : 1440px){
+    .title {
+        font-style: $style;
+        font-size: 48px;
+        font-weight: $s_bold;
+        text-align: $c_align;
+        line-height: 60px;
+        letter-spacing: -2%;
+    }
+    
+    .subtitle {
+        font-style: $style;
+        font-size: 24px;
+        font-weight: $norm;
+        text-align: $c_align;
+        line-height: 32px;
+        letter-spacing: -1.9%;
+    }
+    
+    .subtitle_semibold {
+        font-style: $style;
+        font-size: 24px;
+        font-weight: $s_bold;
+        text-align: $c_align;
+        line-height: 32px;
+        letter-spacing: -1.9%;
+    }
+
+    .price {
+        font-style: $style;
+        font-size: 24px;
+        font-weight: $s_bold;
+        line-height: 32px;
+        letter-spacing: -1.9%;
+    }
+    
+    .text {
+        font-style: $style;
+        font-size: 18px;
+        font-weight: $norm;
+        line-height: 24px;
+        letter-spacing: -0.6%;
+    }
+    
+    .text_semibold {
+        font-style: $style;
+        font-size: 18px;
+        font-weight: $s_bold;
+        line-height: 24px;
+        letter-spacing: -0.6%;
+    }
+    
+    .desc {
+        font-style: $style;
+        font-size: 14px;
+        font-weight: $norm;
+        line-height: 24px;
+        letter-spacing: 0%;
+    }
+    
+    .others {
+        font-style: $style;
+        font-size: 14px;
+        font-weight: $norm;
+        line-height: 22px;
+        letter-spacing: 0%;
+    }
+}

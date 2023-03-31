@@ -1,0 +1,85 @@
+@keyframes pop {
+    0% {
+        transform: scale(.9);
+    }
+    100% {
+        transform : scale(1);
+    }
+}
+
+.specifications {
+    animation: pop .2s ease-out forwards;
+}
+
+.productcont {
+    flex-grow : 1;
+}
+
+.products {
+    display : flex;
+    flex-flow : row wrap;
+    justify-content : flex-start;
+}
+
+.products>:nth-child(n){
+    width : 45%;
+}
+
+.products>:nth-child(odd)  {
+    margin-left : 3%;
+    margin-right : 2%;
+}
+
+.products>:nth-child(even) {
+    margin-left : 2%;
+    margin-right : 3%;
+}
+
+//TABLET SCREEN SIZE
+
+@media only screen and (min-width : 768px) {
+    .products>:nth-child(odd)  {
+        margin-left : 4%;
+        margin-right : 1%;
+    }
+    
+    .products>:nth-child(even) {
+        margin-left : 1%;
+        margin-right : 4%;
+    }
+}
+
+
+@media only screen and (min-width : 1200px) {
+    .products>:nth-child(n){
+        width : 30%;
+    }
+    .products>:nth-child(odd)  {
+        margin-left : 1.6%;
+        margin-right : 1.6%;
+    }
+    
+    .products>:nth-child(even) {
+        margin-left : 1.6%;
+        margin-right : 1.6%;
+    }
+}
+
+
+//DESKTOP SCREEN SIZE
+
+@media only screen and (min-width : 1700px) {
+    .products>:nth-child(n){
+        width : 45%;
+    }
+
+    .products>:nth-child(odd)  {
+        margin-left : 4%;
+        margin-right : 1%;
+    }
+    
+    .products>:nth-child(even) {
+        margin-left : 1%;
+        margin-right : 4%;
+    }
+}

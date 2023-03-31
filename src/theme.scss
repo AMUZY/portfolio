@@ -1,0 +1,96 @@
+$theme_col : #FF5B00;
+$cat_col : #EB00FF;
+$subcat_col : #00B2FF;
+$d_grey : #6E7C87;
+$black : #252C32;
+$white : #FFFFFF;
+$clickbtn : #CACACA;
+$unclickbtn : #F1F2F4;
+$specs : #0090D8;
+$section : #F6F8F9;
+
+// FOR SUBCAT MOBILE HEADER
+
+.input:focus {
+    outline-color: $theme_col;
+}
+
+.input::selection {
+    background: $theme_col; /* WebKit/Blink Browsers */
+}
+
+.input::-moz-selection {
+    background: $theme_col; /* Gecko Browsers */
+}
+
+.nohighlight {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.section_col {
+    background-color: $section;
+    @extend .nohighlight;
+}
+
+.theme_col {
+    background-color: $theme_col;
+    @extend .nohighlight;
+}
+
+.cat_col {
+    background-color: $cat_col;
+    @extend .nohighlight;
+}
+.black_col {
+    background-color: $black;
+    @extend .nohighlight;
+}
+.subcat_col {
+    background-color: $subcat_col;
+    @extend .nohighlight;
+}
+.dgrey_col {
+    background-color: $d_grey;
+    @extend .nohighlight;
+}
+
+.white_col {
+    background-color: $white;
+    @extend .nohighlight;
+}
+
+.click_col {
+    background-color: $clickbtn;
+    @extend .nohighlight;
+}
+
+.unclick_col{
+    background-color: $unclickbtn;
+    @extend .nohighlight;
+}
+
+.white {
+    color: $white;
+}
+
+.black {
+    color : $black;
+}
+
+.grey {
+    color : $d_grey;
+}
+
+.theme {
+    color : #FF5B00;
+}
+
+.specs {
+    color : $specs;
+}
