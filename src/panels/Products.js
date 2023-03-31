@@ -4,11 +4,9 @@ import "../theme.scss"
 import "../products.scss"
 import { useState } from "react"
 
-import closebtn from "../SVGs/circle_x_btn.svg"
 
 // CARD IMPORT
 import Card from "../components/Card"
-import { NavLink } from "react-router-dom"
 import {v4 as uuidv4} from "uuid"
 
 export default function Products(props){
@@ -67,13 +65,6 @@ export default function Products(props){
                                 {title}
                             </h2>
                         </div>
-
-                        {/* CLOSE BUTTON */}
-                        {/* <div className="w-max h-max">
-                            <button className="w-[30px] md:w-[35px]" onClick={()=>{setSpecshow("hidden") ; setBtnshow("hidden")}}>
-                                <img src = {closebtn} className="" alt = "specifications close button"/>
-                            </button>
-                        </div> */}
                     </div>
 
                     {/* SUBTITLE (FOR MOBILE ONLY)*/}

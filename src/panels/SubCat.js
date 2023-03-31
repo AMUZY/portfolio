@@ -2,18 +2,12 @@ import "../button.scss"
 import "../font.scss"
 import "../theme.scss"
 import "../navbar.scss"
-import Subcatbtn from "../buttons/Subcatbtn"
 import { useState } from "react"
 
 //IMPORTED SVGs
-import homeicon from "../SVGs/home_icon.svg"
 import menu from "../SVGs/menu.svg"
-// IMPORTED PICTURES
-import venmobile from "../PICTURES/konga_mobile.jpg"
-import ventablet from "../PICTURES/konga_tablet.jpg"
-import vendesktop from "../PICTURES/konga_desktop.jpg"
 
-import { NavLink, Link } from "react-router-dom"
+import { NavLink} from "react-router-dom"
 import {v4 as uuidv4} from "uuid"
 
 export default function SubCat(props){
@@ -32,25 +26,25 @@ export default function SubCat(props){
         setSubcatshow("block left-[-100%]");
     }
 
-    function alltabs(){
-        sub_cat.map((item)=>{
-            return (
-                <NavLink 
-                key = {uuidv4()}
-                className= {({isActive}) => {
-                    if(isActive){
-                        return "h-max mx-2 my-1 text_semibold no-underline subcat_btn theme_col white"
-                    }
-                    else {
-                        return "h-max mx-2 my-1 hover:bg-gray-200 text no-underline subcat_btn black"
-                    }
-                }}
-                to = {item.href}>
-                        {item.name}
-                </NavLink>
-            )
-        })
-    }
+    // function alltabs(){
+    //     sub_cat.map((item)=>{
+    //         return (
+    //             <NavLink 
+    //             key = {uuidv4()}
+    //             className= {({isActive}) => {
+    //                 if(isActive){
+    //                     return "h-max mx-2 my-1 text_semibold no-underline subcat_btn theme_col white"
+    //                 }
+    //                 else {
+    //                     return "h-max mx-2 my-1 hover:bg-gray-200 text no-underline subcat_btn black"
+    //                 }
+    //             }}
+    //             to = {item.href}>
+    //                     {item.name}
+    //             </NavLink>
+    //         )
+    //     })
+    // }
 
     return (
         <>

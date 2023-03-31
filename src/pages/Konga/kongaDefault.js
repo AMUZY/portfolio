@@ -379,9 +379,9 @@ export default function KongaDefault(first) {
   }
   else {
     outer: for (let i = 0; i < konga.length; i++) {
-      inner1: for (let j = 0; j < konga[i].cat.length; j++) {
-        inner2: for (let k = 0; k < konga[i].cat[j].subcat.length; k++) {
-          inner3: for (
+             for (let j = 0; j < konga[i].cat.length; j++) {
+               for (let k = 0; k < konga[i].cat[j].subcat.length; k++) {
+                 for (
             let l = 0;
             l < konga[i].cat[j].subcat[k].subsub.length;
             l++

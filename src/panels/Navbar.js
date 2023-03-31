@@ -3,13 +3,12 @@ import "../theme.scss"
 import "../font.scss"
 import "../navbar.scss"
 import {v4 as uuidv4} from "uuid";
-import { NavLink, Link, useLocation } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { useState } from "react";
 
 //IMPORTED SVGs
 import homeicon from "../SVGs/home_icon.svg"
 import menu from "../SVGs/menu.svg"
-import closebtn from "../SVGs/circle_x_btn.svg"
 
 // IMPORTED PICTURES
 import venmobile from "../PICTURES/konga_mobile.jpg"
@@ -19,8 +18,6 @@ import vendesktop from "../PICTURES/konga_desktop.jpg"
 export default function Navbar(props){
     const [btnshow , setBtnshow] = useState("hidden opacity-0");
     const [catshow, setCatshow] = useState("top-[-100%]");
-
-    var link = useLocation();
 
     function OpenCat(){
         setBtnshow("block opacity-70");
