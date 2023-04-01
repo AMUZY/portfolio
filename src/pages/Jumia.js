@@ -7,8 +7,6 @@ import Products from "../panels/Products"
 //IMPRTED PICTURES
 import product from "../PICTURES/product.jpg"
 import product2 from "../PICTURES/product2.jpg"
-import fav from "../PICTURES/fav.jpg"
-import charles from "../PICTURES/charles.jfif"
 
 // STARS IMPORT
 import one from "../SVGs/1_star.svg";

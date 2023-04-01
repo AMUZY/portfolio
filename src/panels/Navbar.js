@@ -11,13 +11,13 @@ import homeicon from "../SVGs/home_icon.svg"
 import menu from "../SVGs/menu.svg"
 
 // IMPORTED PICTURES
-import venmobile from "../PICTURES/konga_mobile.jpg"
+import venmobile from "../PICTURES/konga_link_desktop.jpg"
 import ventablet from "../PICTURES/konga_tablet.jpg"
 import vendesktop from "../PICTURES/konga_desktop.jpg"
 
 export default function Navbar(props){
     const [btnshow , setBtnshow] = useState("hidden opacity-0");
-    const [catshow, setCatshow] = useState("top-[-100%]");
+    const [catshow, setCatshow] = useState("top-[-50%]");
 
     function OpenCat(){
         setBtnshow("block opacity-70");
@@ -26,37 +26,38 @@ export default function Navbar(props){
 
     function CloseCat(){
         setBtnshow("hidden opacity-0");
-        setCatshow("block top-[-100%]");
+        setCatshow("block top-[-50%]");
     }
 
     const main_nav = props.mainNav;
 
     return (
         <>
-            {/* MOBILE AND TABLET NAVBAR */}
-            <div className="navbar flex flex-row items-center justify-between white_col z-[1] border-b-[1px] border-gray-300 xl:hidden">
+            {/* MOBILE AND TABLET NAVBAR BUTTON PANE */}
+            <div className="navbar w-[70%] sm:w-[70%] md:w-[80%] lg:w-[85%] flex flex-row items-center justify-between white_col z-[1] border-b-[1px] border-gray-300 xl:hidden">
                 {/* VENDOR'S IMAGE */}
-                <picture className="h-full mx-2">
-                        <source className = "h-full" srcSet = {vendesktop} media = "(min-width : 1440px)"/>
-                        <source className = "h-full" srcSet = {ventablet} media= "(min-width : 768px)"/>
-                        <img className = "h-full" src = {venmobile} alt = "vendor"/>
-                </picture>
-
-                {/* HOME ICON AND VENDOR LOGO IMAGE DIV */}
-                    {/* HOME ICON */}
-                    <Link
-                    className="mx-2"
-                    to = "/">
-                        <img className = "w-[20px] md:w-[25px] xl:w-[30px]" src = {homeicon} alt = "home icon" />
-                    </Link>
-                {/* CATEGORIES BUTTON DIV */}
-                <button type = "button" className = "flex items-center justify-center w-max h-max mx-4 my-auto"
-                    onClick={()=>{OpenCat()}}>
-                        <img className = "h-full" src = {menu} alt = "menu button" />
-                        <h2 className="category">
-                            Categories
-                        </h2>
-                </button>
+                        <img className = "h-full w-[100px]" src = {venmobile} alt = "vendor"/>
+                <div className="flex flex-row ">
+                    {/* HOME ICON AND VENDOR LOGO IMAGE DIV */}
+                        {/* HOME ICON */}
+                        <Link
+                        className = "flex flex-col items-center w-max h-max mx-4 my-auto"
+                        to = "/">
+                            <img className = "w-[20px] md:w-[25px] xl:w-[30px]" src = {homeicon} alt = "home icon" />
+                            <h2 className="category">
+                                Home
+                            </h2>
+                        </Link>
+                        
+                    {/* CATEGORIES BUTTON DIV */}
+                    <button type = "button" className = "flex flex-col items-center w-max h-max mx-2 my-auto"
+                        onClick={()=>{OpenCat()}}>
+                            <img className = "w-[20px] md:w-[25px] xl:w-[30px]" src = {menu} alt = "menu button" />
+                            <h2 className="category">
+                                Categories
+                            </h2>
+                    </button>
+                </div>
             </div>
 
 
@@ -80,7 +81,7 @@ export default function Navbar(props){
                                 key = {uuidv4()}
                                 className= {({isActive}) => {
                                     if(isActive){
-                                        return "text-center h-max mx-2 my-1 text_semibold no-underline cat_btn cat_col white"
+                                        return "text-center h-max mx-2 my-1 text_semibold no-underline cat_btn theme_col white"
                                     }
                                     else {
                                         return "text-center h-max mx-2 my-1 section_col text no-underline hover:bg-gray-200 cat_btn black"
@@ -114,11 +115,7 @@ export default function Navbar(props){
                     to = "/">
                         <img className = "w-[20px] md:w-[25px] xl:w-[30px]" src = {homeicon} alt = "home icon" />
                     </Link>
-                    <picture className="h-full mx-2">
-                        <source className = "h-full" srcSet = {vendesktop} media = "(min-width : 1440px)"/>
-                        <source className = "h-full" srcSet = {ventablet} media= "(min-width : 768px)"/>
                         <img className = "h-full" src = {venmobile} alt = "vendor"/>
-                    </picture>
                 </div>
                 {/* TABS DIV */}
                 <div className="flex py-3 flex-row justify-between mx-2">
@@ -129,7 +126,7 @@ export default function Navbar(props){
                                 key = {uuidv4()}
                                 className= {({isActive}) => {
                                     if(isActive){
-                                        return "text-center h-max mx-2 my-1 text_semibold no-underline cat_btn cat_col white"
+                                        return "text-center h-max mx-2 my-1 text_semibold no-underline cat_btn theme_col white"
                                     }
                                     else {
                                         return "text-center h-max mx-2 my-1 section_col text no-underline hover:bg-gray-200 cat_btn black"

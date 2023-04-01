@@ -2,28 +2,29 @@ import "../button.scss"
 import "../font.scss"
 import "../theme.scss"
 import "../navbar.scss"
+import Subcatbtn from "../buttons/Subcatbtn"
 import { useState } from "react"
 
 //IMPORTED SVGs
 import menu from "../SVGs/menu.svg"
 
-import { NavLink} from "react-router-dom"
+import { NavLink, Link } from "react-router-dom"
 import {v4 as uuidv4} from "uuid"
 
 export default function SubCat(props){
     const sub_cat = props.sub_cat
 
     const [btnshow , setBtnshow] = useState("hidden opacity-0");
-    const [subcatshow, setSubcatshow] = useState("left-[-100%]");
+    const [subcatshow, setSubcatshow] = useState("right-[-50%]");
 
     function OpenCat(){
         setBtnshow("block opacity-70");
-        setSubcatshow("block left-0");
+        setSubcatshow("block right-0");
     }
 
     function CloseCat(){
         setBtnshow("hidden opacity-0");
-        setSubcatshow("block left-[-100%]");
+        setSubcatshow("block right-[-50%]");
     }
 
     // function alltabs(){
@@ -48,12 +49,12 @@ export default function SubCat(props){
 
     return (
         <>
-            {/* MOBILE SUB CATEGORIES */}
-            <div className="navbar flex flex-row items-center justify-between white_col z-[1] border-b-[1px] border-gray-300 xl:hidden">
+            {/* MOBILE SUB CATEGORIES BUTTON PANE*/}
+            <div className="navbar absolute px-2 top-0 right-0 w-[30%] sm:w-[30%] md:w-[20%] lg:w-[15%] flex flex-row items-center justify-start white_col z-[1] border-b-[1px] border-gray-300 xl:hidden">
                 {/* SUB CATEGORIES BUTTON DIV */}
-                <button type = "button" className = "flex items-center justify-center w-max h-max mx-4 my-auto"
+                <button type = "button" className = "flex flex-col items-center w-max h-max my-auto"
                     onClick = {()=>{OpenCat()}}>
-                        <img className = "h-full" src = {menu} alt = "menu button" />
+                        <img className = "w-[20px] md:w-[25px] xl:w-[30px]" src = {menu} alt = "menu button" />
                         <h2 className="category">
                             Sub Categories
                         </h2>
@@ -79,7 +80,7 @@ export default function SubCat(props){
                                 key = {uuidv4()}
                                 className= {({isActive}) => {
                                     if(isActive){
-                                        return "h-max mx-2 my-1 text_semibold no-underline subcat_btn subcat_col white"
+                                        return "h-max mx-2 my-1 text_semibold no-underline subcat_btn theme_col white"
                                     }
                                     else {
                                         return "h-max mx-2 my-1 hover:bg-gray-200 text no-underline subcat_btn black"
@@ -117,7 +118,7 @@ export default function SubCat(props){
                                 key = {uuidv4()}
                                 className= {({isActive}) => {
                                     if(isActive){
-                                        return "h-max mx-2 my-1 text_semibold no-underline cat_btn subcat_col white"
+                                        return "h-max mx-2 my-1 text_semibold no-underline cat_btn theme_col white"
                                     }
                                     else {
                                         return "h-max mx-2 my-1 hover:bg-gray-200 text no-underline cat_btn black"

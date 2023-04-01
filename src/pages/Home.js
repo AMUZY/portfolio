@@ -66,7 +66,7 @@ export default function Home(props) {
 
 
             {/* IMAGE DIV */}
-            <div className="mt-10 mb-16">
+            <div className="max-w-[92%] mt-10 mb-16">
                 <picture>
                     <source srcSet = {picdesktop} media = "(min-width : 1440px)"/>
                     <source srcSet = {pictablet} media= "(min-width : 768px)"/>
@@ -151,7 +151,7 @@ export default function Home(props) {
             
 
             {/* VENDORS HEADING, DIV */}
-            <div className="rounded-2xl flex flex-col items-center w-[80%] my-5 px-14 py-8 md:w-[60%] xl:w-[80%] xl:my-16 xl:p-14 section_col">
+            <div className="rounded-2xl flex flex-col items-center w-[92%] my-5 px-14 py-8 md:w-[60%] xl:w-[80%] xl:my-16 xl:p-14 section_col">
                 {/* HEADING DIV */}
                 <div className="flex flex-row justify-center">
                     {/* OUR VENDORS */}

@@ -11,7 +11,7 @@ export default function OtherCategories (props) {
         {name : "Books and Media Library" ,href :KongaDefault("books-and-medialibrary")},
         {name : "Building and Industrial",href :KongaDefault("building-and-industrial")},
         {name : "Generators and Power" ,href :KongaDefault("generators-and-power")},
-        {name : "Sport's and Fitness" ,href :KongaDefault("sports-and-fitness")},
+        {name : "Sports and Fitness" ,href :KongaDefault("sports-and-fitness")},
     ]
 
     return (

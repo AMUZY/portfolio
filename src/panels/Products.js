@@ -29,7 +29,7 @@ export default function Products(props){
     // className="rounded-xl overflow-y-scroll my-2 py-5 section_col w-full h-[88%] sm:h-[91%] xl:h-[85%]">
 
     return (
-        <div className="rounded-xl flex-grow productcont overflow-y-scroll mb-4 mx-4 pt-1 section_col w-auto xl:mb-2">
+        <div className="rounded-xl flex-grow productcont overflow-y-scroll mb-2 mx-4 pt-1 section_col w-auto xl:mb-2">
             <div className = "w-[100%] products pb-2 h-auto">
                 {
                     products.map((item)=>{

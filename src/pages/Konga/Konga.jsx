@@ -1,9 +1,6 @@
 import "../../button.scss"
 import "./konga.scss"
 import Navbar from "../../panels/Navbar"
-import SubCat from "../../panels/SubCat"
-import ProductArea from "../../panels/ProductArea"
-import Products from "../../panels/Products"
 import { Outlet } from "react-router-dom"
 import KongaDefault from "./kongaDefault"
 
@@ -31,7 +28,7 @@ export default function Konga() {
     
 
     return (
-        <div className="relative w-full mainkonga flex flex-col">
+        <div className="relative overflow-hidden w-full mainkonga flex flex-col">
             <Navbar mainNav = {mainNav} />
             
             <div className="flex newdude flex-col w-full xl:flex-row">
