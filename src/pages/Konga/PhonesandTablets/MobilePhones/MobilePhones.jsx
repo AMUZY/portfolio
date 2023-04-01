@@ -6,8 +6,9 @@ export default function MobilePhones (){
     const name = "Mobile Phones"
 
     const subsub = [
-        {name : "Feature Phones" ,href : KongaDefault("feature-phones")},
         {name : "Smart Phones",href : KongaDefault("smart-phones")},
+        {name : "Feature Phones" ,href : KongaDefault("feature-phones")},
+        
     ]
 
     return (

@@ -28,7 +28,7 @@ export default function Konga() {
     
 
     return (
-        <div className="relative overflow-hidden w-full mainkonga flex flex-col">
+        <div className="relative w-full mainkonga flex flex-col">
             <Navbar mainNav = {mainNav} />
             
             <div className="flex newdude flex-col w-full xl:flex-row">

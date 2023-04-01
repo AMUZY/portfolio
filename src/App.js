@@ -16,6 +16,7 @@ import SubCat from "./panels/SubCat";
 import ProductArea from "./panels/ProductArea";
 import Products from "./panels/Products";
 import Navbar from "./panels/Navbar";
+import NotFound from "../src/pages/NotFound"
 
 // KONGA ALL PAGES IMPORTS
 import ComputersandAccessories from "../src/pages/Konga/ComputersandAccessories/ComputersandAccessories"
@@ -523,6 +524,7 @@ export default function App() {
                   {/* BEGIN HERE */}
               {/* EXPERTNAIRE ROUTE */}
                   {/* BEGIN HERE */}
+                  <Route path = "*" element = {<NotFound />} />
             </Routes>
       </Router>
     </div>

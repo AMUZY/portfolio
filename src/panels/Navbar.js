@@ -29,14 +29,15 @@ export default function Navbar(props){
         setCatshow("block top-[-50%]");
     }
 
+    // w-[70%] sm:w-[70%] md:w-[80%] lg:w-[85%]
+
     const main_nav = props.mainNav;
 
     return (
         <>
             {/* MOBILE AND TABLET NAVBAR BUTTON PANE */}
-            <div className="navbar w-[70%] sm:w-[70%] md:w-[80%] lg:w-[85%] flex flex-row items-center justify-between white_col z-[1] border-b-[1px] border-gray-300 xl:hidden">
-                {/* VENDOR'S IMAGE */}
-                        <img className = "h-full w-[100px]" src = {venmobile} alt = "vendor"/>
+            <div className="navbar w-auto flex flex-row items-center justify-start white_col z-[1] border-b-[1px] border-gray-300 xl:hidden">
+             
                 <div className="flex flex-row ">
                     {/* HOME ICON AND VENDOR LOGO IMAGE DIV */}
                         {/* HOME ICON */}
@@ -58,6 +59,9 @@ export default function Navbar(props){
                             </h2>
                     </button>
                 </div>
+                   {/* VENDOR'S IMAGE */}
+                   <img className = "h-full w-[100px]" src = {venmobile} alt = "vendor"/>
+                {/* <span className = "h-[1px] border-b-[2px] border-dotted border-orange-500 flex-grow"></span> */}
             </div>
 
 

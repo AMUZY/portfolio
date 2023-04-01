@@ -43,7 +43,7 @@ export default function KongaDefault(first) {
           subcat: [
             {
               href: "mobile-phones",
-              subsub: ["feature-phones", "smart-phones"],
+              subsub: ["smart-phones","feature-phones",],
             },
             {
               href: "mobile-phones-accessories",

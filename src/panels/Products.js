@@ -75,22 +75,22 @@ export default function Products(props){
                     </div>
 
                     {/* KEY FEATURES AND SPECIFICATIONS */}
-                    <div className="my-2 flex-grow flex flex-row justify-between">
+                    <div className="my-2 flex-grow flex flex-col justify-between">
                         {/* KEY FEATURES */}
-                        <div className="w-[48%]">
+                        {/* <div className="w-[48%]">
                             <h2 className="text text-left">
                                 KEY FEATURES
                             </h2>
                             <h3 className="grey desc text-left">
                                 {keyfeat}
                             </h3>
-                        </div>
+                        </div> */}
 
                         {/* SPAN */}
-                        <span className="black_col w-[1px] mx-[1%]"></span>
+                        {/* <span className="black_col w-full h-[1px] mx-[1%] my-[2%]"></span> */}
 
                         {/* SPECIFICATIONS */}
-                        <div className="w-[48%]">
+                        <div className="w-[96%]">
                             <h2 className="text text-left">
                                 SPECIFICATIONS
                             </h2>
