@@ -2,15 +2,72 @@ import "../button.scss"
 import "../font.scss"
 import "../theme.scss"
 
-import { NavLink } from "react-router-dom"
+import x from "../SVGs/circle_x_btn.svg"
+
+import { NavLink, useNavigate } from "react-router-dom"
 import {v4 as uuidv4} from "uuid"
+import { useState } from "react"
+// import { useParams } from "react-router-dom"
+
+export var SEARCHED = {
+    title : "",
+}
+
 
 
 export default function ProductArea (props){
+    const [prod,setProd] = useState(props.allprods);
     const subsub = props.subsub;
+    const [search,setSearch] = useState("hidden")
+    const [check,setCheck] = useState("");
+    const [showsearch,setShowsearch] = useState([]);
+    const [xbtn,setXbtn] = useState("hidden");
+
+
+    // NEW ARRAY THAT ELEMINATES DUPLICATES IN THE SHOWSEACH ARRAY
+    
+    let finalsearch = [...new Set(showsearch.map((item)=>{return item.title }))];
+    console.log(finalsearch);
+
+    // FUNCTION THAT SETS SEARCH TO HIDDEN ON CALL OF THE EXPORT FUNCTION CLOSESEARCH ABOVE
+
+    let navigate = useNavigate();
+
+    const handleChange = (e) => {
+        // 👇 Get input value from "event"
+        e.preventDefault();
+        setCheck(e.target.value);
+        setSearch("block");
+        if(e.target.value === "")
+        {
+            setSearch("hidden")
+        }
+        if(check.length >= 0 && e.target.value !== ""){
+            setXbtn("inline-block")
+        }
+        else{
+            setXbtn("hidden")
+        }
+        setShowsearch(prod.filter((item)=>{
+            return(
+                item.title.toLowerCase().includes(check.toLowerCase())
+            )
+        }))
+    
+      };
+
+      const gosearch = (()=>{
+        finalsearch.map((item)=>{
+            if(item === check){
+                SEARCHED.title = check;
+                navigate("/konga/search");
+            }
+        })
+      })
+    
 
     return (
-        <div className=" my-2 mx-4 xl:h-[13%] ">
+        <div onClick = {()=>{setSearch("hidden")}} className=" my-2 mx-4 xl:h-[13%] ">
             <div className="">
                 {/* TITLE DIV */}
                 <div className="w-full h-max">
@@ -44,16 +101,49 @@ export default function ProductArea (props){
                         }
                     </div>
                     {/* SEARCH DIV */}
-                    <div className = "h-max flex-grow flex flex-row my-3 w-full lg:w-auto md:min-w-[30%] flex-grow-0 ">
-                        {/* SEARCH BAR */}
-                        <input className="text input flex-grow rounded-lg border-[1px] border-gray-300 mr-[5px] h-max px-4 py-2 overflow-hidden" placeholder="Search Products" />
-                        {/* SEARCH BUTTON */}
-                        <button className = "ml-[5px] search_btn theme_col">
-                            <h2 className="text white">
-                                Search
-                            </h2>
-                        </button>
-                    </div>
+                        <div className = "relative h-max flex-grow flex flex-row my-3 w-full lg:w-auto md:min-w-[30%] flex-grow-0 ">
+
+                            {/* SEARCH BAR */}
+                            <div className = "relative flex-grow mr-[5px] h-max ">
+                                <input type = "text"
+                                    value={check}
+                                    onBlur={()=>{
+                                        // setShowsearch([]);
+                                        // console.log("not equal to");
+                                        // setCheck("");    
+                                    }}
+                                    onChange={handleChange}
+                                    className="w-full h-full input rounded-lg border-[1px] border-gray-300 px-4 py-2 text overflow-hidden" placeholder="Search All Categories" />
+
+                                {/* BUTTON TO CLEAR SEARCH BAR */}
+                                <button className = {"absolute h-[98%] top-0 right-1 bottom-0 nohightlight " + xbtn} onClick={()=>{setCheck("");setXbtn("hidden")}}><img className = "bg-white w-[25px]" src = {x} alt = "delete button"/></button>
+                            </div>
+
+                            {/* DIV WHERE ITEMS SHOW UP */}
+                            <div className={"absolute z-[1] overflow-hidden white_col rounded-lg p-2 flex flex-col flex-nowrap left-0 translate-y-[100%] right-0 bottom-[-10%] max-h-[400px] " + search}> 
+                                {
+                                    finalsearch.map((item)=>{
+                                        return (
+                                            <button type = "button" key = {uuidv4()} onClick = {()=>{
+                                                setCheck(item);
+                                                setSearch("hidden")
+                                            }} className="flex flex-nowrap justify-start text grey mx-1 my-1"> {item} </button>
+                                        )
+                                    })
+                                }
+                            </div>
+
+                            {/* SEARCH BUTTON */}
+                            <button type = "submit" onClick = {()=>{
+                                if(check.length > 0){
+                                    gosearch(); 
+                                }
+                                }} className = "ml-[5px] search_btn theme_col">
+                                <h2 className="text white">
+                                    Search
+                                </h2>
+                            </button>
+                        </div>
                 </div>
                 {/* ALL PRODUCTS DIRECT YOU */}
                 <div>

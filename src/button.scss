@@ -86,9 +86,6 @@
     @extend .flex_w_btn;
 }
 
-.search_btn:hover {
-    opacity: 70%;
-}
 
 //TABLET SCREEN SIZE
 
@@ -128,5 +125,8 @@
     .prod_btn {
         padding : 6px 12px;
         border-radius: 9999px;
+    }
+    .search_btn:hover {
+        opacity: 70%;
     }
 }

@@ -110,7 +110,7 @@ export default function Card(props) {
                 return (
                   <img
                     key={uuidv4()}
-                    className="flex-shrink-0 w-[inherit] h-[inherit] "
+                    className="z-[0] flex-shrink-0 w-[inherit] h-[inherit] "
                     src={item.img}
                     alt={item.alt}
                   />

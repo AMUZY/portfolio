@@ -3,12 +3,15 @@ import "./konga.scss"
 import Navbar from "../../panels/Navbar"
 import { Outlet } from "react-router-dom"
 import KongaDefault from "./kongaDefault"
+import BagsCasesCovers from "./ComputersandAccessories/Computing/BagsCasesCovers"
 
 import { useLocation} from "react-router-dom";
+import { useState } from "react"
 
 
 export default function Konga() {
     
+
     const mainNav =[
         {name : "Computers and Accessories" ,href : KongaDefault("computers-and-accessories")},
         {name : "Phones and Tablets",href : KongaDefault("phones-and-tablets") },
@@ -20,11 +23,12 @@ export default function Konga() {
     ];
 
     
-    var link = useLocation();
+    // var link = useLocation();
 
     // PRODUCTS
     // MAX OF SIX IMAGES PER ITEM
     // THE HEIGHT OF ALL IMAGES ARE INHERITED FROM PARENT
+
     
 
     return (

@@ -1,8 +1,10 @@
 import KongaDefault from "../../kongaDefault"
 import { Outlet } from "react-router-dom"
 import ProductArea from "../../../../panels/ProductArea"
+// import { useOutletContext } from "react-router-dom"
 
-export default function Computing (){
+export default function Computing (props){
+
     const name = "Computing"
 
     const subsub = [
@@ -12,10 +14,11 @@ export default function Computing (){
         {name : "Storage devices" ,href : KongaDefault("storage-devices")},
     ]
 
+
     return (
         <>
-            <ProductArea subsub = {subsub} name = {name}/>
-            <Outlet />
+            <ProductArea allprods = {props.allprods} subsub = {subsub} name = {name}/>
+            <Outlet  />
         </>
     )
 }

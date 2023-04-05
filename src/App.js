@@ -1,5 +1,5 @@
 import "./input.css"
-
+import { useState } from "react";
 import {BrowserRouter as Router,
 Routes,
 Route,
@@ -17,6 +17,7 @@ import ProductArea from "./panels/ProductArea";
 import Products from "./panels/Products";
 import Navbar from "./panels/Navbar";
 import NotFound from "../src/pages/NotFound"
+
 
 // KONGA ALL PAGES IMPORTS
 import ComputersandAccessories from "../src/pages/Konga/ComputersandAccessories/ComputersandAccessories"
@@ -237,12 +238,27 @@ import OtherCategories from "../src/pages/Konga/OtherCategories/OtherCategories"
             import OutdoorandIndoorGames from "../src/pages/Konga/OtherCategories/SportsandFitness/OutdoorandIndoorGames"
             import Sportswear from "../src/pages/Konga/OtherCategories/SportsandFitness/Sportswear"
             import Swimming from "../src/pages/Konga/OtherCategories/SportsandFitness/Swimming"
+import Searched from "./pages/Searched";
 
 // END OF KONGA PAGES IMPORT
 
-
+// ARRAY AND FUNCTION TO STORE ALL PRODUCT NAMES
+export const allprods = [];
+function updateProds(title,src,subtitle,price,star,spec,prodlink){
+      const newprod = {
+            title : title,
+            src : src,
+            subtitle : subtitle,
+            price : price,
+            star : star,
+            spec : spec,
+            prodlink : prodlink,
+      }
+      allprods.push(newprod);
+}
 
 export default function App() {
+     
   return (
     <div className="App w-full flex flex-col">
       <Router>
@@ -252,8 +268,8 @@ export default function App() {
               <Route path = "/konga" element = {<Konga />}>
 
                 <Route path = "/konga/computers-and-accessories" element = {<ComputersandAccessories />}>
-                  <Route path = "/konga/computers-and-accessories/computing" element = {<Computing />} >
-                    <Route path = "/konga/computers-and-accessories/computing/bags-cases-covers" element = {<BagsCasesCovers />} />
+                  <Route path = "/konga/computers-and-accessories/computing" element = {<Computing allprods = {allprods} />} >
+                    <Route path = "/konga/computers-and-accessories/computing/bags-cases-covers" element = {<BagsCasesCovers  updateProds = {updateProds}/>} />
                     <Route path = "/konga/computers-and-accessories/computing/computer-peripherals" element = {<ComputerPeripherals />} />
                     <Route path = "/konga/computers-and-accessories/computing/laptop-and-desktop-accessories" element = {<LaptopandDesktopAccessories />} />
                     <Route path = "/konga/computers-and-accessories/computing/storage-devices" element = {<StorageDevices />} />
@@ -524,6 +540,7 @@ export default function App() {
                   {/* BEGIN HERE */}
               {/* EXPERTNAIRE ROUTE */}
                   {/* BEGIN HERE */}
+                  <Route path = "/konga/search" element = {<Searched />} />
                   <Route path = "*" element = {<NotFound />} />
             </Routes>
       </Router>

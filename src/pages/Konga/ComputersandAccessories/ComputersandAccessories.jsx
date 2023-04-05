@@ -2,14 +2,17 @@ import "../konga.scss"
 import KongaDefault from "../kongaDefault"
 import SubCat from "../../../panels/SubCat"
 import Cat_Template from "../Cat_Template"
+// import { useOutletContext } from "react-router-dom"
 
-export default function ComputersandAccessories () {
+export default function ComputersandAccessories (props) {
 
     const sub_cat = [
         {name : "Computing" ,href : KongaDefault("computing")},
         {name : "Laptops",href :KongaDefault("laptops")},
         {name : "PC Gaming" ,href :KongaDefault("pcgaming")},
     ]
+
+    
 
     return (
         <>
