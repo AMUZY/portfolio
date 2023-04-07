@@ -28,7 +28,6 @@ export default function ProductArea (props){
     // NEW ARRAY THAT ELEMINATES DUPLICATES IN THE SHOWSEACH ARRAY
     
     let finalsearch = [...new Set(filtereditems.map((item)=>{return item.title }))];
-    console.log(finalsearch);
 
     // FUNCTION THAT SETS SEARCH TO HIDDEN ON CALL OF THE EXPORT FUNCTION CLOSESEARCH ABOVE
 
@@ -61,7 +60,7 @@ export default function ProductArea (props){
         finalsearch.map((item)=>{
             if(item === check){
                 SEARCHED.title = check;
-                navigate("/konga/search");
+                navigate("/konga/search/" + check);
             }
         })
       })
@@ -154,7 +153,7 @@ export default function ProductArea (props){
                 {/* ALL PRODUCTS DIRECT YOU */}
                 <div>
                     <h4 className="others grey">
-                        All products direct you to Konga online shopping mall
+                        All products are from Konga online shopping mall
                     </h4>
                 </div>
             </div>

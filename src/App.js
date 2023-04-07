@@ -554,7 +554,7 @@ export default function App() {
                   {/* BEGIN HERE */}
               {/* EXPERTNAIRE ROUTE */}
                   {/* BEGIN HERE */}
-                  <Route path = "/konga/search" element = {<Searched />} />
+                  <Route path = "/konga/search/:searched" element = {<Searched />} />
                   <Route path = "*" element = {<NotFound />} />
             </Routes>
       </Router>

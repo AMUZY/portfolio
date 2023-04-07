@@ -3,9 +3,8 @@ import "./konga.scss"
 import Navbar from "../../panels/Navbar"
 import { Outlet } from "react-router-dom"
 import KongaDefault from "./kongaDefault"
-import BagsCasesCovers from "./ComputersandAccessories/Computing/BagsCasesCovers"
+import { useLocation } from "react-router-dom"
 
-import { useLocation} from "react-router-dom";
 import { useState } from "react"
 
 // STARS IMPORT
@@ -19,6 +18,12 @@ import four from "../../SVGs/4_star.svg";
 import four_half from "../../SVGs/4_5_star.svg";
 import five from "../../SVGs/5_star.svg";
 
+
+
+// ARRAY TO STORE ALL PATHS
+export var PATHS = []; 
+
+// CLASS THAT CONTAINS PROPERTIES OF ALL ITEM OBJECTS
 class Item {
     constructor(src,alt,title,subtitle,price,star,spec,prodlink){
         this.src = src;
@@ -32,7 +37,7 @@ class Item {
     }
 };
 
-var ITEMS = [];
+export var ITEMS = [];
 
 // ALL ITEMS BEGINS
   export const item1 = new Item(
@@ -692,6 +697,143 @@ var ITEMS = [];
   ITEMS.push(item24);
 
 
+  export const item25 = new Item(
+    [
+        {
+          id: 0,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/X/K/160851_1661507966.jpg",
+        },
+        {
+          id: 1,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/E/S/160851_1661507981.jpg",
+        },
+        {
+          id: 2,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/B/A/160851_1661507993.jpg",
+        },
+      ],
+       "product",
+       "Big Size Multi Purpose Khamo Khaki Backpack - Brown",
+      
+      "The Big Size Multi Purpose Khamo Khaki Backpack in Brown is a versatile backpack suitable for various purposes. With a spacious main compartment and multiple pockets, it provides ample storage space for everyday essentials. Its durable and waterproof material makes it ideal for outdoor activities or travel. The backpack features adjustable straps for comfortable carrying and a stylish khaki brown design.",
+       "9,450",
+       five,
+       `Big Size Multi Purpose Khamo Khaki Backpack - Brown
+
+       has all the space and organization features to meet your urban gear needs with a large main compartment.
+       
+       Designed with your high expectations in mind. From the train, to the office, from the field to the classroom the HP 15.6" Backpack brings different aspects of your life together with hardy protection, distinct style
+       
+       Ideal for work, school, and weekend outings. Unique modern designs, padded comfort, and easy access to your essentials The Big Size Multi Purpose Backpack - Black  has all the space and organization features to meet your urban gear needs with a large main compartment.
+       
+       Size : 
+       
+       Hight : 25 inches 
+       
+       Breadth : 9 inches  `,
+     "https://www.konga.com/product/big-size-multi-purpose-khamo-khaki-backpack-brown-5842180?k_id=AMUZY",
+  )
+  ITEMS.push(item25);
+
+  export const item26 = new Item(
+    [
+        {
+          id: 0,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/L/E/195079_1653589100.jpg",
+        },
+        {
+          id: 1,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/A/T/195079_1653589132.jpg",
+        },
+        {
+          id: 2,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/F/M/195079_1653589220.jpg",
+        },
+      ],
+       "product",
+       "Waterproof Multipurpose 3 In 1 USB Laptop Backpack - 15-inches - Red",
+      
+      "The Waterproof Multipurpose 3 In 1 USB Laptop Backpack in red is a versatile and practical backpack that can fit laptops up to 15 inches. It is made of waterproof material, making it perfect for use in any weather condition. The backpack features multiple compartments for organizing your items, and includes a USB port for convenient charging on the go. It can be used as a backpack, shoulder bag or handbag, making it suitable for various occasions.",
+       "13,000",
+       five,
+       `This designer backpack was designed to suit your test in all ramifications. It has two compartments inside and outside. The compartments includes Laptop compartment, Tablet compartment, Smartphones compartment,Notepad compartment and compartment for pen and other accessories. it was made with quality material that makes it resistant to water.It has a USB connector which can connect to Power bank, USB jack and Phones.
+       Length- 40cm
+       Width- 28cm
+       Breadth- 15cm`,
+     "https://www.konga.com/product/waterproof-multipurpose-3-in-1-usb-laptop-backpack-15-inches-red-5738895?k_id=AMUZY",
+  )
+  ITEMS.push(item26);
+
+  export const item27 = new Item(
+    [
+        {
+          id: 0,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/U/D/169767_1678230706.jpg",
+        },
+        {
+          id: 1,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/C/M/169767_1678230729.jpg",
+        },
+        {
+          id: 2,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/D/D/169767_1678230835.jpg",
+        },
+      ],
+       "product",
+       "Fashion House Double Sided Reversible Leather Belt For Men",
+      
+      "The Fashion House Double Sided Reversible Leather Belt is a stylish and versatile accessory designed for men. It features a reversible design, allowing you to wear it with either the black or brown side facing out, depending on your outfit. The belt is made from high-quality leather, ensuring durability and long-lasting wear. The classic design is perfect for both formal and casual occasions, making it a must-have accessory in any man's wardrobe.",
+       "2,999",
+       five,
+       `Material: Leather
+       Product Category: Belt
+       Applicable age: Adult
+       Belt buckle Material: alloy
+       Gender: Male
+       Perfect fit for your trousers `,
+     "https://www.konga.com/product/fashion-house-double-sided-reversible-leather-belt-for-men-4920811?k_id=AMUZY",
+  )
+  ITEMS.push(item27);
+
+  export const item28 = new Item(
+    [
+        {
+          id: 0,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/U/B/87533_1541491205.jpg",
+        },
+      ],
+       "product",
+       "Men's Belt",
+      
+      "Men's belt is a clothing accessory worn around the waist to hold up pants or shorts.",
+       "2,700",
+       five,
+       `Color: Black
+       Material: Leather
+       Durable`,
+     "https://www.konga.com/product/fashion-house-double-sided-reversible-leather-belt-for-men-4920811?k_id=AMUZY",
+  )
+  ITEMS.push(item28);
+
+  export const item29 = new Item(
+    [
+        {
+          id: 0,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/K/U/87533_1541493209.jpg",
+        },
+      ],
+       "product",
+       "Men's Formal Belt - Brown",
+      
+      "Men's formal belt in brown color.",
+       "2,600",
+       five,
+       `Color: Brown
+       Material: Leather
+       Durable`,
+     "https://www.konga.com/product/mens-formal-belt-brown-4110425?k_id=AMUZY",
+  )
+  ITEMS.push(item29);
 
 // ALL ITEMS END
 
@@ -705,6 +847,9 @@ var ITEMS = [];
 
 
 export default function Konga(props) {
+  let link = useLocation()
+  PATHS.push(link.pathname)
+
     const mainNav =[
         {name : "Computers and Accessories" ,href : KongaDefault("computers-and-accessories")},
         {name : "Phones and Tablets",href : KongaDefault("phones-and-tablets") },
@@ -724,7 +869,6 @@ export default function Konga(props) {
 
     ITEMS.forEach((item)=>{
         props.updateProds(item.title,item.src,item.subtitle,item.price,item.star,item.spec,item.prodlink);
-        console.log(item);
       })
 
     return (

@@ -5,12 +5,33 @@ import { SEARCHED } from "../panels/ProductArea";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import bluearrow from "../SVGs/r_b_arrow.svg";
+import { PATHS } from "./Konga/Konga";
+import { useParams } from "react-router-dom";
+import { ITEMS } from "./Konga/Konga";
+
+
+
+function goBack(){
+    if(PATHS[PATHS.length-1]){
+        return PATHS[PATHS.length-1]
+    }
+    else if(PATHS[PATHS.length-1] !== "undefined"){
+        console.log(PATHS[PATHS.length-1])
+        return "/konga/computers-and-accessories/computing/bags-cases-covers"
+    }
+    else if(PATHS[PATHS.length-1] === "undefined"){
+        return "/konga/computers-and-accessories/computing/bags-cases-covers"
+    }
+}
 
 export default function Searched() {
+    const { searched } = useParams();
+    
+
     var state;
     let count = [1];
-    allprods.forEach((item) => {
-        if (SEARCHED.title === item.title) {
+    ITEMS.forEach((item) => {
+        if (searched === item.title) {
             const newstuff = {
             title: item.title,
             subtitle: item.subtitle,
@@ -29,7 +50,7 @@ export default function Searched() {
                         if(state){
                             return (
                                 <div key = {uuidv4()}>
-                                    <Link className="mb-4 specs flex flex-row items-center justify-center" to = "/konga/computers-and-accessories/computing/bags-cases-covers" > <img className = "rotate-180 mx-2" src= {bluearrow}/> Return to view more </Link>
+                                    <Link className="mb-4 specs flex flex-row items-center justify-center" to = {goBack()} > <img className = "rotate-180 mx-2" src= {bluearrow}/> Return to view more </Link>
                                     <SearchCard
                                         title={state.title}
                                         subtitle={state.subtitle}
