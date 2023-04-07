@@ -126,14 +126,14 @@ export default function ProductArea (props){
                             </div>
 
                             {/* DIV WHERE ITEMS SHOW UP */}
-                            <div className={"absolute z-[1] overflow-hidden white_col rounded-lg p-2 flex flex-col flex-nowrap left-0 translate-y-[100%] right-0 bottom-[-10%] max-h-[400px] " + search}> 
+                            <div className={"absolute z-[1] overflow-scroll white_col rounded-lg p-2 flex flex-col flex-nowrap left-0 translate-y-[100%] right-0 bottom-[-10%] max-h-[412px] " + search}> 
                                 {
                                     finalsearch.map((item)=>{
                                         return (
                                             <button type = "button" key = {uuidv4()} onClick = {()=>{
                                                 setCheck(item);
                                                 setSearch("hidden")
-                                            }} className="flex flex-row text grey mx-1 my-1"> {item} </button>
+                                            }} className="flex flex-row text grey mx-1 my-2 xl:my-1"> {item} </button>
                                         )
                                     })
                                 }

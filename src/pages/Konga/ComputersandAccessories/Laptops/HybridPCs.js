@@ -14,10 +14,12 @@ import three_half from "../../../../SVGs/3_5_star.svg";
 import four from "../../../../SVGs/4_star.svg";
 import four_half from "../../../../SVGs/4_5_star.svg";
 import five from "../../../../SVGs/5_star.svg";
+import { item23, item24 } from "../../Konga";
 
 export default function HybridPCs(props) {
   const products = [
-    
+    item23,
+    item24
   ];
 
   return <Products products={products} />;

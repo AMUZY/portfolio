@@ -138,7 +138,7 @@ var ITEMS = [];
     [
         { id: 0, img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/P/S/78942_1554696612.jpg" },
         { id: 1, img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/T/X/78942_1554696647.jpg" },
-        { id: 1, img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/C/A/78942_1554696684.jpg" },
+        { id: 2, img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/C/A/78942_1554696684.jpg" },
       ],
      "product",
       "Professional Powerpoint Wireless Controller",
@@ -593,6 +593,104 @@ var ITEMS = [];
      "https://www.konga.com/product/105-1-8-128mb-ram-dual-sim-black-4934955?k_id=AMUZY",
   )
   ITEMS.push(item22);
+
+  let x360 = <ul>
+  <li>Screen size: 14 inches</li>
+  <li>Processor: 11th Generation Intel Core i3-1115G4</li>
+  <li>RAM: 8GB DDR4 SDRAM</li>
+  <li>Storage: 256GB SSD</li>
+  <li>Operating system: Windows 10</li>
+  <li>Display resolution: 1920 x 1080 pixels</li>
+  <li>Graphics: Intel UHD Graphics</li>
+  <li>Touchscreen: Yes</li>
+  <li>Wireless communication: 802.11ax Wi-Fi 6 and Bluetooth 5.2</li>
+  <li>Ports: USB Type-C, USB Type-A, HDMI, SD card reader, and headphone/microphone combo jack</li>
+  <li>Dimensions: 12.76 x 8.78 x 0.78 inches</li>
+  <li>Weight: 3.55 pounds</li>
+  <li>Color: Silver</li>
+</ul>
+
+  export const item23 = new Item(
+    [
+        {
+          id: 0,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/X/R/204979_1657814725.jpg",
+        },
+        {
+          id: 1,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/W/H/204979_1657814742.jpg",
+        },
+        {
+          id: 2,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/P/P/204979_1657814754.jpg",
+        },
+      ],
+       "product",
+       "HP Pavilion X360 Convertible 14 - 14\" - Core I3 - 256GB SSD - 8GB RAM - Touchscreen -Win 10 -Silver",
+      
+      "The HP Pavilion X360 Convertible 14 is a versatile laptop with a 14\" touchscreen display. It features an Intel Core i3 processor, 8GB of RAM, and a 256GB SSD for fast and efficient performance. The laptop runs on Windows 10 and comes in a stylish silver color. Its 360-degree hinge allows you to easily switch between laptop, tent, stand, and tablet modes.",
+       "305,000",
+       five,
+    //   keyfeat: "these are where I will write the key features of the product",
+       x360,
+     "https://www.konga.com/product/hp-pavilion-x360-convertible-14-14-core-i3-256gb-ssd-8gb-ram-touchscreen-win-10-silver-5789757?k_id=AMUZY",
+  )
+  ITEMS.push(item23);
+
+  let x360512 = <ul>
+  <li>Brand: HP</li>
+  <li>Model: Pavilion X360 Convertible 14</li>
+  <li>Screen Size: 14 inches</li>
+  <li>Screen Resolution: 1920 x 1080 pixels</li>
+  <li>Processor: Intel Core i5</li>
+  <li>Processor Speed: 1.6 GHz base frequency, up to 4.2 GHz with Intel Turbo Boost Technology</li>
+  <li>RAM: 8 GB DDR4-3200 SDRAM (1 x 8 GB)</li>
+  <li>Storage: 512 GB PCIe NVMe M.2 SSD</li>
+  <li>Graphics: Intel Iris Xe Graphics</li>
+  <li>Operating System: Windows 10 Home</li>
+  <li>Ports: 1 SuperSpeed USB Type-C 5Gbps signaling rate; 2 SuperSpeed USB Type-A 5Gbps signaling rate; 1 HDMI 1.4b; 1 AC smart pin; 1 headphone/microphone combo</li>
+  <li>Wireless Connectivity: Realtek Wi-Fi 5 (2x2) and Bluetooth 5 combo</li>
+  <li>Audio: B&O, dual speakers, HP Audio Boost</li>
+  <li>Webcam: HP Wide Vision 720p HD camera with integrated dual array digital microphones</li>
+  <li>Color: Natural Silver</li>
+  <li>Dimensions: 32.4 x 22.1 x 1.99 cm</li>
+  <li>Weight: 1.61 kg</li>
+</ul>
+
+  export const item24 = new Item(
+    [
+        {
+          id: 0,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/F/W/204979_1657811640.jpg",
+        },
+        {
+          id: 1,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/M/U/204979_1657811627.jpg",
+        },
+        {
+          id: 2,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/E/D/204979_1657811655.jpg",
+        },
+        {
+          id: 3,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/Y/V/204979_1657811669.jpg",
+        },
+        {
+          id: 4,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/C/Y/204979_1657811685.jpg",
+        },
+      ],
+       "product",
+       "HP Pavilion X360 Convertible 14 - Core I5 - 512GB SSD - 8GB RAM - Touchscreen - Windows 10",
+      
+      "The HP Pavilion X360 Convertible 14 is a powerful laptop featuring an Intel Core i5 processor, 512GB SSD storage, and 8GB of RAM. It also includes a 14-inch touchscreen display and runs on Windows 10, providing a smooth and user-friendly experience. The 360-degree hinge allows for easy switching between laptop, tablet, and tent mode, making it a versatile device for work or entertainment.",
+       "425,000",
+       five,
+       x360512,
+     "https://www.konga.com/product/hp-pavilion-x360-convertible-14-core-i5-512gb-ssd-8gb-ram-touchscreen-windows-10-5791383?k_id=AMUZY",
+  )
+  ITEMS.push(item24);
+
 
 
 // ALL ITEMS END
