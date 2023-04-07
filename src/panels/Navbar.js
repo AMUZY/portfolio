@@ -60,8 +60,7 @@ export default function Navbar(props){
                     </button>
                 </div>
                    {/* VENDOR'S IMAGE */}
-                   <img className = "h-full w-[100px]" src = {venmobile} alt = "vendor"/>
-                {/* <span className = "h-[1px] border-b-[2px] border-dotted border-orange-500 flex-grow"></span> */}
+                   {/* <img className = "h-full w-[100px]" src = {venmobile} alt = "vendor"/> */}
             </div>
 
 
@@ -119,7 +118,7 @@ export default function Navbar(props){
                     to = "/">
                         <img className = "w-[20px] md:w-[25px] xl:w-[30px]" src = {homeicon} alt = "home icon" />
                     </Link>
-                        <img className = "h-full" src = {venmobile} alt = "vendor"/>
+                        {/* <img className = "h-full" src = {venmobile} alt = "vendor"/> */}
                 </div>
                 {/* TABS DIV */}
                 <div className="flex py-3 flex-row justify-between mx-2">

@@ -12,7 +12,7 @@ export default function SearchCard (props){
             {/* <h1 className="w-max h-max subtitle_semibold">NAME:</h1> */}
             <h1 className="mb-4 title"> {props.title} </h1>
             <h1 className="w-max h-max subtitle_semibold">DESCRIPTION:</h1>
-            <h1 className="mb-4 subtitle"> {props.subtitle} </h1>
+            <h1 className="mb-4 subtitle grey"> {props.subtitle} </h1>
             <div className="mb-4 overflow-x-scroll w-full px-8 flex flex-row items-center">
                 {
                     props.src.map((item)=>{
@@ -25,9 +25,9 @@ export default function SearchCard (props){
             <h1 className="w-max h-max subtitle_semibold">PRICE:</h1>
             <h1 className="mb-4 subtitle"> {"₦" + props.price} </h1>
             <h1 className="w-max h-max subtitle_semibold">RATING:</h1>
-            <img className = "mb-4 w-40" src = {props.star} />
+            <img className = "mb-4 w-40 grey" src = {props.star} />
             <h1 className="w-max h-max subtitle_semibold">SPECIFICATIONS:</h1>
-            <h1 className="mb-4 subtitle"> {props.spec} </h1>
+            <h1 className="mb-4 subtitle grey"> {props.spec} </h1>
             {/* PURCHASE LINK */}
             <a
               href={props.prodlink}

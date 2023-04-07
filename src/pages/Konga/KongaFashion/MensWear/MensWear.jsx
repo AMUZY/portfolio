@@ -2,7 +2,7 @@ import KongaDefault from "../../kongaDefault"
 import { Outlet } from "react-router-dom"
 import ProductArea from "../../../../panels/ProductArea"
 
-export default function MensWear (){
+export default function MensWear (props){
     const name = "Men's Wear"
 
     const subsub = [
@@ -16,7 +16,7 @@ export default function MensWear (){
 
     return (
         <>
-            <ProductArea subsub = {subsub} name = {name}/>
+            <ProductArea allprods = {props.allprods} subsub = {subsub} name = {name}/>
             <Outlet />
         </>
     )

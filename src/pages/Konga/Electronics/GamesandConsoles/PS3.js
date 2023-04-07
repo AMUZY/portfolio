@@ -15,17 +15,10 @@ import four from "../../../../SVGs/4_star.svg";
 import four_half from "../../../../SVGs/4_5_star.svg";
 import five from "../../../../SVGs/5_star.svg";
 
-export default function PS3 (){
+export default function PS3 (props){
 
     const products = [
-        {src : [{id : 0 , img : product2} ,{id : 1, img : product},] , alt : "product" , 
-            title : "ALIENWARE LAPTOP" , 
-                subtitle : "Favour Hyacinth is a great girl. She's everything a woman is meant to be. She's smart, intelligent, and has high moral standards.", 
-                    price : "1,250,000", 
-                        star : five , 
-                            keyfeat : "these are where I will write the key features of the product", 
-                                spec : "these will contain the specifications of the product",
-                                    prodlink : "somewhere", },          
+         
     ]
 
     return (

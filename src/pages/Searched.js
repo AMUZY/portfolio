@@ -9,7 +9,7 @@ import larrow from "../SVGs/l_arrow.svg";
 export default function Searched() {
     var state;
     let count = [1];
-    allprods.map((item) => {
+    allprods.forEach((item) => {
         if (SEARCHED.title === item.title) {
             const newstuff = {
             title: item.title,
@@ -28,10 +28,9 @@ export default function Searched() {
                 {count.map(()=>{
                         if(state){
                             return (
-                                <>
+                                <div key = {uuidv4()}>
                                     <Link className="mb-4 flex flex-row items-center justify-center" to = "/konga/computers-and-accessories/computing/bags-cases-covers" > <img className = "mx-2" src= {larrow}/> Return </Link>
                                     <SearchCard
-                                        key={uuidv4()}
                                         title={state.title}
                                         subtitle={state.subtitle}
                                         src={state.src}
@@ -40,13 +39,13 @@ export default function Searched() {
                                         spec = {state.spec}
                                         prodlink = {state.prodlink}
                                     />
-                                </>
+                                </div>
 
                             )
                         }
                         else{
                             return (
-                                <Link className="mb-4 flex flex-row items-center justify-center" to = "/konga/computers-and-accessories/computing/bags-cases-covers" > <img className = "mx-2" src= {larrow}/> Return </Link>
+                                <Link key = {uuidv4()} className="mb-4 flex flex-row items-center justify-center" to = "/konga/computers-and-accessories/computing/bags-cases-covers" > <img className = "mx-2" src= {larrow}/> Return </Link>
                             )
                         }
                     })

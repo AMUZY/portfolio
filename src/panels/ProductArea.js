@@ -101,7 +101,7 @@ export default function ProductArea (props){
                         }
                     </div>
                     {/* SEARCH DIV */}
-                        <div className = "relative h-max flex-grow flex flex-row my-3 w-full lg:w-auto md:min-w-[30%] flex-grow-0 ">
+                        <div className = "relative h-max flex-grow flex flex-row my-3 w-full xl:w-auto ">
 
                             {/* SEARCH BAR */}
                             <div className = "relative flex-grow mr-[5px] h-max ">
@@ -127,7 +127,7 @@ export default function ProductArea (props){
                                             <button type = "button" key = {uuidv4()} onClick = {()=>{
                                                 setCheck(item);
                                                 setSearch("hidden")
-                                            }} className="flex flex-nowrap justify-start text grey mx-1 my-1"> {item} </button>
+                                            }} className="flex flex-row grey mx-1 my-1"> {item} </button>
                                         )
                                     })
                                 }
