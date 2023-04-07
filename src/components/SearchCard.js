@@ -4,6 +4,9 @@ import "../font.scss";
 import "../navbar.scss";
 import "../card.scss";
 import {v4 as uuidv4} from "uuid"
+import { LazyLoadImage } from "react-lazy-load-image-component"
+import 'react-lazy-load-image-component/src/effects/blur.css';
+// import placeholder from "../PICTURES/placeholder.png"
 
 
 export default function SearchCard (props){
@@ -13,11 +16,11 @@ export default function SearchCard (props){
             <h1 className="mb-4 title"> {props.title} </h1>
             <h1 className="w-max h-max subtitle_semibold">DESCRIPTION:</h1>
             <h1 className="mb-4 subtitle grey"> {props.subtitle} </h1>
-            <div className="mb-4 overflow-x-scroll w-full px-8 flex flex-row items-center">
+            <div className="mb-4 overflow-x-scroll max-w-full h-auto px-8 flex flex-row items-center">
                 {
                     props.src.map((item)=>{
                         return (
-                            <img key = {uuidv4()} src = {item.img} className="mx-2 w-auto xl:w-1/2 h-auto"/>
+                            <LazyLoadImage effect="blur" key = {uuidv4()} src = {item.img} placeholderSrc= {item.img} className="searchlazyimg"/>
                         )
                     })
                 }

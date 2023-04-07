@@ -7,6 +7,7 @@ import x from "../SVGs/circle_x_btn.svg"
 import { NavLink, useNavigate } from "react-router-dom"
 import {v4 as uuidv4} from "uuid"
 import { useState } from "react"
+import { useMemo } from "react"
 // import { useParams } from "react-router-dom"
 
 export var SEARCHED = {
@@ -20,13 +21,13 @@ export default function ProductArea (props){
     const subsub = props.subsub;
     const [search,setSearch] = useState("hidden")
     const [check,setCheck] = useState("");
-    const [showsearch,setShowsearch] = useState([]);
+    const [filtereditems,setFiltereditems] = useState([]);
     const [xbtn,setXbtn] = useState("hidden");
 
 
     // NEW ARRAY THAT ELEMINATES DUPLICATES IN THE SHOWSEACH ARRAY
     
-    let finalsearch = [...new Set(showsearch.map((item)=>{return item.title }))];
+    let finalsearch = [...new Set(filtereditems.map((item)=>{return item.title }))];
     console.log(finalsearch);
 
     // FUNCTION THAT SETS SEARCH TO HIDDEN ON CALL OF THE EXPORT FUNCTION CLOSESEARCH ABOVE
@@ -48,7 +49,7 @@ export default function ProductArea (props){
         else{
             setXbtn("hidden")
         }
-        setShowsearch(prod.filter((item)=>{
+        setFiltereditems(prod.filter((item)=>{
             return(
                 item.title.toLowerCase().includes(check.toLowerCase())
             )
@@ -100,15 +101,20 @@ export default function ProductArea (props){
                             })
                         }
                     </div>
-                    {/* SEARCH DIV */}
+                    {/* SEARCH DIV FORM*/}
                         <div className = "relative h-max flex-grow flex flex-row my-3 w-full xl:w-auto ">
 
                             {/* SEARCH BAR */}
                             <div className = "relative flex-grow mr-[5px] h-max ">
                                 <input type = "text"
                                     value={check}
+                                    onKeyUp={(e)=>{
+                                        if(e.code === "Enter"){
+                                            gosearch(); 
+                                        }
+                                    }}  
                                     onBlur={()=>{
-                                        // setShowsearch([]);
+                                        // setFiltereditems([]);
                                         // console.log("not equal to");
                                         // setCheck("");    
                                     }}

@@ -1,14 +1,21 @@
-// @keyframes slide {
-//     0% {
-
-//     }
-//     50% {
-
-//     }
-//     100% {
-
-//     }
-// }
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+        transition: .2s ease-in-out;
+    }
+    50% {
+        transform: translateX(-10%);
+        transition: .3s ease-in-out;
+    }
+    80% {
+        transform: translateX(10%);
+        transition: .3s ease-in-out;
+    }
+    100% {
+        transform: translateX(0);
+        transition: .2s ease-in-out;
+    }
+}
 
 @keyframes popup {
     0% {
@@ -20,6 +27,14 @@
     100% {
         transform : scale(1);
     }
+}
+
+.searchlazyimg {
+    margin-left : 8px;
+    margin-right : 8px;
+    width : 300px;
+    max-width: 90dvw;
+    animation : slide 2s;
 }
 
 .maincard {
@@ -55,6 +70,11 @@
         transform: translateX(201px);
     }
     
+    .searchlazyimg {
+        width : 500px;
+        max-width : 1000px;
+    }
+
     .imgright {
         transform: translateX(-201px);
     }

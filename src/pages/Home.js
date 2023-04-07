@@ -4,9 +4,10 @@ import "../font.scss"
 import "../home.scss"
 import KongaDefault from "./Konga/kongaDefault"
 import { NavLink } from "react-router-dom"
-import {v4 as uuidv4} from "uuid"
+import {v4 as uuidv4} from "uuid" 
+import { LazyLoadImage } from "react-lazy-load-image-component"
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
-import Card from "../components/Card"
 
 // IMPORTED SVG
 import logo from "../SVGs/logo.svg"
@@ -24,6 +25,7 @@ import arrow from "../SVGs/longarrow.svg"
 import jumia from "../PICTURES/jumia_link_desktop.jpg"
 import konga from "../PICTURES/konga_link_desktop.jpg"
 import expertnaire from "../PICTURES/expertnaire_link_desktop.jpg"
+import { useEffect } from "react"
 
 
 
@@ -64,15 +66,12 @@ export default function Home(props) {
                 </div>
             </div>
 
-
             {/* IMAGE DIV */}
             <div className="max-w-[92%] mt-10 mb-16">
-                <picture>
-                    <source srcSet = {picdesktop} media = "(min-width : 1440px)"/>
-                    <source srcSet = {pictablet} media= "(min-width : 768px)"/>
-                    <img className="mx-auto" src = {picmobile} alt = "home pic"/>
-                </picture>
+                    <LazyLoadImage src = {picdesktop} className="mx-auto" placeholderSrc = {picdesktop} effect= "blur" alt = "home pic"/>
             </div>
+
+    
 
 
             {/* MAKE AN ORDER */}

@@ -24,6 +24,7 @@ import five from "../SVGs/5_star.svg";
 // IMPORTED REACT COMPONENTS
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+
 // import { useEffect } from "react"
 
 export default function Card(props) {

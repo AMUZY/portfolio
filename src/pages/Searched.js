@@ -29,7 +29,7 @@ export default function Searched() {
                         if(state){
                             return (
                                 <div key = {uuidv4()}>
-                                    <Link className="mb-4 flex flex-row items-center justify-center" to = "/konga/computers-and-accessories/computing/bags-cases-covers" > <img className = "mx-2" src= {larrow}/> Return </Link>
+                                    <Link className="mb-4 flex flex-row items-center justify-center" to = "/konga/computers-and-accessories/computing/bags-cases-covers" > <img className = "mx-2" src= {larrow}/> Return to view more </Link>
                                     <SearchCard
                                         title={state.title}
                                         subtitle={state.subtitle}
@@ -45,7 +45,7 @@ export default function Searched() {
                         }
                         else{
                             return (
-                                <Link key = {uuidv4()} className="mb-4 flex flex-row items-center justify-center" to = "/konga/computers-and-accessories/computing/bags-cases-covers" > <img className = "mx-2" src= {larrow}/> Return </Link>
+                                <Link key = {uuidv4()} className="mb-4 flex flex-row items-center justify-center" to = "/konga/computers-and-accessories/computing/bags-cases-covers" > <img className = "mx-2" src= {larrow}/> Return to view more </Link>
                             )
                         }
                     })
