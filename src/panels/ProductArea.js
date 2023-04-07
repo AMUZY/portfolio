@@ -127,7 +127,7 @@ export default function ProductArea (props){
                                             <button type = "button" key = {uuidv4()} onClick = {()=>{
                                                 setCheck(item);
                                                 setSearch("hidden")
-                                            }} className="flex flex-row grey mx-1 my-1"> {item} </button>
+                                            }} className="flex flex-row text grey mx-1 my-1"> {item} </button>
                                         )
                                     })
                                 }
