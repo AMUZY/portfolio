@@ -521,9 +521,9 @@ export var ITEMS = [];
       ],
       "product",
       
-        "Tecno Camon 18i(cg6)-6.6\" Hd+ -128GB ROM - 4GB RAM -48mp/8mp-5000mAh-4g Lte- Grey",
+      "Tecno Camon 18i(cg6)-6.6\" Hd+ -128GB ROM - 4GB RAM -48mp8mp-5000mAh-4g Lte- Grey",
       
-        "The Tecno Camon 18i (CG6) features a 6.6-inch HD+ display, 128GB of internal storage, 4GB of RAM, dual rear cameras with 48MP and 8MP lenses, a 5000mAh battery, and support for 4G LTE connectivity. It comes in the color grey.",
+      "The Tecno Camon 18i (CG6) features a 6.6-inch HD+ display, 128GB of internal storage, 4GB of RAM, dual rear cameras with 48MP and 8MP lenses, a 5000mAh battery, and support for 4G LTE connectivity. It comes in the color grey.",
       "99,000",
       four,
       // keyfeat: "these are where I will write the key features of the product",
