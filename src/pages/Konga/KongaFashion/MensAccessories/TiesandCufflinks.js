@@ -14,11 +14,14 @@ import three_half from "../../../../SVGs/3_5_star.svg";
 import four from "../../../../SVGs/4_star.svg";
 import four_half from "../../../../SVGs/4_5_star.svg";
 import five from "../../../../SVGs/5_star.svg";
+import { item26, item35, item36, item37 } from "../../Konga";
 
 export default function TiesandCufflinks (){
 
     const products = [
-         
+        item35,
+        item36,
+        item37,
     ]
 
     return (

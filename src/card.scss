@@ -78,4 +78,14 @@
     .imgright {
         transform: translateX(-201px);
     }
+
+    .searchimgCont {
+        scrollbar-width: none;
+    }
+
+    .searchimgCont ::-webkit-scrollbar{
+        display: none;
+        width: 0 !important
+    }
+    
 }

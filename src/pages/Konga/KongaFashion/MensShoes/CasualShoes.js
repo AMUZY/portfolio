@@ -14,11 +14,15 @@ import three_half from "../../../../SVGs/3_5_star.svg";
 import four from "../../../../SVGs/4_star.svg";
 import four_half from "../../../../SVGs/4_5_star.svg";
 import five from "../../../../SVGs/5_star.svg";
+import { item38, item39, item40, item41 } from "../../Konga";
 
 export default function CasualShoes (){
 
     const products = [
-         
+        item38,
+        item39,
+        item40,
+        item41,
     ]
 
     return (

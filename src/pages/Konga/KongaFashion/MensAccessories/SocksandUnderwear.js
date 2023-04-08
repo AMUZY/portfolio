@@ -14,11 +14,13 @@ import three_half from "../../../../SVGs/3_5_star.svg";
 import four from "../../../../SVGs/4_star.svg";
 import four_half from "../../../../SVGs/4_5_star.svg";
 import five from "../../../../SVGs/5_star.svg";
+import { item33, item34 } from "../../Konga";
 
 export default function SocksandUnderwear (){
 
     const products = [
-        
+        item33,
+        item34,
     ]
 
     return (

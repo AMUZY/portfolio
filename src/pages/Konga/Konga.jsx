@@ -835,6 +835,693 @@ export var ITEMS = [];
   )
   ITEMS.push(item29);
 
+
+  export const item30 = new Item(
+    [
+        {
+          id: 0,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/Z/N/143607_1569603983.jpg",
+        },
+        {
+          id: 1,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/E/S/143607_1569604028.jpg",
+        },
+        {
+          id: 2,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/W/N/143607_1569604060.jpg",
+        },
+      ],
+       "product",
+       "CAP-Best Face Cap",
+      
+      "Men's face cap.",
+       "2,700",
+       four,
+       `Item Type: Baseball Cap
+       Gender: Unisex
+       Colour: Black
+       Strap Type: Adjustable back
+       Hat Size: One Size Fits All`,
+     "https://www.konga.com/product/cap-best-face-cap-4485302?k_id=AMUZY",
+  )
+  ITEMS.push(item30);
+
+  export const item31 = new Item(
+    [
+        {
+          id: 0,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/I/S/61262_1570786990.jpg",
+        },
+        {
+          id: 1,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/N/I/61262_1570061534.jpg",
+        },
+      ],
+       "product",
+       "Adex Silk Durag - Black",
+      
+      "Men's face cap.",
+       "1,999",
+       four,
+       `-Durable 
+        Colour - Black
+        Brand	- Adex
+       -Easy to wear 
+       -Affordable price `,
+     "https://www.konga.com/product/adex-silk-durag-black-4498714?k_id=AMUZY",
+  )
+  ITEMS.push(item31);
+
+  export const item32 = new Item(
+    [
+        {
+          id: 0,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/P/Y/85382_1636409250.jpg",
+        },
+      ],
+       "product",
+       "Plain Face/baseball Cap - Blue",
+      
+      "Men's snapback like, baseball cap. Colour blue",
+       "2,500",
+       four,
+       `1. It is very fashionable and unique
+
+       2. Sun-shade and sunscreen
+       
+       3. Universal size suitable for adult
+       
+       4. Take it, you will be a beautiful beautiful scenery line in the crowd
+       
+       5. It is a good gift for your lover, family, friend and coworkers
+       
+       6- Color Blue`,
+     "https://www.konga.com/product/plain-face-baseball-cap-blue-5517023?k_id=AMUZY",
+  )
+  ITEMS.push(item32);
+
+  export const item33 = new Item(
+    [
+        {
+          id: 0,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/H/A/169767_1584523889.jpg",
+        },
+      ],
+       "product",
+       "Unisex Ankle Socks - Six Pairs-in-1",
+      
+      "Unisex Ankle Socks - Six Pairs-in-1 are a pack of versatile and comfortable socks that can be worn by both men and women. They come in a set of six pairs and are designed to fit snugly around the ankle, providing all-day comfort and support. They are perfect for everyday wear, sports activities, and casual occasions.",
+       "1,500",
+       five,
+       `6 Pairs
+       Easy to wear  
+       Easy to maintain  
+       Classy
+       Stylish 
+       Fashionable
+       Affordable
+       Black/White/Ash`,
+     "https://www.konga.com/product/unisex-ankle-socks-six-pairs-in-1-4678178?k_id=AMUZY",
+  )
+  ITEMS.push(item33);
+
+  export const item34 = new Item(
+    [
+        {
+          id: 0,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/M/i/Miracle-Copper-Infused-Anti-Fatigue-Compression-Socks-3736531.jpg",
+        },
+        {
+          id: 1,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/M/i/Miracle-Copper-Infused-Anti-Fatigue-Compression-Socks-3736532.jpg",
+        },
+        {
+          id: 2,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/M/i/Miracle-Copper-Infused-Anti-Fatigue-Compression-Socks-3736530.jpg",
+        },
+      ],
+       "product",
+       "Dr Miracle's Miracle Copper-Infused Anti-Fatigue Compression Socks",
+      
+      "Reliever Compression socks",
+       "2,500",
+       five,
+       `Brand	- Dr Miracle's
+       These specially designed, graduated compression socks have copper infused fibers to help enhance circulation, reduce swelling, ease pains, and soothe tired, aching legs and feet. Moisture-wicking fibers help keep feet dry, healthy and comfortable, while the anti-microbial benefits of copper naturally control odor-causing bacteria and fungi. Great for men or women. Specify size: Small fits Womens shoe sizes 6-9 1/2 and Mens 5- 9 1/2. Large/Xlarge fits Womens 10-13 1/2 and Mens 10- 12 1/2. Machine Washable Cold Water`,
+     "https://www.konga.com/product/dr-miracles-miracle-copper-infused-anti-fatigue-compression-socks-2193222?k_id=AMUZY",
+  )
+  ITEMS.push(item34);
+
+  export const item35 = new Item(
+    [
+        {
+          id: 0,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/P/F/121150_1652044062.jpg",
+        },
+        {
+          id: 1,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/G/S/121150_1652044092.jpg",
+        },
+        {
+          id: 2,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/B/F/121150_1652044141.jpg",
+        },
+        {
+          id: 3,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/J/D/121150_1652044352.jpg",
+        },
+        {
+          id: 4,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/R/H/121150_1652044620.jpg",
+        },
+      ],
+       "product",
+       "Anchor Cufflinks - Silver",
+      
+      `Colour	Silver
+      Glittering Appearance and Non TarnishUnique classic cufflinks complements any outfit. Whether its wedding or a special occasion, show off your style when using these gorgeous cufflinks.
+      Unique and excellent quality, light-weight
+      An ideal gift for yourself and your friends.`,
+
+       "3,500",
+       four,
+       `Light weight 
+       Unique 
+       Non tarnish 
+       Durable `,
+     "https://www.konga.com/product/anchor-cufflinks-silver-5716184?k_id=AMUZY",
+  )
+  ITEMS.push(item35);
+
+  export const item36 = new Item(
+    [
+        {
+          id: 0,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/Q/F/68096_1628192615.jpg",
+        },
+      ],
+       "product",
+       "Men's Classic Cufflinks - Black",
+      
+      `100% high quality!!
+      Modern cufflinks will complement any outfit. Whether it's a wedding or a special occasion, show off your modern style when sporting these gorgeous cufflinks.
+      Excellent quality
+      Light-weight and everlasting shine
+      The must-have accessory for well-dressed wardrobe
+      Perfect for any occasions: Office, Meetings, Events, Anniversaries etc, elevating fashionable image to your personal appearance
+      An ideal gift for your boyfriend, father or relatives`,
+
+       "3,995",
+       four,
+       `Cuff Links
+       Men
+       Unique
+       Durable
+       Nice
+       Awesome
+       No Box`,
+     "https://www.konga.com/product/mens-classic-cufflinks-black-5369378?k_id=AMUZY",
+  )
+  ITEMS.push(item36);
+
+  export const item37 = new Item(
+    [
+        {
+          id: 0,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/J/B/187502_1626187832.jpg",
+        },
+      ],
+       "product",
+       "Men's Cufflinks",
+      
+      `This is the best cufflinks.it well suits your dressing and can be used on any ocassion.sold at the best price on De rozzy store.`,
+
+       "3,200",
+       four,
+       `Cuff Links
+       Men
+       Unique
+       Durable
+       Nice
+       Awesome
+       No Box`,
+     "https://www.konga.com/product/mens-cufflinks-5341522?k_id=AMUZY",
+  )
+  ITEMS.push(item37);
+
+  export const item38 = new Item(
+    [
+        {
+          id: 0,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/C/B/160686_1571479313.jpg",
+        },
+        {
+          id: 1,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/C/G/160686_1571479335.jpg",
+        },
+        {
+          id: 2,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/N/Z/160686_1571479352.jpg",
+        },
+      ],
+       "product",
+       "Fashion House Men's Suede Leather Ankle Boots - Blue",
+      
+      `Suede Ankle Boots profile in rich chestnut suede. It has an open lacing system which ensures a proper fit at all times. You can use it to achieve different fashion looks by choosing the right combination of shirts and trousers. Wearing it with a well-fitted blazer, long sleeve shirt and chinos will give you an extra smart casual look.
+
+      A must have for every gentle man. Sizes 9 = 42, 11= 44,`,
+
+       "3,200",
+       four,
+       `Brand	Fashion House
+       Fastening	Lace-up
+       Heel Type	Not Applicable
+       Shoe Fit	True to Size`,
+     "https://www.konga.com/product/fashion-house-mens-suede-leather-ankle-boots-blue-4512153?k_id=AMUZY",
+  )
+  ITEMS.push(item38);
+
+  export const item39 = new Item(
+    [
+        {
+          id: 0,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/Q/Q/164518_1654171509.jpg",
+        },
+        {
+          id: 1,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/N/V/164518_1654171523.jpg",
+        },
+        {
+          id: 2,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/X/Z/164518_1654171544.jpg",
+        },
+      ],
+       "product",
+       "Men's Casual Sneakers",
+      
+      `CASUAL SNEAKERS - Compared to traditional sneakers, this sneakers are made to be a light and stable wearable accessory to help you easily capture life's moments.
+      COMFORT FLATS - Comfort outsole for traction. These flat shoes are specially designed to bring every one who buys comfort.
+      EASY TO SLIP ON - Elastic “V” for easy on/off. Why let the shoes getting in your way while you walk? Get one pair of this MEN'S and women's flat shoe and experience convience in putting on and taking off.
+      CLASSIC STYLE - This casual Slip on comes in classic white color. With this gorgeous and stable designs, flats go well with jeans, shorts, skirts, chinos and your everyday casual wear`,
+
+       "4,999",
+       four,
+       `Feels very comfortable
+       easy to wear (just slip on)
+       Not found in the market
+       more than 2 years guarantee
+       Breathable sole`,
+     "https://www.konga.com/product/mens-casual-sneakers-5748708?k_id=AMUZY",
+  )
+  ITEMS.push(item39);
+
+  export const item40 = new Item(
+    [
+        {
+          id: 0,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/F/T/187130_1636559495.jpg",
+        },
+        {
+          id: 1,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/P/I/187130_1636559537.jpg",
+        },
+      ],
+       "product",
+       "Unisex Sneaker",
+      
+      `Toe style: round head
+      Closed: lace-up
+      Sole Material: RubberÈ`,
+
+       "12,000",
+       four,
+       `US 8 = UK 7 = EU=40.5/CN 40 = Feet length 25cm; 
+       US 8.5 = UK7.5 = EU/CN 41 = Feet length 25.5cm; 
+       US 9 = UK 8 = EU/CN 42 = Feet length 26cm; 
+       US 10 = UK 9 = EU/CN 43 = Feet length 26.5cm; 
+       US 10.5 = UK 9.5 = EU/CN 44 = Feet length 27cm; 
+       US 11.5 = UK 10 = EU/CN 45 = Feet length 27.5cm;
+       US 12 = UK 11 = EU/CN 46 = Feet length 28cm;
+       Fashionable & Comfortable.
+       This Shoes is very fashion and popular.
+       This is very popular design, we believe you will love it very much!
+       Out sole Material:Rubber`,
+     "https://www.konga.com/product/unisex-sneaker-5220377?k_id=AMUZY",
+  )
+  ITEMS.push(item40);
+
+  export const item41 = new Item(
+    [
+      {
+        id: 0,
+        img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/V/N/143826_1635837202.jpg",
+      },
+      {
+        id: 1,
+        img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/T/F/143826_1635837098.jpg",
+      },
+      {
+        id: 2,
+        img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/W/K/143826_1635837158.jpg",
+      },
+      {
+        id: 3,
+        img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/A/Y/143826_1635837237.jpg",
+      },
+      ],
+       "product",
+       "Men Classic Sneakers",
+      
+      `This Smart Classic Sneakers is comfy and allows you the luxury of getting a lasting wear all day.
+      Suitable for men and women. Lightweight and affordable.
+      Has balanced soles and comfy insoles. 
+      Drip all day with comfort.`,
+
+       "7,500",
+       four,
+       `Top notch
+       Classic
+       Everlasting
+       Rubber sole
+       Canvas material
+       Strong`,
+     "https://www.konga.com/product/men-classic-sneakers-5504755?k_id=AMUZY",
+  )
+  ITEMS.push(item41);
+
+
+  export const item42 = new Item(
+    [
+      {
+        id: 0,
+        img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/L/o/Loafers-With-Belt-Detail---Black-6136812_1.jpg",
+      },
+      {
+        id: 1,
+        img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/L/o/Loafers-With-Belt-Detail---Black-6136813_1.jpg",
+      },
+      {
+        id: 2,
+        img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/L/o/Loafers-With-Belt-Detail---Black-6136814_1.jpg",
+      },
+      {
+        id: 3,
+        img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/L/o/Loafers-With-Belt-Detail---Black-6136815_1.jpg",
+      },
+      ],
+       "product",
+       "O'tega Loafers With Belt Detail - Black",
+      
+      `Brand	O'tega
+      Fastening	Slip-on
+      Heel Type	Flat
+      Shoe Fit	True to Size
+      Loafers With Belt Detail is made from superior quality upper leather and inner linining, the sole is ready made real rubber, its a very comfortable casual shoe.`,
+
+       "9,999",
+       four,
+       `Style: loafers
+
+       low heel
+       
+       Colour: Black`,
+     "https://www.konga.com/product/otega-loafers-with-belt-detail-black-2039094?k_id=AMUZY",
+  )
+  ITEMS.push(item42);
+
+  export const item43 = new Item(
+    [
+      {
+        id: 0,
+        img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/S/i/Simple-Lace-Up-Formal-Shoes-6750037_1.jpg",
+      },
+      {
+        id: 1,
+        img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/S/i/Simple-Lace-Up-Formal-Shoes-6750038_1.jpg",
+      },
+      {
+        id: 2,
+        img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/S/i/Simple-Lace-Up-Formal-Shoes-6750039_1.jpg",
+      },
+      {
+        id: 3,
+        img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/S/i/Simple-Lace-Up-Formal-Shoes-6750040_1.jpg",
+      },
+      {
+        id: 4,
+        img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/S/i/Simple-Lace-Up-Formal-Shoes-6750041_1.jpg",
+      },
+      ],
+       "product",
+       "O'tega Simple Lace-Up Formal Shoes",
+      
+      `Simple lace formal lace-up is made from top quality upper and inner leather,the sole is ready made rubber with a low heel,this shoe is light and very comfortable.`,
+
+       "11,750",
+       four,
+       `colour: black
+       material: leather
+       Sole:rubber
+       Upper:leather`,
+     "https://www.konga.com/product/otega-simple-lace-up-formal-shoes-1468936?k_id=AMUZY",
+  )
+  ITEMS.push(item43);
+
+  export const item44 = new Item(
+    [
+        {
+          id: 0,
+          img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/G/S/56270_1639131264.jpg",
+        },
+      ],
+       "product",
+       "Men Skin Design Patent Hook Shoe - Black",
+      
+      `The perfect skin Top Shoe with Hook design.
+      Can be worn to weddings, parties, office, formal and informal events.
+      its glossy patent leather makes the shoe eye catching.`,
+
+       "8,999",
+       four,
+       `Colour : Black
+       Event : Formal and Informal
+       New
+       Comfortable and non slippery
+       Value for your money
+      Fastening	Slip-on
+      Heel Type	Flat
+      Shoe Fit	Wide fit`,
+     "https://www.konga.com/product/men-skin-design-patent-hook-shoe-black-5557465?k_id=AMUZY",
+  )
+  ITEMS.push(item44);
+
+  export const item45 = new Item(
+    [
+      {
+        id: 0,
+        img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/W/L/169529_1586038754.jpg",
+      },
+      {
+        id: 1,
+        img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/L/Z/169529_1586038965.jpg",
+      },
+      {
+        id: 2,
+        img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/L/G/169529_1586039013.jpg",
+      },
+      ],
+       "product",
+       "Glossy Men's Shoe",
+      
+      `Have you ever desired to wear an executive and classy shoe that gives you an outstanding outfits every time? Have you ever dreamed of wearing a shoe that in highly executive and classy with glossy touch?  I want to sincerely recommend this shoe for you. `,
+
+       "9,000",
+       five,
+       `Highly executive, outstanding and exceptionally distinguishing type of shoe
+       Fashionable & Comfortable for gentlemen who understand fashion.
+       Very light and extremely easy to wear and remove
+       Excellent craftsmanship. This will make you stand out anywhere. 
+       This shoe is made with great attention to details.
+       This is very unique design, we believe you will love it very much! Upper material made of leather. Sole is well made and uniquely designed.`,
+     "https://www.konga.com/product/glossy-mens-shoe-4689122?k_id=AMUZY",
+  )
+  ITEMS.push(item45);
+
+  export const item46 = new Item(
+    [
+      {
+        id: 0,
+        img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/D/C/168938_1597495735.jpg",
+      },
+      {
+        id: 1,
+        img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/L/E/168938_1597495704.jpg",
+      },
+      {
+        id: 2,
+        img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/L/H/168938_1597495721.jpg",
+      },
+      ],
+       "product",
+       "Afre Blue Spray Suede Shoe Polish",
+      
+      `Afre suede shoe polish keeps your shoe shining and lasts longer than expected. It makes your feet stand out among others. It maintains the beauty of the shoe at the new level. It makes the shoe shining and different as the case may be. It is good to buy and sell at your store or shop. It can be added as a gift to your man. Every man must have it to maintain the beauty and longevity of the footwear. It does not allow the material of your shoe to easily fade out.`,
+
+       "2,000",
+       four,
+       `New
+       Spray
+       Shoe Polish
+       Suede spray
+       shoe restorer 
+       Super cool
+       Blue`,
+     "https://www.konga.com/product/afre-blue-spray-suede-shoe-polish-4876146?k_id=AMUZY",
+  )
+  ITEMS.push(item46);
+
+  export const item47 = new Item(
+    [
+      {
+        id: 0,
+        img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/T/r/Travel-Shoe-Care-Kit-1182102_4.jpg",
+      },
+      {
+        id: 1,
+        img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/T/r/Travel-Shoe-Care-Kit-1182103_4.jpg",
+      },
+      {
+        id: 2,
+        img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/T/r/Travel-Shoe-Care-Kit-1182104_4.jpg",
+      },
+      ],
+       "product",
+       "Travel Shoe Care Kit",
+      
+      `Shoe care kit is essential for every traveller or someone always on the road. Its comes with shoe polish, shoe brush, shoe shine, lint brush and shoe horn. .all in a zipper pouch`,
+
+       "3,500",
+       five,
+       `shoe care`,
+     "https://www.konga.com/product/travel-shoe-care-kit-1480043?k_id=AMUZY",
+  )
+  ITEMS.push(item47);
+
+  export const item48 = new Item(
+    [
+      {
+        id: 0,
+        img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/V/N/140823_1598207321.jpg",
+      },
+      ],
+       "product",
+       "Fashion Front Black Classy Male Basket Slips",
+      
+      `Real Footwears is one of its kind when dealing with quality, classic, unique, long lasting and affordable footwears. 
+      Our products are made of the best quality materials which makes us unique in what we do.
+      We have different quality designs for both male and female which makes you stand out and gives your feet the best classy look. `,
+
+       "8,550",
+       four,
+       `Classy and Unique handmade design. 
+       Made of High Quality upper leather. 
+       Made of high quality leather lined insole. 
+       Made of high quality nora outer sole and crape top heel. `,
+     "https://www.konga.com/product/fashion-front-black-classy-male-basket-slips-4892630?k_id=AMUZY",
+  )
+  ITEMS.push(item48);
+
+  export const item49 = new Item(
+    [
+      {
+        id: 0,
+        img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/I/Z/157868_1627739090.jpg",
+      },
+      {
+        id: 1,
+        img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/C/H/157868_1627858448.jpg",
+      },
+      ],
+       "product",
+       "Unisex Casual Flip-flops Slippers- Dark Brown",
+      
+      `Men's Summer Flip-flops Slippers Beach Sandals Indoor&Outdoor Casual Shoes
+      Gener: Men
+      
+      Material:EVA
+      
+      Sole Material:EVA
+      
+      Style: Fashion,Casual
+      
+      Item Type:Flip-flops
+      
+      Heel Type: Flat with
+      
+      Appropriate Season: Spring,Summer
+      
+      Occasion: Indoor&Outdoor
+      
+      Package: 1 Pair Flip-flop`,
+
+       "3,200",
+       four,
+       `Style:Leisure
+       100%  new and high quality
+       Gender:men
+       Occasion:Home,Beach
+       Durable`,
+     "https://www.konga.com/product/unisex-casual-flip-flops-slippers-dark-brown-5365435?k_id=AMUZY",
+  )
+  ITEMS.push(item49);
+
+  export const item50 = new Item(
+    [
+      {
+        id: 0,
+        img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/X/I/157868_1622389937.jpg",
+      },
+      {
+        id: 1,
+        img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/I/F/157868_1622389964.jpg",
+      },
+      {
+        id: 2,
+        img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/V/D/157868_1622390015.jpg",
+      },
+      ],
+       "product",
+       "Men's Summer Flip-flops - Grey",
+      
+      `Men's Summer Flip-flops Slippers Beach Sandals Indoor&Outdoor Casual Shoes
+      Gener: Men
+      
+      Material:EVA
+      
+      Sole Material:EVA
+      
+      Style: Fashion,Casual
+      
+      Item Type:Flip-flops
+      
+      Heel Type: Flat with
+      
+      Appropriate Season: Spring,Summer
+      
+      Occasion: Indoor&Outdoor
+      
+      Package: 1 Pair Flip-flop`,
+
+       "3,200",
+       four,
+       `Indoor&Outdoor Casual Slippers-Gray
+       Comfortable for beach wear
+       Type- Flip Flop
+       Easy to carry`,
+     "https://www.konga.com/product/mens-summer-flip-flops-grey-5271885?k_id=AMUZY",
+  )
+  ITEMS.push(item50);
+
 // ALL ITEMS END
 
 // 

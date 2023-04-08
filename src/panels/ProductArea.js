@@ -125,7 +125,7 @@ export default function ProductArea (props){
                             </div>
 
                             {/* DIV WHERE ITEMS SHOW UP */}
-                            <div className={"absolute z-[1] overflow-scroll white_col rounded-lg p-2 flex flex-col flex-nowrap left-0 translate-y-[100%] right-0 bottom-[-10%] max-h-[412px] " + search}> 
+                            <div className={"absolute z-[1] searcheddiv overflow-y-scroll white_col rounded-lg p-2 flex flex-col flex-nowrap left-0 translate-y-[100%] right-0 bottom-[-10%] max-h-[412px] " + search}> 
                                 {
                                     finalsearch.map((item)=>{
                                         return (
