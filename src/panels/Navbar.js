@@ -117,6 +117,9 @@ export default function Navbar(props){
                     className="mx-2"
                     to = "/">
                         <img className = "w-[20px] md:w-[25px] xl:w-[30px]" src = {homeicon} alt = "home icon" />
+                        <h2 className="category">
+                                Home
+                            </h2>
                     </Link>
                         {/* <img className = "h-full" src = {venmobile} alt = "vendor"/> */}
                 </div>

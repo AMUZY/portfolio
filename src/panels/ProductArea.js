@@ -100,7 +100,7 @@ export default function ProductArea (props){
                             })
                         }
                     </div>
-                    {/* SEARCH DIV FORM*/}
+                    {/* SEARCH DIV */}
                         <div className = "relative h-max flex-grow flex flex-row my-3 w-full xl:w-auto ">
 
                             {/* SEARCH BAR */}

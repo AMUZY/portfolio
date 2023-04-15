@@ -8,10 +8,9 @@ useParams,
 } from "react-router-dom"
 
 import Home from "./pages/Home";
-// import SubCat from "./panels/SubCat";
-// import ProductArea from "./panels/ProductArea"
 import Konga from "./pages/Konga/Konga";
 import Jumia from "./pages/Jumia";
+import Expert from "./pages/Expertnaire/Expert";
 import SubCat from "./panels/SubCat";
 import ProductArea from "./panels/ProductArea";
 import Products from "./panels/Products";
@@ -239,6 +238,8 @@ import OtherCategories from "../src/pages/Konga/OtherCategories/OtherCategories"
             import Sportswear from "../src/pages/Konga/OtherCategories/SportsandFitness/Sportswear"
             import Swimming from "../src/pages/Konga/OtherCategories/SportsandFitness/Swimming"
 import Searched from "./pages/Searched";
+import ExpProducts from "./pages/Expertnaire/Products/ExpProducts";
+import ExpSearched from "./pages/ExpSearched";
 
 // END OF KONGA PAGES IMPORT
 
@@ -550,11 +551,17 @@ export default function App() {
                     </Route>
                 </Route>
               </Route>
-              {/* JUMIA ROUTE */}
-                  {/* BEGIN HERE */}
-              {/* EXPERTNAIRE ROUTE */}
-                  {/* BEGIN HERE */}
+                  {/* KONGA SEARCH PAGE */}
                   <Route path = "/konga/search/:searched" element = {<Searched />} />
+                  {/* JUMIA ROUTE */}
+                  {/* BEGIN HERE */}
+                  {/* EXPERTNAIRE ROUTE */}
+                  <Route path = "/expertnaire" element = {<Expert />}>
+                        <Route path = "/expertnaire/exp-products" element = {<ExpProducts />} />
+                  </Route>
+                  {/* EXPERTNAIRE SEARCH PAGE */}
+                  <Route path = "/expertnaire/search/:searched" element = {<ExpSearched />} />
+                  {/* NOT FOUND PAGE */}
                   <Route path = "*" element = {<NotFound />} />
             </Routes>
       </Router>
