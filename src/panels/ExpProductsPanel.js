@@ -107,7 +107,7 @@ export default function ExpProductsPanel(props){
                             // setCheck("");    
                         }}
                         onChange={handleChange}
-                        className="w-full h-full input rounded-lg border-[1px] border-gray-300 px-4 py-2 text overflow-hidden" placeholder="Search All Categories" />
+                        className="w-full h-full input rounded-lg border-[1px] border-gray-300 px-4 py-2 text overflow-hidden" placeholder="Search All Products" />
 
                     {/* BUTTON TO CLEAR SEARCH BAR */}
                     <button className = {"absolute h-[98%] top-0 right-1 bottom-0 nohightlight " + xbtn} onClick={()=>{setCheck("");setXbtn("hidden")}}><img className = "bg-white w-[25px]" src = {x} alt = "delete button"/></button>
