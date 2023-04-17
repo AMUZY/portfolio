@@ -10,6 +10,7 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 // IMPORTED SVG
+import jvzoo from "../PICTURES/jvzoo.png"
 import logo from "../SVGs/logo.svg"
 import picmobile from "../PICTURES/homepic_mobile.jpg" 
 import pictablet from "../PICTURES/homepic_tablet.jpg" 
@@ -34,6 +35,7 @@ export default function Home(props) {
         // {name : "JUMIA" , src : jumia , href : "/jumia",  alt : "jumia online shopping mall"},
         {name : "KONGA" , src : konga , href : KongaDefault("konga"),  alt : "konga online shopping mall"},
         {name : "EXPERTNAIRE" , src : expertnaire , href : "/expertnaire/exp-products",  alt : "expertnaire, platform for digital products"},
+        {name : "JVZOO" , src : jvzoo , href : "/expertnaire/exp-products",  alt : "jvzoo, platform for digital products"},
     ]
 
 
@@ -90,7 +92,7 @@ export default function Home(props) {
                             <div className="w-full">
                                 {/* TITLE */}
                                 <h2 className="subtitle_semibold text-center mx-auto my-2">
-                                    Create account with vendor
+                                    Create account with vendor(for non-digital products)
                                 </h2>
                                 {/* SUBTITLE */}
                                 <h3 className="text grey text-center w-[80%] mx-auto my-2">
