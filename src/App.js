@@ -240,6 +240,7 @@ import OtherCategories from "../src/pages/Konga/OtherCategories/OtherCategories"
 import Searched from "./pages/Searched";
 import ExpProducts from "./pages/Expertnaire/Products/ExpProducts";
 import ExpSearched from "./pages/ExpSearched";
+import MyFirebase from "./MyFirebase";
 
 // END OF KONGA PAGES IMPORT
 
@@ -561,6 +562,8 @@ export default function App() {
                   </Route>
                   {/* EXPERTNAIRE SEARCH PAGE */}
                   <Route path = "/expertnaire/search/:searched" element = {<ExpSearched />} />
+                  {/* FIREBASE FRONTEND EDIT */}
+                  <Route path = "/firebase" element = {<MyFirebase/>} />
                   {/* NOT FOUND PAGE */}
                   <Route path = "*" element = {<NotFound />} />
             </Routes>

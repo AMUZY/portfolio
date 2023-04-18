@@ -34,7 +34,7 @@ export default function ExpSearchCard (props){
               type="button"
               className="mt-[6px] w-full md:w-auto pur_btn theme_col white "
             >
-              <h2 className="w-full text-center subtitle_semibold">Get this Product</h2>
+              <h2 className="w-full text-center subtitle_semibold">Get it Now</h2>
             </a>
         </div>
     )

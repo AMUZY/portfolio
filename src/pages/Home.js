@@ -34,7 +34,7 @@ export default function Home(props) {
     const vendors = [
         // {name : "JUMIA" , src : jumia , href : "/jumia",  alt : "jumia online shopping mall"},
         {name : "KONGA" , src : konga , href : KongaDefault("konga"),  alt : "konga online shopping mall"},
-        {name : "EXPERTNAIRE" , src : expertnaire , href : "/expertnaire/exp-products",  alt : "expertnaire, platform for digital products"},
+        // {name : "EXPERTNAIRE" , src : expertnaire , href : "/expertnaire/exp-products",  alt : "expertnaire, platform for digital products"},
         {name : "JVZOO" , src : jvzoo , href : "/expertnaire/exp-products",  alt : "jvzoo, platform for digital products"},
     ]
 
@@ -78,7 +78,7 @@ export default function Home(props) {
                     {/* HEADING DIV */}
                     <div className="flex flex-row justify-center">
                         {/* MAKE AN ORDER HEADING */}
-                        <h2 className="theme flex flex-row flex-wrap justify-center subtitle_semibold">MAKE AN ORDER IN <h2 className="black subtitle_semibold px-[.38rem]">THREE</h2><h2 className="theme subtitle_semibold"> EASY STEPS </h2> </h2>
+                        <h2 className="theme flex flex-row flex-wrap justify-center subtitle_semibold">MAKE AN ORDER IN THREE EASY STEPS</h2>
                     </div>
                     {/* ICONS DIV */}
                     <div className="my-5 flex justify-center flex-col xl:flex-row">

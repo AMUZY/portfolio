@@ -56,7 +56,7 @@ export default function ExpNavbar(props){
                         {
                             EXPITEMS.map((item)=>{
                                 return (
-                                    <h2 className="text_semibold flex items-center h-full w-max mx-2"> {item.title} </h2>
+                                    <h2 key = {uuidv4()} className="text_semibold flex items-center h-full w-max mx-2"> {item.title} </h2>
                                 )
                             })
                         }
@@ -65,7 +65,7 @@ export default function ExpNavbar(props){
                         {
                             EXPITEMS.map((item)=>{
                                 return (
-                                    <h2 className="text_semibold flex items-center h-full w-max mx-2"> {item.title} </h2>
+                                    <h2 key = {uuidv4()} className="text_semibold flex items-center h-full w-max mx-2"> {item.title} </h2>
                                 )
                             })
                         }

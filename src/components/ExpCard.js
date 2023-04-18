@@ -93,7 +93,7 @@ export default function ExpCard (props) {
 
   return (
     // CARD DIV
-    <div className="maincard flex my-2 h-auto items-center reg_shadow white_col rounded-lg flex-col md:my-3 md:p-3 lg:my-4 xl:flex-row">
+    <div className="flex my-2 h-auto items-center reg_shadow white_col rounded-lg flex-col md:my-3 md:p-3 lg:my-4 xl:flex-row">
       {/* IMAGES AND SPAN DIV */}
       <div className="w-full mx-auto mt-2 xl:px-auto xl:my-2 xl:w-[40%]">
         {/* IMAGES DIV */}
@@ -167,7 +167,7 @@ export default function ExpCard (props) {
                 "mt-[6px] w-full md:w-auto pur_btn theme_col white " + animate
               }
             >
-              <h2 className="w-full text-center text_semibold">Get this Product</h2>
+              <h2 className="w-full text-center text_semibold">Get it Now</h2>
             </a>
           </div>
         </div>

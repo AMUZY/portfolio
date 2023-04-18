@@ -41,27 +41,67 @@ export var EXPITEMS = [];
 // ALL ITEMS BEGINS
   export const exp1 = new ExpItem(
     [
-        { id: 0, img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/W/L/140825_1656434632.jpg" },
+        { id: 0, img: "https://greatplr.com/chatgpt/tray.png" },
     ],
     "product",
-    "Become a Millonaire in Two days",
-    "The Dell Laptop Backpack in black is designed to hold laptops up to 15.6 inches and provide a safe, comfortable, and stylish way to transport your laptop and other essential items.",
- 
-    "It is simply a backpack designed to carry a 15.6\" laptop.",
-    "https://www.konga.com/product/portable-laptop-bag-blue-4788971?k_id=AMUZY",
+    // TITLE
+    "ChatGPT for Internet Marketers (PLR) information",
+    // SUBTITLE
+    `Dear Entrepreneur,
+
+    AI is taking the world by storm, and everyone is clamoring to get a piece of it.
+    
+    It was recently announced that ChatGPT was the fastest app in history to reach 100 Million users. It took Instagram over 2 years, and TikTok 9 months to reach that milestone.
+    
+    The reason it is growing so rapidly, is because entrepreneurs and businesses around the world want to harness this technology to get more done and make more money... while doing less work! Sounds great, right?` ,
+    // DESCRIPTION
+    `We've created a masterclass teaching internet marketers how to use ChatGPT to increase their productivity and make more money online. Here are just SOME of the types of small businesses and entrepreneurs who can benefit from ChatGPT, and who are ready to buy this course from you:
+
+    Home-based businesses, such as online stores, freelance writing or graphic design, or pet grooming.
+    Retail businesses, such as a boutique clothing store, a gift shop, or a specialty food store.
+    Service-based businesses, such as a cleaning service, a lawn care business, or a tutoring service.
+    Food-related businesses, such as a food truck, a bakery, or a catering service.
+    Health and wellness businesses, such as a yoga studio, a massage therapy business, or a personal training business.
+    Technology businesses, such as software development or web design.
+    Professional services, such as accounting or legal services.
+    Entertainment businesses, such as a music or art venue, or a game arcade.
+    Tourism-related businesses, such as a tour guide service, a bed and breakfast, or a vacation rental business.
+    Construction and home improvement businesses, such as a home renovation or handyman service.`,
+    // PRODUCT LINK
+    "https://jvz3.com/c/2801613/392510/",
   )
   EXPITEMS.push(exp1);
 
   export const exp2 = new ExpItem(
     [
-        { id: 0, img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/U/Z/138686_1647879497.jpg" },
+        { id: 0, img: "https://shorturl.at/CDSUV" },
     ],
     "product",
-    "Jand within 2 hrs",
-    "The Anti Theft Waterproof USB Laptop Backpack is a durable and secure backpack designed to keep your belongings safe while you're on-the-go. With its waterproof material and anti-theft design, this backpack is perfect for travel or everyday use. It features a USB charging port, multiple compartments for organization, and can fit laptops up to 15.6 inches.",
- 
-    "It is simply a backpack designed to carry a 15.6\" laptop. It has a waterproof and Antitheft design",
-    "https://www.konga.com/product/anti-theft-waterproof-usb-laptop-backpack-5672159?k_id=AMUZY",
+    // TITLE
+    "Done-For-You PLR Installation Service (any plr oto) information",
+    // SUBTITLE
+    `DONE-FOR-YOU PLR INSTALLATION SERVICE:
+    LET US Install Your Entire PLR Package For You So You Can Start Generating Subscribers And Sales Quicker!` ,
+    // DESCRIPTION
+    `Here is what the Done-For-You PLR Installation Service covers:
+
+    Fully installed for you! Just provide a few details.
+    
+    Sales page customized with your order button. Start generating sales!
+    
+    Opt-in page done for you so you can build your list!
+    
+    Installation of download page so your customers can download the product right away!
+    
+    Everything uploaded to our lightning fast web host!
+    
+    You will have your product up and running in 1-2 working days!
+    
+    Free custom subdomain included OR use your own domain.
+    
+    Free hosting included for your PLR product.`,
+    // PRODUCT LINK
+    "https://jvz6.com/c/2801613/383029/",
   )
   EXPITEMS.push(exp2);
 
