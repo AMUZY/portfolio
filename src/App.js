@@ -276,7 +276,7 @@ function updateProds(title,src,subtitle,price,star,spec,prodlink){
 export default function App() {
      
   return (
-    <div className="App w-full flex flex-col">
+    <div className="App w-full flex flex-col relative">
       <Router>
           <Routes>
               <Route path = "/" element = {<Home />} />
