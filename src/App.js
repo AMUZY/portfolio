@@ -242,22 +242,7 @@ import ExpProducts from "./pages/Expertnaire/Products/ExpProducts";
 import ExpSearched from "./pages/ExpSearched";
 import MyFirebase from "./MyFirebase";
 
-// END OF KONGA PAGES IMPORT
 
-// ARRAY AND FUNCTION TO STORE ALL PRODUCT NAMES
-// export const allprods = [];
-// function updateProds(title,src,subtitle,price,star,spec,prodlink){
-//       const newprod = {
-//             title : title,
-//             src : src,
-//             subtitle : subtitle,
-//             price : price,
-//             star : star,
-//             spec : spec,
-//             prodlink : prodlink,
-//       }
-//       allprods.push(newprod);
-// }
 
 export const allprods = [];
 function updateProds(title,src,subtitle,price,star,spec,prodlink){

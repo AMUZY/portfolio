@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom"
 import KongaDefault from "./kongaDefault"
 import { useLocation } from "react-router-dom"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 // STARS IMPORT
 import one from "../../SVGs/1_star.svg";
@@ -17,6 +17,10 @@ import three_half from "../../SVGs/3_5_star.svg";
 import four from "../../SVGs/4_star.svg";
 import four_half from "../../SVGs/4_5_star.svg";
 import five from "../../SVGs/5_star.svg";
+
+
+// export var NEWSOMETHING = []
+
 
 
 
@@ -38,6 +42,7 @@ class Item {
 };
 
 export var ITEMS = [];
+
 
 // ALL ITEMS BEGINS
   export const item1 = new Item(
@@ -63,7 +68,8 @@ export var ITEMS = [];
         { id: 2, img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/X/M/138686_1647879336.jpg" },
         { id: 3, img: "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/W/Y/138686_1647879433.jpg" },
     ],
-    "product","Anti Theft Waterproof Usb Laptop Backpack",
+    "product",
+    "Anti Theft Waterproof Usb Laptop Backpack",
     "The Anti Theft Waterproof USB Laptop Backpack is a durable and secure backpack designed to keep your belongings safe while you're on-the-go. With its waterproof material and anti-theft design, this backpack is perfect for travel or everyday use. It features a USB charging port, multiple compartments for organization, and can fit laptops up to 15.6 inches.",
     "11,999",
     four,

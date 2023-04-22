@@ -6,32 +6,63 @@ import { useReducer,useState } from "react"
 import {v4 as uuidv4} from "uuid"
 import x from "./SVGs/circle_x_btn.svg"
 
-// Import the functions you need from the SDKs you need
+
 import { initializeApp } from "firebase/app";
 import {
-  getFirestore,collection,getDocs,
+  getFirestore,collection,onSnapshot,
   addDoc,deleteDoc,doc
 } from "firebase/firestore"
-  
-//   // MY OWN TEST PROMISE
-//   let p = new Promise((resolve, reject)=>{
-//     let a = 1 + 1
-//     if(a  === 2){
-//       resolve({
-//         name : "Nnamdi",
-//         class : "500L"
-//       })
-//     } else {
-//       reject("failed")
-//     }
-//   })
-  
-//   p.then((message)=>{
-//     console.log("My status is " + message.name + " " + message.class)
-//   })
-//   .catch((message)=>{
-//     console.log("the promise " + message)
-//   })
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+
+  // Your web app's Firebase configuration
+ export const firebaseConfig = {
+    apiKey: "AIzaSyBZ4NkN8hyYtZbPcLC8CcvNrdODChx_hCU",
+    authDomain: "amunation-73fba.firebaseapp.com",
+    projectId: "amunation-73fba",
+    storageBucket: "amunation-73fba.appspot.com",
+    messagingSenderId: "524832572385",
+    appId: "1:524832572385:web:cc20c14eeb074005ec08a0"
+};
+
+// Initialize Firebase
+export const app = initializeApp(firebaseConfig);
+
+// Initialize services
+export const product_db = getFirestore()
+
+// Collection ref
+export const colRef = collection(product_db, "products");
+export const expColRef = collection(product_db, "exp")
+
+
+// Get Collection Data
+var products = []
+var exp_prod = []
+
+
+// export var exp_prod = [({...doc.data() ,id: doc.id})]
+
+onSnapshot(colRef, (snapshot)=>{
+    snapshot.docs.forEach((doc)=>{
+        products.push({...doc.data() ,id: doc.id})
+        })
+    // console.log(products)
+})
+
+
+
+onSnapshot(expColRef, (snapshot)=>{
+    snapshot.docs.forEach((doc)=>{
+        exp_prod.push({...doc.data() ,id: doc.id})
+        })
+        // console.log(exp_prod)
+})
+
+
+
 
 const UPDATEINFO = {
     UPDATETITLE : "updatetitle",
@@ -40,6 +71,7 @@ const UPDATEINFO = {
     UPDATEIMG : "updateimg",
     UPDATEPRICE : "updateprice",
     UPDATESTAR : "updatestar",
+    UPDATESPEC : "updatespec",
     UPDATELINK : "updatelink",
     UPDATE_ID : "updateid",
 }
@@ -47,6 +79,7 @@ const UPDATEINFO = {
 // ALL PRODUCT FEATURES
 let title = "";
 let subtitle = "";
+let spec = "";
 let image = "";
 let price = "";
 let star = "";
@@ -60,6 +93,7 @@ let exp_why = "";
 let exp_image = "";
 let exp_link = "";
 let exp_id = "";
+
 
 export default function MyFirebase (){
     function handlesubmit (e){
@@ -79,6 +113,8 @@ export default function MyFirebase (){
         dispatch({type : UPDATEINFO.UPDATESTAR , payload : star})
         link = "";
         dispatch({type : UPDATEINFO.UPDATELINK , payload : link})
+        spec = "";
+        dispatch({type : UPDATEINFO.UPDATESPEC , payload : spec})
     }
     // RESET EXP ADD FORM
     function ResetExpAddform(){
@@ -121,6 +157,9 @@ export default function MyFirebase (){
             case UPDATEINFO.UPDATESTAR : {
                 return {...state, star : action.payload }
             }
+            case UPDATEINFO.UPDATESPEC : {
+                return {...state, spec : action.payload }
+            }
             case UPDATEINFO.UPDATELINK : {
                 return {...state, link : action.payload }
             }
@@ -154,60 +193,13 @@ export default function MyFirebase (){
     }
 
     // USE REDUCER INITIALIZATION
-    const [product, dispatch] = useReducer(reducer, {title, subtitle, image, price, star, link, id})
+    const [product, dispatch] = useReducer(reducer, {title, subtitle, image, price, star, spec, link, id})
     const [exp_product, exp_dispatch] = useReducer(exp_reducer, {exp_title, exp_subtitle, exp_why, exp_image, exp_link, exp_id})
 
     // DIV, LABALE AND INPUT STYLES
     const divstyle = "w-full h-max flex flex-row justify-between items-center flex-grow"
     const labelstyle = "mr-2 my-2 text-xl font-bold"
     const inputstyle = "ml-1 px-2 my-2 input rounded-xs border-[1px] border-gray-300 flex-grow text-xl overflow-hidden"
-
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-        apiKey: "AIzaSyBZ4NkN8hyYtZbPcLC8CcvNrdODChx_hCU",
-        authDomain: "amunation-73fba.firebaseapp.com",
-        projectId: "amunation-73fba",
-        storageBucket: "amunation-73fba.appspot.com",
-        messagingSenderId: "524832572385",
-        appId: "1:524832572385:web:cc20c14eeb074005ec08a0"
-    };
-  
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  
-  // Initialize services
-  const product_db = getFirestore()
-  
-  // Collection ref
-  const colRef = collection(product_db, "products");
-  const expColRef = collection(product_db, "exp")
-  
-  
-  // Get Collection Data
-  let products = []
-  let exp_prod = []
-  
-  getDocs(colRef)
-      .then((snapshot)=>{
-        snapshot.docs.forEach((doc)=>{
-          products.push({...doc.data() ,id: doc.id})
-        })
-        console.log(products)
-      })
-      .catch((error)=>{
-        console.log(error.message)
-      })
-
-    getDocs(expColRef)
-    .then((snapshot)=>{
-    snapshot.docs.forEach((doc)=>{
-        exp_prod.push({...doc.data() ,id: doc.id})
-    })
-    console.log(exp_prod)
-    })
-    .catch((error)=>{
-    console.log(error.message)
-    })
   
   function AddProduct(){
     addDoc(colRef, {
@@ -216,6 +208,7 @@ export default function MyFirebase (){
       image : product.image,
       price : product.price,
       star : product.star,
+      spec : product.spec,
       link : product.link,
     })
     .then(()=>{
@@ -271,6 +264,8 @@ export default function MyFirebase (){
 
 //   final search
   let finalsearch = [...new Set(filtereditems.map((item)=>{return item }))];
+
+  
 // EXP final search
   let expfinalsearch = [...new Set(expfiltereditems.map((item)=>{return item }))];
   const handleChange = (e) => {
@@ -350,6 +345,10 @@ export default function MyFirebase (){
                     <div className={divstyle}>
                         <label className = {labelstyle} htmlFor = "star"> star: </label>
                         <input className = {inputstyle} onChange={(e)=>{star = e.target.value; dispatch({type : UPDATEINFO.UPDATESTAR , payload : star})}} type = "text" name = "star" value={product.star}/>
+                    </div>
+                    <div className={divstyle}>
+                        <label className = {labelstyle} htmlFor = "spec"> specifications: </label>
+                        <input className = {inputstyle} onChange={(e)=>{spec = e.target.value; dispatch({type : UPDATEINFO.UPDATESPEC , payload : spec})}} type = "text" name = "spec" value={product.spec}/>
                     </div>
                     <div className={divstyle}>
                         <label className = {labelstyle} htmlFor = "link"> LInk: </label>

@@ -15,22 +15,16 @@ export default function ExpSearchCard (props){
             {/* <h1 className="w-max h-max subtitle_semibold">NAME:</h1> */}
             <h1 className="mb-4 title"> {props.title} </h1>
             <div className="mb-4 overflow-x-scroll min-h-[50px] searchimgCont max-w-full h-auto px-8 flex flex-row items-center">
-                {
-                    props.src.map((item)=>{
-                        return (
-                            <LazyLoadImage effect="blur" key = {uuidv4()} src = {item.img} placeholderSrc= {item.img} className="searchlazyimg"/>
-                        )
-                    })
-                }
+                <LazyLoadImage effect="blur" key = {uuidv4()} src = {props.image} placeholderSrc= {props.image} className="searchlazyimg"/>
             </div>
             <h1 className="w-max h-max subtitle_semibold">DESCRIPTION:</h1>
             <h1 className="mb-4 subtitle grey"> {props.subtitle} </h1>
             
             <h1 className="w-max h-max subtitle_semibold">WHY YOU NEED THIS:</h1>
-            <h1 className="mb-4 subtitle grey"> {props.use} </h1>
+            <h1 className="mb-4 subtitle grey"> {props.why} </h1>
             {/* PURCHASE LINK */}
             <a
-              href={props.prodlink}
+              href={props.link}
               type="button"
               className="mt-[6px] w-full md:w-auto pur_btn theme_col white "
             >

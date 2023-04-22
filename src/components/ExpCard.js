@@ -30,15 +30,6 @@ import { v4 as uuidv4 } from "uuid";
 export default function ExpCard (props) {
   const [pos, setPos] = useState(0);
   const [slide, setSlide] = useState("top-0 left-0");
-  const [leftbtncol, setLeftbtncol] = useState("unclick_col");
-  const [rightbtncol, setRightbtncol] = useState(() => {
-    if (props.src.length === 1) {
-      return "unclick_col";
-    }
-    else {
-        return "click_col";
-    }
-  });
   const [animate, setAnimate] = useState("");
 
   // if(props.src.length === 1){
@@ -107,16 +98,12 @@ export default function ExpCard (props) {
                 slide
               }
             >
-              {props.src.map((item) => {
-                return (
-                  <img
-                    key={uuidv4()}
-                    className="z-[0] flex-shrink-0 w-[inherit] h-[inherit] "
-                    src={item.img}
-                    alt={item.alt}
-                  />
-                );
-              })}
+              <img
+                key={uuidv4()}
+                className="z-[0] flex-shrink-0 w-[inherit] h-[inherit] "
+                src={props.src}
+                alt="product"
+              />
             </div>
           </div>
         </div>
@@ -142,7 +129,6 @@ export default function ExpCard (props) {
               props.OpenSpec(
                 props.title,
                 props.subtitle,
-                props.keyfeat,
                 props.use
               );
             }}

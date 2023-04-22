@@ -11,6 +11,7 @@ import {v4 as uuidv4} from "uuid"
 
 export default function Products(props){
     let products = props.products;
+    // console.log(products)
     const [btnshow , setBtnshow] = useState("hidden");
     const [specshow , setSpecshow] = useState("hidden");
     const [title, setTitle] = useState("");
@@ -31,22 +32,21 @@ export default function Products(props){
     return (
         <div className="rounded-xl flex-grow productcont overflow-y-scroll mb-2 mx-4 pt-1 section_col w-auto xl:mb-2">
             <div className = "w-[100%] products pb-2 h-auto">
-                {
+                {/* {
                     products.map((item)=>{
                         return (
                             <Card key = {uuidv4()} 
-                                    src = {item.src} 
+                                    image = {item.image} 
                                         title ={item.title} 
                                             subtitle = {item.subtitle} 
                                                 price = {item.price} 
                                                     star = {item.star} 
-                                                        keyfeat = {item.keyfeat} 
                                                             spec = {item.spec}
-                                                                prodlink = {item.prodlink}
+                                                                link = {item.link}
                                                                     OpenSpec={OpenSpec}/>
                         )
                     })
-                }
+                } */}
             </div>
             
             {/* BLUR BOX */}

@@ -2,88 +2,105 @@ import "../button.scss"
 import "../font.scss"
 import "../theme.scss"
 import "../products.scss"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-
+import { firebaseConfig } from "../MyFirebase"
 import x from "../SVGs/circle_x_btn.svg"
 
 
 // CARD IMPORT
 import ExpCard from "../components/ExpCard"
 import {v4 as uuidv4} from "uuid"
-import { EXPITEMS } from "../pages/Expertnaire/Expert"
 
+import {
+  onSnapshot,
+} from "firebase/firestore"
+import { expColRef } from "../MyFirebase"
+
+
+// EXPORTED ITEMS
+export var EXPITEMS = [];
 
 export var SEARCHED = {
     title : "",
 }
 
+
 export default function ExpProductsPanel(props){
-    const [prod,setProd] = useState(EXPITEMS);
-    const subsub = props.subsub;
+
+    const [exp_prod,setExp_prod] = useState([])
+
+    useEffect(()=>{
+        onSnapshot(expColRef, (snapshot)=>{
+        var exp_prod = []
+        snapshot.docs.forEach((doc)=>{
+            exp_prod.push({...doc.data() ,id: doc.id})
+            setExp_prod(exp_prod);
+            EXPITEMS = exp_prod;
+            })
+    })
+    }, [])
+
+    // const [prod,setProd] = useState(exp_prod);
     const [search,setSearch] = useState("hidden")
     const [check,setCheck] = useState("");
     const [filtereditems,setFiltereditems] = useState([]);
     const [xbtn,setXbtn] = useState("hidden");
 
-        // NEW ARRAY THAT ELEMINATES DUPLICATES IN THE SHOWSEACH ARRAY
-    
-        let finalsearch = [...new Set(filtereditems.map((item)=>{return item.title }))];
+    // NEW ARRAY THAT ELEMINATES DUPLICATES IN THE SHOWSEACH ARRAY
 
-        // FUNCTION THAT SETS SEARCH TO HIDDEN ON CALL OF THE EXPORT FUNCTION CLOSESEARCH ABOVE
+    let finalsearch = [...new Set(filtereditems.map((item)=>{return item.title }))];
+
+    // FUNCTION THAT SETS SEARCH TO HIDDEN ON CALL OF THE EXPORT FUNCTION CLOSESEARCH ABOVE
+
+    let navigate = useNavigate();
+
+    const handleChange = (e) => {
+        // 👇 Get input value from "event"
+        e.preventDefault();
+        setCheck(e.target.value);
+        setSearch("block");
+        if(e.target.value === "")
+        {
+            setSearch("hidden")
+        }
+        if(check.length >= 0 && e.target.value !== ""){
+            setXbtn("inline-block")
+        }
+        else{
+            setXbtn("hidden")
+        }
+        setFiltereditems(exp_prod.filter((item)=>{
+            return(
+                item.title.toLowerCase().includes(check.toLowerCase())
+            )
+        }))
     
-        let navigate = useNavigate();
-    
-        const handleChange = (e) => {
-            // 👇 Get input value from "event"
-            e.preventDefault();
-            setCheck(e.target.value);
-            setSearch("block");
-            if(e.target.value === "")
-            {
-                setSearch("hidden")
+        };
+
+        const gosearch = (()=>{
+        finalsearch.map((item)=>{
+            if(item === check){
+                SEARCHED.title = check;
+                navigate("/expertnaire/search/" + check);
             }
-            if(check.length >= 0 && e.target.value !== ""){
-                setXbtn("inline-block")
-            }
-            else{
-                setXbtn("hidden")
-            }
-            setFiltereditems(prod.filter((item)=>{
-                return(
-                    item.title.toLowerCase().includes(check.toLowerCase())
-                )
-            }))
+        })
+        })
         
-          };
     
-          const gosearch = (()=>{
-            finalsearch.map((item)=>{
-                if(item === check){
-                    SEARCHED.title = check;
-                    navigate("/expertnaire/search/" + check);
-                }
-            })
-          })
-        
 
-
-
-    let products = props.products;
     const [btnshow , setBtnshow] = useState("hidden");
     const [specshow , setSpecshow] = useState("hidden");
     const [title, setTitle] = useState("");
     const [subtitle, setSubtitle] = useState("");
-    const [keyfeat, setKeyfeat] = useState("");
-    const [spec, setSpec] = useState("");
+    const [why, setWhy] = useState("");
 
-    function OpenSpec(title, subtitle, keyfeat, spec){
+    function OpenSpec(title, subtitle, why){
         setSpecshow("block");
         setBtnshow("block");
         setTitle(title);
         setSubtitle(subtitle);
-        setKeyfeat(keyfeat);
-        setSpec(spec);
+        setWhy(why);
     }
     // className="rounded-xl overflow-y-scroll my-2 py-5 section_col w-full h-[88%] sm:h-[91%] xl:h-[85%]">
 
@@ -144,16 +161,15 @@ export default function ExpProductsPanel(props){
             {/* MAIN ITEM CARDS */}
             <div className = "w-[100%] products pb-2 h-auto">
                 {
-                    products.map((item)=>{
+                    exp_prod.map((item)=>{
                         return (
                             <ExpCard key = {uuidv4()} 
-                                    src = {item.src} 
+                                    src = {item.image} 
                                         title ={item.title} 
                                             subtitle = {item.subtitle} 
-                                                keyfeat = {item.keyfeat} 
-                                                    use = {item.use}
-                                                        prodlink = {item.prodlink}
-                                                            OpenSpec={OpenSpec}/>
+                                                use = {item.why}
+                                                    prodlink = {item.link}
+                                                        OpenSpec={OpenSpec}/>
                         )
                     })
                 }
@@ -205,7 +221,7 @@ export default function ExpProductsPanel(props){
                                 WHY YOU NEED THIS
                             </h2>
                             <h3 className="grey desc text-left">
-                                {spec}
+                                {why}
                             </h3>
                         </div>
                     </div>
