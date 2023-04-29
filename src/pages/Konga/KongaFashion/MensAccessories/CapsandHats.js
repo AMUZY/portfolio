@@ -1,4 +1,5 @@
 import Products from "../../../../panels/Products"
+import { ServeGroupItems } from "../../../../Custom_Functions/ServeGroupItems";
 
 //IMPRTED PICTURES
 import product from "../../../../PICTURES/product.jpg"
@@ -17,12 +18,7 @@ import five from "../../../../SVGs/5_star.svg";
 import { item30, item31, item32 } from "../../Konga";
 
 export default function CapsandHats (){
-
-    const products = [
-        item30,
-        item31,
-        item32,
-    ]
+    const products = ServeGroupItems("CapsandHats");
 
     return (
             <Products products = {products} />

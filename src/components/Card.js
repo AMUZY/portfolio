@@ -24,21 +24,22 @@ import five from "../SVGs/5_star.svg";
 // IMPORTED REACT COMPONENTS
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import LoaderComp from "../LoadingIcons/LoaderComp";
 
 // import { useEffect } from "react"
 
 export default function Card(props) {
   const [pos, setPos] = useState(0);
   const [slide, setSlide] = useState("top-0 left-0");
-  const [leftbtncol, setLeftbtncol] = useState("unclick_col");
-  const [rightbtncol, setRightbtncol] = useState(() => {
-    if (props.src.length === 1) {
-      return "unclick_col";
-    }
-    else {
-        return "click_col";
-    }
-  });
+  // const [leftbtncol, setLeftbtncol] = useState("unclick_col");
+  // const [rightbtncol, setRightbtncol] = useState(() => {
+  //   if (props.src.length === 1) {
+  //     return "unclick_col";
+  //   }
+  //   else {
+  //       return "click_col";
+  //   }
+  // });
   const [animate, setAnimate] = useState("");
 
   // if(props.src.length === 1){
@@ -54,46 +55,56 @@ export default function Card(props) {
   // w-[80px] md:w-[100px] xl:w-[201px]
 
   // TO INCREASE THE IMAGE NUMBER LIMIT, ADD ELSE IF WITH +100%
-  function leftslide() {
-    if (pos === 1) {
-      setSlide("top-0 left-0");
-    } else if (pos === 2) {
-      setSlide("top-0 left-[-100%] ");
-    } else if (pos === 3) {
-      setSlide("top-0 left-[-200%] ");
-    } else if (pos === 4) {
-      setSlide("top-0 left-[-300%] ");
-    } else if (pos === 5) {
-      setSlide("top-0 left-[-400%] ");
-    } else if (pos === 6) {
-      setSlide("top-0 left-[-500%] ");
-    }
-  }
+  // function leftslide() {
+  //   if (pos === 1) {
+  //     setSlide("top-0 left-0");
+  //   } else if (pos === 2) {
+  //     setSlide("top-0 left-[-100%] ");
+  //   } else if (pos === 3) {
+  //     setSlide("top-0 left-[-200%] ");
+  //   } else if (pos === 4) {
+  //     setSlide("top-0 left-[-300%] ");
+  //   } else if (pos === 5) {
+  //     setSlide("top-0 left-[-400%] ");
+  //   } else if (pos === 6) {
+  //     setSlide("top-0 left-[-500%] ");
+  //   }
+  // }
 
-  function rightslide() {
-    if (pos === 0) {
-      setSlide("top-0 left-[-100%] ");
-    }
-    if (pos === 1) {
-      setSlide("top-0 left-[-200%] ");
-    }
-    if (pos === 2) {
-      setSlide("top-0 left-[-300%] ");
-    }
-    if (pos === 3) {
-      setSlide("top-0 left-[-400%] ");
-    }
-    if (pos === 4) {
-      setSlide("top-0 left-[-500%] ");
-    }
-    if (pos === 5) {
-      setSlide("top-0 left-[-600%] ");
-    }
-  }
+  // function rightslide() {
+  //   if (pos === 0) {
+  //     setSlide("top-0 left-[-100%] ");
+  //   }
+  //   if (pos === 1) {
+  //     setSlide("top-0 left-[-200%] ");
+  //   }
+  //   if (pos === 2) {
+  //     setSlide("top-0 left-[-300%] ");
+  //   }
+  //   if (pos === 3) {
+  //     setSlide("top-0 left-[-400%] ");
+  //   }
+  //   if (pos === 4) {
+  //     setSlide("top-0 left-[-500%] ");
+  //   }
+  //   if (pos === 5) {
+  //     setSlide("top-0 left-[-600%] ");
+  //   }
+  // }
+
+  let imgcount = [1];
 
   return (
     // CARD DIV
     <div className="maincard flex my-2 h-auto items-center reg_shadow white_col rounded-lg flex-col md:my-3 md:p-3 lg:my-4 xl:flex-row">
+      {/* LOADING ANIMATION */}
+      {/* {imgcount.map(()=>{
+        while(props.title === false){
+          return (
+            <h1 key = {uuidv4()}> LOADING IMAGE </h1>
+        )
+        }
+      })} */}
       {/* IMAGES AND SPAN DIV */}
       <div className="w-full mx-auto mt-2 xl:px-auto xl:my-2 xl:w-[40%]">
         {/* IMAGES DIV */}
@@ -107,24 +118,27 @@ export default function Card(props) {
                 slide
               }
             >
-              {props.src.map((item) => {
-                return (
-                  <img
-                    key={uuidv4()}
-                    className="z-[0] flex-shrink-0 w-[inherit] h-[inherit] "
-                    src={item.img}
-                    alt={item.alt}
-                  />
-                );
+              {imgcount.map(()=>{
+                while(props.image){
+                  return (
+                    <LoaderComp key = {uuidv4()} />
+                  )
+              }
               })}
+              <img
+                key={uuidv4()}
+                className="z-[0] flex-shrink-0 w-[inherit] h-[inherit] "
+                src={props.image}
+                alt="product"
+              />
             </div>
           </div>
         </div>
 
         {/* BUTTONS AND SPAN DIV */}
-        <div className="h-auto my-2 mx-1 flex flex-row justify-center items-center">
+        {/* <div className="h-auto my-2 mx-1 flex flex-row justify-center items-center"> */}
           {/* SLIDE LEFT BUTTON */}
-          <button
+          {/* <button
             className={
               "m-2 hover:opacity-80 rounded-lg p-[8px] md:p-[10px] xl:p-[12px] xl:rounded-xl " +
               leftbtncol
@@ -144,10 +158,10 @@ export default function Card(props) {
             }}
           >
             <img src={larrow} alt="left arrow button" />
-          </button>
+          </button> */}
           {/* SPANS DIV */}
-          <div className="w-max flex flex-row justify-between">
-            {props.src.map((item) => {
+          {/* <div className="w-max flex flex-row justify-between"> */}
+            {/* {props.src.map((item) => {
               if (pos === item.id) {
                 return (
                   <span
@@ -167,11 +181,11 @@ export default function Card(props) {
                   ></span>
                 );
               }
-            })}
-          </div>
+            })} */}
+          {/* </div> */}
 
           {/* SLIDE RIGHT BUTTON */}
-          <button
+          {/* <button
             className={
               "m-2 hover:opacity-80 rounded-lg p-[8px] md:p-[10px] xl:p-[12px] xl:rounded-xl " +
               rightbtncol
@@ -192,7 +206,7 @@ export default function Card(props) {
           >
             <img src={rarrow} alt="right arrow button" />
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* INFO DIV */}
@@ -227,15 +241,75 @@ export default function Card(props) {
           <h2 className="my-[3px] xl:my-[6px] price">{"₦" + props.price}</h2>
           {/* STARS AND BUTTON */}
           <div className="my-[2px] md:my-[3px] xl:my-[6px] flex flex-col items-start md:flex-row md:items-center justify-between">
-            <img
-              className="my-[3px] xl:my-[6px] md:w-[76.88px] md:h-[15px] xl:w-[116px] xl:h-[22.62px]"
-              src={props.star}
-              alt="rating stars"
-            />
+            {
+              imgcount.map(()=>{
+                if(props.star === "one"){
+                  return (
+                    <img
+                    key = {uuidv4()}
+                    className="my-[3px] xl:my-[6px] md:w-[76.88px] md:h-[15px] xl:w-[116px] xl:h-[22.62px]"
+                    src={one}
+                    alt="rating stars"
+                  />
+                  )
+                }
+                else if(props.star === "two"){
+                  return (
+                    <img
+                    key = {uuidv4()}
+                    className="my-[3px] xl:my-[6px] md:w-[76.88px] md:h-[15px] xl:w-[116px] xl:h-[22.62px]"
+                    src={two}
+                    alt="rating stars"
+                  />
+                  )
+                }
+                else if(props.star === "three"){
+                  return (
+                    <img
+                    key = {uuidv4()}
+                    className="my-[3px] xl:my-[6px] md:w-[76.88px] md:h-[15px] xl:w-[116px] xl:h-[22.62px]"
+                    src={three}
+                    alt="rating stars"
+                  />
+                  )
+                }
+                else if(props.star === "four"){
+                  return (
+                    <img
+                    key = {uuidv4()}
+                    className="my-[3px] xl:my-[6px] md:w-[76.88px] md:h-[15px] xl:w-[116px] xl:h-[22.62px]"
+                    src={four}
+                    alt="rating stars"
+                  />
+                  )
+                }
+                else if(props.star === "four_half"){
+                  return (
+                    <img
+                    key = {uuidv4()}
+                    className="my-[3px] xl:my-[6px] md:w-[76.88px] md:h-[15px] xl:w-[116px] xl:h-[22.62px]"
+                    src={four_half}
+                    alt="rating stars"
+                  />
+                  )
+                }
+                else if(props.star === "five"){
+                  return (
+                    <img
+                    key = {uuidv4()}
+                    className="my-[3px] xl:my-[6px] md:w-[76.88px] md:h-[15px] xl:w-[116px] xl:h-[22.62px]"
+                    src={five}
+                    alt="rating stars"
+                  />
+                  )
+                }
+            })
+            }
+            
 
             {/* PURCHASE BUTTON */}
             <a
-              href={props.prodlink}
+              href={props.link}
               type="button"
               onClick={() => {
                 console.log(props.prodlink);

@@ -1,4 +1,5 @@
 import Products from "../../../../panels/Products";
+import { ServeGroupItems } from "../../../../Custom_Functions/ServeGroupItems";
 
 //IMPRTED PICTURES
 import product from "../../../../PICTURES/product.jpg";
@@ -17,11 +18,8 @@ import five from "../../../../SVGs/5_star.svg";
 import { item6, item7, item8 } from "../../Konga";
 
 export default function ComputerPeripherals(props) {
-  const products = [
-    item6,
-    item7,
-    item8
-  ];
+  const products = ServeGroupItems("ComputerPeripherals");
+  console.log(ServeGroupItems("ComputerPeripherals"))
 
   return <Products products={products} />;
 }

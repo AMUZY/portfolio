@@ -1,4 +1,5 @@
 import Products from "../../../../panels/Products";
+import { ServeGroupItems } from "../../../../Custom_Functions/ServeGroupItems";
 
 //IMPRTED PICTURES
 import product from "../../../../PICTURES/product.jpg";
@@ -18,10 +19,7 @@ import { item21, item22 } from "../../Konga";
 
 
 export default function FeaturePhones() {
-  const products = [
-    item21,
-    item22,
-  ];
+  const products = ServeGroupItems("FeaturePhones");
 
   return <Products products={products} />;
 }

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import bluearrow from "../SVGs/r_b_arrow.svg";
 import { PATHS } from "./Konga/Konga";
 import { useParams } from "react-router-dom";
-import { ITEMS } from "./Konga/Konga";
+import { useServeAllKongaItems } from "../Custom_Functions/ServeAllKongaItems";
 
 
 
@@ -26,7 +26,7 @@ function goBack(){
 
 export default function Searched() {
     const { searched } = useParams();
-    
+    let ITEMS = useServeAllKongaItems()
 
     var state;
     let count = [1];
@@ -35,7 +35,7 @@ export default function Searched() {
             const newstuff = {
             title: item.title,
             subtitle: item.subtitle,
-            src: item.src,
+            image: item.image,
             price: item.price,
             star: item.star,
             spec: item.spec,
@@ -54,7 +54,7 @@ export default function Searched() {
                                     <SearchCard
                                         title={state.title}
                                         subtitle={state.subtitle}
-                                        src={state.src}
+                                        image={state.image}
                                         price = {state.price}
                                         star = {state.star}
                                         spec = {state.spec}

@@ -1,10 +1,18 @@
-.mainkonga {
+.main_konga {
     overflow : hidden;
     max-height : -webkit-fill-available;
     height : 100dvh;
     position : relative;
 }
 
+.desk_konga{
+    @extend .main_konga;
+    display: none;
+}
+.mob_konga{
+    @extend .main_konga;
+    display: block;
+}
 .newdude{
     height : 94%
 }
@@ -16,6 +24,14 @@
 @media only screen and (min-width : 1700px) {
     .cat {
         height : 100%;
+    }
+    .desk_konga{
+        @extend .main_konga;
+        display: block;
+    }
+    .mob_konga{
+        @extend .main_konga;
+        display: none;
     }
     
 }

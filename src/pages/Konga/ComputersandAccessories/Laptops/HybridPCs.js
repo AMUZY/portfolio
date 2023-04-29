@@ -1,4 +1,5 @@
 import Products from "../../../../panels/Products";
+import { ServeGroupItems } from "../../../../Custom_Functions/ServeGroupItems";
 
 //IMPRTED PICTURES
 import product from "../../../../PICTURES/product.jpg";
@@ -17,10 +18,7 @@ import five from "../../../../SVGs/5_star.svg";
 import { item23, item24 } from "../../Konga";
 
 export default function HybridPCs(props) {
-  const products = [
-    item23,
-    item24
-  ];
+  const products = ServeGroupItems("HybridPCs");
 
   return <Products products={products} />;
 }

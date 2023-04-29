@@ -3,6 +3,7 @@ import "../font.scss"
 import "../theme.scss"
 import "../products.scss"
 import { useState } from "react"
+import LoaderComp from "../LoadingIcons/LoaderComp"
 
 
 // CARD IMPORT
@@ -28,11 +29,21 @@ export default function Products(props){
         setSpec(spec);
     }
     // className="rounded-xl overflow-y-scroll my-2 py-5 section_col w-full h-[88%] sm:h-[91%] xl:h-[85%]">
-
+    let count = [1];
     return (
         <div className="rounded-xl flex-grow productcont overflow-y-scroll mb-2 mx-4 pt-1 section_col w-auto xl:mb-2">
+            {/* LOADING ANIMATION */}
+            {count.map(()=>{
+                while(products.length === 0){
+                    return (
+                        <div key = {uuidv4()} className="relative w-[95%] h-[95%] m-auto p-0">
+                            <LoaderComp />
+                        </div>
+                    )
+                }
+            })}
             <div className = "w-[100%] products pb-2 h-auto">
-                {/* {
+                {
                     products.map((item)=>{
                         return (
                             <Card key = {uuidv4()} 
@@ -46,7 +57,7 @@ export default function Products(props){
                                                                     OpenSpec={OpenSpec}/>
                         )
                     })
-                } */}
+                }
             </div>
             
             {/* BLUR BOX */}

@@ -15,6 +15,7 @@ import SubCat from "./panels/SubCat";
 import ProductArea from "./panels/ProductArea";
 import Products from "./panels/Products";
 import Navbar from "./panels/Navbar";
+import { ServeAllKongaItems, useServeAllKongaItems } from "./Custom_Functions/ServeAllKongaItems";
 import NotFound from "../src/pages/NotFound"
 
 
@@ -244,56 +245,47 @@ import MyFirebase from "./MyFirebase";
 
 
 
-export const allprods = [];
-function updateProds(title,src,subtitle,price,star,spec,prodlink){
-      const newprod = {
-            title : title,
-            src : src,
-            subtitle : subtitle,
-            price : price,
-            star : star,
-            spec : spec,
-            prodlink : prodlink,
-      }
-      allprods.push(newprod);
-}
+
+// export const allprods = ServeAllKongaItems();
+
+
 
 export default function App() {
-     
+      const allprods = useServeAllKongaItems();
   return (
     <div className="App w-full flex flex-col relative">
       <Router>
           <Routes>
               <Route path = "/" element = {<Home />} />
               {/* KONGA */}
-              <Route path = "/konga" element = {<Konga updateProds = {updateProds}/>}>
+              <Route path = "/konga" element = {<Konga/>}>
 
                 <Route path = "/konga/computers-and-accessories" element = {<ComputersandAccessories />}>
-                  <Route path = "/konga/computers-and-accessories/computing" element = {<Computing allprods = {allprods} />} >
+                  <Route path = "/konga/computers-and-accessories/computing" element = {<Computing  />} >
                     <Route path = "/konga/computers-and-accessories/computing/bags-cases-covers" element = {<BagsCasesCovers  />} />
                     <Route path = "/konga/computers-and-accessories/computing/computer-peripherals" element = {<ComputerPeripherals />} />
                     <Route path = "/konga/computers-and-accessories/computing/laptop-and-desktop-accessories" element = {<LaptopandDesktopAccessories />} />
                     <Route path = "/konga/computers-and-accessories/computing/storage-devices" element = {<StorageDevices />} />
                   </Route>
-                  <Route path = "/konga/computers-and-accessories/laptops" element = {<Laptops allprods = {allprods} />} >
+                  <Route path = "/konga/computers-and-accessories/laptops" element = {<Laptops  />} >
                     <Route path = "/konga/computers-and-accessories/laptops/hybrid-pcs" element = {<HybridPCs  />} />
                     <Route path = "/konga/computers-and-accessories/laptops/macbooks" element = {<Macbooks  />} />
                     <Route path = "/konga/computers-and-accessories/laptops/minilaptops-and-netbooks" element = {<MiniLaptopsandNetbooks  />} />
                     <Route path = "/konga/computers-and-accessories/laptops/notebooks" element = {<Notebooks />} />
                     <Route path = "/konga/computers-and-accessories/laptops/ultrabooks" element = {<Ultrabooks />} />
                   </Route>
-                  <Route path = "/konga/computers-and-accessories/pcgaming" element = {<PCGaming allprods = {allprods}/>} >
+                  <Route path = "/konga/computers-and-accessories/pcgaming" element = {<PCGaming />} >
                     <Route path = "/konga/computers-and-accessories/pcgaming/pcgames" element = {<PCGames  />} />
                     <Route path = "/konga/computers-and-accessories/pcgaming/pcgaming-accessories" element = {<PCgamingAccessories  />} />
                   </Route>
                 </Route>
 
                 <Route path = "/konga/phones-and-tablets" element = {<PhonesandTablets />}>
-                    <Route path = "/konga/phones-and-tablets/mobile-phones" element = {<MobilePhones allprods = {allprods}/>} >
+                    <Route path = "/konga/phones-and-tablets/mobile-phones" element = {<MobilePhones />} >
                       <Route path = "/konga/phones-and-tablets/mobile-phones/feature-phones" element = {<FeaturePhones  />}/>
                       <Route path = "/konga/phones-and-tablets/mobile-phones/smart-phones" element = {<SmartPhones  />}/>
                     </Route>
-                    <Route path = "/konga/phones-and-tablets/mobile-phones-accessories" element = {<MobilePhonesAccessories allprods = {allprods}/>} >
+                    <Route path = "/konga/phones-and-tablets/mobile-phones-accessories" element = {<MobilePhonesAccessories />} >
                       <Route path = "/konga/phones-and-tablets/mobile-phones-accessories/batteries" element = {<Batteries  />}/>
                       <Route path = "/konga/phones-and-tablets/mobile-phones-accessories/cables" element = {<Cables />}/>
                       <Route path = "/konga/phones-and-tablets/mobile-phones-accessories/cases-and-covers" element = {<CasesandCovers  />}/>
@@ -302,7 +294,7 @@ export default function App() {
                       <Route path = "/konga/phones-and-tablets/mobile-phones-accessories/screen-protectors" element = {<ScreenProtectors  />}/>
                       <Route path = "/konga/phones-and-tablets/mobile-phones-accessories/smartwatches-and-bands" element = {<SmartwatchesandBands />}/>
                     </Route>
-                    <Route path = "/konga/phones-and-tablets/tablets" element = {<Tablets allprods = {allprods}/>} >
+                    <Route path = "/konga/phones-and-tablets/tablets" element = {<Tablets />} >
                       <Route path = "/konga/phones-and-tablets/tablets/android" element = {<Android />}/>
                       <Route path = "/konga/phones-and-tablets/tablets/ios" element = {<IOS />}/>
                       <Route path = "/konga/phones-and-tablets/tablets/other-os" element = {<OtherOS />}/>
@@ -311,21 +303,21 @@ export default function App() {
                 </Route>
 
                 <Route path = "/konga/electronics" element = {<Electronics />}>
-                    <Route path = "/konga/electronics/accessories" element = {<Accessories allprods = {allprods}/>} >
+                    <Route path = "/konga/electronics/accessories" element = {<Accessories />} >
                       <Route path = "/konga/electronics/accessories/gaming-accessories" element = {<GamingAccessories />} />
                       <Route path = "/konga/electronics/accessories/headphones" element = {<HeadPhones />} />
                       <Route path = "/konga/electronics/accessories/other-accessories" element = {<OtherAccessories />} />
                       <Route path = "/konga/electronics/accessories/television-accessories" element = {<TelevisionAccessories />} />
                       <Route path = "/konga/electronics/accessories/tv-audio" element = {<TVAudio />} />
                     </Route>
-                    <Route path = "/konga/electronics/cameras" element = {<Cameras allprods = {allprods}/>} >
+                    <Route path = "/konga/electronics/cameras" element = {<Cameras />} >
                       <Route path = "/konga/electronics/cameras/camcorders-and-videocameras" element = {<CamcordersandVideoCameras />} />
                       <Route path = "/konga/electronics/cameras/cameralenses-and-accessories" element = {<CameraLensesandAccessories />} />
                       <Route path = "/konga/electronics/cameras/cctv-cameras" element = {<CCTVCameras />} />
                       <Route path = "/konga/electronics/cameras/digital-cameras" element = {<DigitalCameras />} />
                       <Route path = "/konga/electronics/cameras/proff-and-slr-cameras" element = {<ProffandSLRCameras />} />
                     </Route>
-                    <Route path = "/konga/electronics/games-and-consoles" element = {<GamesandConsoles allprods = {allprods}/>} >
+                    <Route path = "/konga/electronics/games-and-consoles" element = {<GamesandConsoles />} >
                       <Route path = "/konga/electronics/games-and-consoles/ps3" element = {<PS3 />} />
                       <Route path = "/konga/electronics/games-and-consoles/ps4" element = {<PS4 />} />
                       <Route path = "/konga/electronics/games-and-consoles/psvita" element = {<PSVita />} />
@@ -333,12 +325,12 @@ export default function App() {
                       <Route path = "/konga/electronics/games-and-consoles/xbox-360" element = {<Xbox360 />} />
                       <Route path = "/konga/electronics/games-and-consoles/xbox-one" element = {<XboxOne />} />
                     </Route>
-                    <Route path = "/konga/electronics/hometheatres-and-audio" element = {<HomeTheatresandAudio allprods = {allprods}/>} >
+                    <Route path = "/konga/electronics/hometheatres-and-audio" element = {<HomeTheatresandAudio />} >
                       <Route path = "/konga/electronics/hometheatres-and-audio/hifi-systems" element = {<HifiSystems />} />
                       <Route path = "/konga/electronics/hometheatres-and-audio/home-theatre" element = {<HomeTheatre />} />
                       <Route path = "/konga/electronics/hometheatres-and-audio/mp3players-and-speakers" element = {<MP3PlayersandSpeakers />} />
                     </Route>
-                    <Route path = "/konga/electronics/televisions" element = {<Televisions allprods = {allprods}/>} >
+                    <Route path = "/konga/electronics/televisions" element = {<Televisions />} >
                       <Route path = "/konga/electronics/televisions/curved-tvs" element = {<CurvedTVs  />} />
                       <Route path = "/konga/electronics/televisions/led-tvs" element = {<LedTVs  />} />
                       <Route path = "/konga/electronics/televisions/oled-tvs" element = {<OledTVs  />} />
@@ -348,20 +340,20 @@ export default function App() {
                 </Route>
 
                 <Route path = "/konga/konga-fashion" element = {<KongaFashion />}>
-                    <Route path = "/konga/konga-fashion/mens-acessories" element = {<MensAccessories allprods = {allprods}/>} >
+                    <Route path = "/konga/konga-fashion/mens-acessories" element = {<MensAccessories />} >
                       <Route path = "/konga/konga-fashion/mens-acessories/men-bags" element ={<MenBags />} />
                       <Route path = "/konga/konga-fashion/mens-acessories/belts-and-wallets" element ={<BeltsandWallets />} />
                       <Route path = "/konga/konga-fashion/mens-acessories/caps-and-hats" element ={<CapsandHats />} />
                       <Route path = "/konga/konga-fashion/mens-acessories/socks-and-underwear" element ={<SocksandUnderwear />} />
                       <Route path = "/konga/konga-fashion/mens-acessories/ties-and-cufflinks" element ={<TiesandCufflinks />} />
                     </Route>
-                    <Route path = "/konga/konga-fashion/mens-shoes" element = {<MensShoes allprods = {allprods}/>} >
+                    <Route path = "/konga/konga-fashion/mens-shoes" element = {<MensShoes />} >
                       <Route path = "/konga/konga-fashion/mens-shoes/casual-shoes" element ={<CasualShoes />} />
                       <Route path = "/konga/konga-fashion/mens-shoes/formal-shoes" element ={<FormalShoes />} />
                       <Route path = "/konga/konga-fashion/mens-shoes/shoecare-and-accessories" element ={<ShoeCareandAccessories />} />
                       <Route path = "/konga/konga-fashion/mens-shoes/slippers-and-sandals" element ={<SlippersandSandals />} />
                     </Route>
-                    <Route path = "/konga/konga-fashion/mens-wear" element = {<MensWear allprods = {allprods}/>} >
+                    <Route path = "/konga/konga-fashion/mens-wear" element = {<MensWear />} >
                       <Route path = "/konga/konga-fashion/mens-wear/jeans" element ={<Jeans />} />
                       <Route path = "/konga/konga-fashion/mens-wear/jerseys" element ={<Jerseys />} />
                       <Route path = "/konga/konga-fashion/mens-wear/polos" element ={<Polos />} />
@@ -369,23 +361,23 @@ export default function App() {
                       <Route path = "/konga/konga-fashion/mens-wear/tshirts" element ={<TShirts />} />
                       <Route path = "/konga/konga-fashion/mens-wear/trousers-and-shorts" element ={<TrousersandShorts />} />
                     </Route>
-                    <Route path = "/konga/konga-fashion/watches" element = {<Watches allprods = {allprods}/>} >
+                    <Route path = "/konga/konga-fashion/watches" element = {<Watches />} >
                       <Route path = "/konga/konga-fashion/watches/menswatches" element ={<MensWatches />} />
                     </Route>
-                    <Route path = "/konga/konga-fashion/womensaccessories" element = {<WomensAccessories allprods = {allprods}/>} >
+                    <Route path = "/konga/konga-fashion/womensaccessories" element = {<WomensAccessories />} >
                       <Route path = "/konga/konga-fashion/womensaccessories/women-bags" element ={<WomenBags />} />
                       <Route path = "/konga/konga-fashion/womensaccessories/women-belts" element ={<WomenBelts />} />
                       <Route path = "/konga/konga-fashion/womensaccessories/purses-and-clutches" element ={<PursesandClutches />} />
                       <Route path = "/konga/konga-fashion/womensaccessories/wallets" element ={<Wallets />} />
                     </Route>
-                    <Route path = "/konga/konga-fashion/women-shoes" element = {<WomensShoes allprods = {allprods}/>} >
+                    <Route path = "/konga/konga-fashion/women-shoes" element = {<WomensShoes />} >
                       <Route path = "/konga/konga-fashion/women-shoes/heels" element ={<Heels />} />
                       <Route path = "/konga/konga-fashion/women-shoes/women-sandals-and-slippers" element ={<WomenSandalsandSlippers />} />
                       <Route path = "/konga/konga-fashion/women-shoes/shoes-and-bags" element ={<ShoesandBags />} />
                       <Route path = "/konga/konga-fashion/women-shoes/sport-shoes" element ={<SportShoes />} />
                       <Route path = "/konga/konga-fashion/women-shoes/wedges" element ={<Wedges />} />
                     </Route>
-                    <Route path = "/konga/konga-fashion/women-wear" element = {<WomensWear allprods = {allprods}/>} >
+                    <Route path = "/konga/konga-fashion/women-wear" element = {<WomensWear />} >
                       <Route path = "/konga/konga-fashion/women-wear/dresses" element ={<Dresses />} />
                       <Route path = "/konga/konga-fashion/women-wear/lingerie-and-sleepwear" element ={<LingerieandSleepwear />} />
                       <Route path = "/konga/konga-fashion/women-wear/skirts" element ={<Skirts />} />
@@ -395,25 +387,25 @@ export default function App() {
                 </Route>
 
                 <Route path = "/konga/home-and-kitchen" element = {<HomeandKitchen />}>
-                    <Route path = "/konga/home-and-kitchen/furniture" element ={<Furniture allprods = {allprods}/>} >
+                    <Route path = "/konga/home-and-kitchen/furniture" element ={<Furniture />} >
                       <Route path = "/konga/home-and-kitchen/furniture/bedroom-furniture" element ={<BedroomFurniture />} />
                       <Route path = "/konga/home-and-kitchen/furniture/kitchens-and-dining-furniture" element ={<KitchenandDiningFurniture />} />
                       <Route path = "/konga/home-and-kitchen/furniture/living-room-furniture" element ={<LivingRoomFurniture />} />
                       <Route path = "/konga/home-and-kitchen/furniture/office-furniture" element ={<OfficeFurniture />} />
                     </Route>
-                    <Route path = "/konga/home-and-kitchen/home-furnishings" element ={<HomeFurnishings allprods = {allprods}/>} >
+                    <Route path = "/konga/home-and-kitchen/home-furnishings" element ={<HomeFurnishings />} >
                       <Route path = "/konga/home-and-kitchen/home-furnishings/bed-and-bathroom-furnishings" element ={<BedandBathroomFurnishings />} />
                       <Route path = "/konga/home-and-kitchen/home-furnishings/curtain-and-blinds" element ={<CurtainandBlinds />} />
                       <Route path = "/konga/home-and-kitchen/home-furnishings/decor" element ={<Decor />} />
                       <Route path = "/konga/home-and-kitchen/home-furnishings/light-fixtures" element ={<LightFixtures />} />
                       <Route path = "/konga/home-and-kitchen/home-furnishings/rings-and-carpets" element ={<RugsandCarpets />} />
                     </Route>
-                    <Route path = "/konga/home-and-kitchen/kitchen-and-dining" element ={<KitchenandDining allprods = {allprods}/>} >
+                    <Route path = "/konga/home-and-kitchen/kitchen-and-dining" element ={<KitchenandDining />} >
                       <Route path = "/konga/home-and-kitchen/kitchen-and-dining/cook-and-bakeware" element ={<CookandBakeware />} />
                       <Route path = "/konga/home-and-kitchen/kitchen-and-dining/dining" element ={<Dining />} />
                       <Route path = "/konga/home-and-kitchen/kitchen-and-dining/kitchen-utensils" element ={<KitchenUtensils />} />
                     </Route>
-                    <Route path = "/konga/home-and-kitchen/large-appliances" element ={<LargeAppliances allprods = {allprods}/>} >
+                    <Route path = "/konga/home-and-kitchen/large-appliances" element ={<LargeAppliances />} >
                       <Route path = "/konga/home-and-kitchen/large-appliances/airconditioners-and-coolers" element ={<AirConditionersandCoolers  />} />
                       <Route path = "/konga/home-and-kitchen/large-appliances/cookers-and-ovens" element ={<CookersandOvens  />} />
                       <Route path = "/konga/home-and-kitchen/large-appliances/fans" element ={<Fans  />} />
@@ -422,7 +414,7 @@ export default function App() {
                       <Route path = "/konga/home-and-kitchen/large-appliances/vacuum-cleaners" element ={<VacuumCleaners  />} />
                       <Route path = "/konga/home-and-kitchen/large-appliances/water-dispensers" element ={<WaterDispensers  />} />
                     </Route>
-                    <Route path = "/konga/home-and-kitchen/small-appliances" element ={<SmallAppliances allprods = {allprods}/>} >
+                    <Route path = "/konga/home-and-kitchen/small-appliances" element ={<SmallAppliances />} >
                       <Route path = "/konga/home-and-kitchen/small-appliances/blenders-juicers-and-mixers" element ={<BlendersJuicersandMixers />} />
                       <Route path = "/konga/home-and-kitchen/small-appliances/electric-kettles" element ={<ElectricKettles />} />
                       <Route path = "/konga/home-and-kitchen/small-appliances/hotplates-and-burners" element ={<HotPlatesandBurners />} />
@@ -430,7 +422,7 @@ export default function App() {
                       <Route path = "/konga/home-and-kitchen/small-appliances/microwaves" element ={<Microwaves />} />
                       <Route path = "/konga/home-and-kitchen/small-appliances/processors-and-mincers" element ={<ProcessorsandMincers />} />
                     </Route>
-                    <Route path = "/konga/home-and-kitchen/top-brands" element ={<TopBrands allprods = {allprods}/>} >
+                    <Route path = "/konga/home-and-kitchen/top-brands" element ={<TopBrands />} >
                       <Route path = "/konga/home-and-kitchen/top-brands/hisense" element ={<Hisense />} />
                       <Route path = "/konga/home-and-kitchen/top-brands/lg" element ={<LG />} />
                       <Route path = "/konga/home-and-kitchen/top-brands/polystar" element ={<Polystar />} />
@@ -440,7 +432,7 @@ export default function App() {
                 </Route>
 
                 <Route path = "/konga/baby-kids-and-toys" element = {<BabyKidsandToys />}>
-                    <Route path = "/konga/baby-kids-and-toys/baby-essentials" element = {<BabyEssentials allprods = {allprods}/>} >
+                    <Route path = "/konga/baby-kids-and-toys/baby-essentials" element = {<BabyEssentials />} >
                       <Route path = "/konga/baby-kids-and-toys/baby-essentials/babyfood-and-formula" element = {<BabyfoodandFormula />} />
                       <Route path = "/konga/baby-kids-and-toys/baby-essentials/bibs-and-burpcloths" element = {<BibsandBurpCloths />} />
                       <Route path = "/konga/baby-kids-and-toys/baby-essentials/bottlefeeding" element = {<BottleFeeding />} />
@@ -448,14 +440,14 @@ export default function App() {
                       <Route path = "/konga/baby-kids-and-toys/baby-essentials/feeding-and-nursing" element = {<FeedingandNursing />} />
                       <Route path = "/konga/baby-kids-and-toys/baby-essentials/pacifiers-and-teethers" element = {<PacifiersandTeethers />} />
                     </Route>
-                    <Route path = "/konga/baby-kids-and-toys/diapering-and-dailycare" element = {<DiaperingandDailyCare allprods = {allprods}/>} >
+                    <Route path = "/konga/baby-kids-and-toys/diapering-and-dailycare" element = {<DiaperingandDailyCare />} >
                       <Route path = "/konga/baby-kids-and-toys/diapering-and-dailycare/bathtime-essentials" element = {<BathtimeEssentials />} />
                       <Route path = "/konga/baby-kids-and-toys/diapering-and-dailycare/dailycare" element = {<DailyCare />} />
                       <Route path = "/konga/baby-kids-and-toys/diapering-and-dailycare/diaperbags-and-changingmats" element = {<DiaperBagsandChangingMats />} />
                       <Route path = "/konga/baby-kids-and-toys/diapering-and-dailycare/diapers-and-babywipes" element = {<DiapersandBabyWipes />} />
                       <Route path = "/konga/baby-kids-and-toys/diapering-and-dailycare/potty-training" element = {<PottyTraining />} />
                     </Route>
-                    <Route path = "/konga/baby-kids-and-toys/fashion-for-boys" element = {<FashionForBoys allprods = {allprods}/>} >
+                    <Route path = "/konga/baby-kids-and-toys/fashion-for-boys" element = {<FashionForBoys />} >
                       <Route path = "/konga/baby-kids-and-toys/fashion-for-boys/boy-body-suits-and-playsuits" element = {<BoyBodysuitsandPlaysuits />} />
                       <Route path = "/konga/baby-kids-and-toys/fashion-for-boys/denim-and-trousers" element = {<DenimandTrousers />} />
                       <Route path = "/konga/baby-kids-and-toys/fashion-for-boys/boy-sets" element = {<BoySets />} />
@@ -465,7 +457,7 @@ export default function App() {
                       <Route path = "/konga/baby-kids-and-toys/fashion-for-boys/boy-underwear-and-socks" element = {<BoyUnderwearandSocks />} />
                       <Route path = "/konga/baby-kids-and-toys/fashion-for-boys/boy-watches" element = {<BoyWatches />} />
                     </Route>
-                    <Route path = "/konga/baby-kids-and-toys/fashion-for-girls" element = {<FashionForGirls allprods = {allprods}/>} >
+                    <Route path = "/konga/baby-kids-and-toys/fashion-for-girls" element = {<FashionForGirls />} >
                       <Route path = "/konga/baby-kids-and-toys/fashion-for-girls/girl-body-suits-and-playsuits" element = {<GirlBodysuitsandPlaysuits  />} />
                       <Route path = "/konga/baby-kids-and-toys/fashion-for-girls/girl-sets" element = {<GirlSets  />} />
                       <Route path = "/konga/baby-kids-and-toys/fashion-for-girls/girl-shoes" element = {<GirlShoes  />} />
@@ -473,17 +465,17 @@ export default function App() {
                       <Route path = "/konga/baby-kids-and-toys/fashion-for-girls/girl-underwear-and-socks" element = {<GirlUnderwearandSocks  />} />
                       <Route path = "/konga/baby-kids-and-toys/fashion-for-girls/girl-watches" element = {<GirlWatches  />} />
                     </Route>
-                    <Route path = "/konga/baby-kids-and-toys/kidsbeddings-and-decor" element = {<KidsBeddingsandDecor allprods = {allprods}/>} >
+                    <Route path = "/konga/baby-kids-and-toys/kidsbeddings-and-decor" element = {<KidsBeddingsandDecor />} >
                       <Route path = "/konga/baby-kids-and-toys/kidsbeddings-and-decor/bedding" element = {<Bedding  />} />
                       <Route path = "/konga/baby-kids-and-toys/kidsbeddings-and-decor/decor-accessories" element = {<DecorAccessories  />} />
                       <Route path = "/konga/baby-kids-and-toys/kidsbeddings-and-decor/kid-furniture" element = {<KidFurniture  />} />
                     </Route>
-                    <Route path = "/konga/baby-kids-and-toys/school-store" element = {<SchoolStore allprods = {allprods}/>} >
+                    <Route path = "/konga/baby-kids-and-toys/school-store" element = {<SchoolStore />} >
                       <Route path = "/konga/baby-kids-and-toys/school-store/bags-and-bagpacks" element = {<BagsandBackpacks  />} />
                       <Route path = "/konga/baby-kids-and-toys/school-store/lunchboxes-and-waterbottles" element = {<LunchboxesandWaterbottles  />} />
                       <Route path = "/konga/baby-kids-and-toys/school-store/school-shoes" element = {<SchoolShoes  />} />
                     </Route>
-                    <Route path = "/konga/baby-kids-and-toys/toys-and-activities" element = {<ToysandActivities allprods = {allprods}/>} >
+                    <Route path = "/konga/baby-kids-and-toys/toys-and-activities" element = {<ToysandActivities />} >
                       <Route path = "/konga/baby-kids-and-toys/toys-and-activities/activities" element = {<Activities  />} />
                       <Route path = "/konga/baby-kids-and-toys/toys-and-activities/bicycles-and-rideon" element = {<BicyclesandRideOn  />} />
                       <Route path = "/konga/baby-kids-and-toys/toys-and-activities/bouncers-rockers-and-swingers" element = {<BouncersRockersandSwingers  />} />
@@ -493,13 +485,13 @@ export default function App() {
                 </Route>
 
                 <Route path = "/konga/other-categories" element = {<OtherCategories />}>
-                    <Route path = "/konga/other-categories/automotive" element = {<Automotive allprods = {allprods}/>} >
+                    <Route path = "/konga/other-categories/automotive" element = {<Automotive />} >
                         <Route path = "/konga/other-categories/automotive/autocare-and-maintenance" element = {<AutocareandMaintenance />} />
                         <Route path = "/konga/other-categories/automotive/automotivetools-and-accessories" element = {<AutomotiveToolsandAccessories />} />
                         <Route path = "/konga/other-categories/automotive/safety-and-security" element = {<SafetyandSecurity />} />
                         <Route path = "/konga/other-categories/automotive/tyres-and-batteries" element = {<TyresandBatteries />} />
                     </Route>
-                    <Route path = "/konga/other-categories/beauty-and-personal" element = {<BeautyandPersonalCare allprods = {allprods}/>} >
+                    <Route path = "/konga/other-categories/beauty-and-personal" element = {<BeautyandPersonalCare />} >
                         <Route path = "/konga/other-categories/beauty-and-personal/contraceptives-and-lubricants" element = {<ContraceptivesandLubricants />} />
                         <Route path = "/konga/other-categories/beauty-and-personal/fragrances" element = {<Fragrances />} />
                         <Route path = "/konga/other-categories/beauty-and-personal/haircentre" element = {<HairCentre />} />
@@ -508,26 +500,26 @@ export default function App() {
                         <Route path = "/konga/other-categories/beauty-and-personal/sexual-wellness" element = {<SexualWellness />} />
                         <Route path = "/konga/other-categories/beauty-and-personal/skincare" element = {<SkinCare />} />
                     </Route>
-                    <Route path = "/konga/other-categories/books-and-medialibrary" element = {<BooksandMediaLibrary allprods = {allprods}/>} >
+                    <Route path = "/konga/other-categories/books-and-medialibrary" element = {<BooksandMediaLibrary />} >
                         <Route path = "/konga/other-categories/books-and-medialibrary/audio-books" element = {<AudioBooks  />} />
                         <Route path = "/konga/other-categories/books-and-medialibrary/hardbooks" element = {<Books  />} />
                         <Route path = "/konga/other-categories/books-and-medialibrary/keyboard-pianos-and-drums" element = {<KeyboardPianosandDrums  />} />
                         <Route path = "/konga/other-categories/books-and-medialibrary/musical-equipment" element = {<MusicalEquipment  />} />
                         <Route path = "/konga/other-categories/books-and-medialibrary/string-instruments" element = {<StringInstruments  />} />
                     </Route>
-                    <Route path = "/konga/other-categories/building-and-industrial" element = {<BuildingandIndustrial allprods = {allprods}/>} >
+                    <Route path = "/konga/other-categories/building-and-industrial" element = {<BuildingandIndustrial />} >
                         <Route path = "/konga/other-categories/building-and-industrial/construction-materials" element = {<ConstructionMaterials />} />
                         <Route path = "/konga/other-categories/building-and-industrial/plumbing-materials" element = {<PlumbingMaterials  />} />
                         <Route path = "/konga/other-categories/building-and-industrial/sewingmachines-and-accessories" element = {<SewingMachinesandAccessories  />} />
                         <Route path = "/konga/other-categories/building-and-industrial/tools" element = {<Tools  />} />
                     </Route>
-                    <Route path = "/konga/other-categories/generators-and-power" element = {<GeneratorsandPower allprods = {allprods}/>} >
+                    <Route path = "/konga/other-categories/generators-and-power" element = {<GeneratorsandPower />} >
                         <Route path = "/konga/other-categories/generators-and-power/generators-and-accessories" element = {<GeneratorsandAccessories />} />
                         <Route path = "/konga/other-categories/generators-and-power/inverters" element = {<Inverters />} />
                         <Route path = "/konga/other-categories/generators-and-power/solar-and-alternative-energy" element = {<SolarandAlternativeEnergy />} />
                         <Route path = "/konga/other-categories/generators-and-power/ups-and-surge-protectors" element = {<UPSandSurgeProtectors />} />
                     </Route>
-                    <Route path = "/konga/other-categories/sports-and-fitness" element = {<SportsandFitness allprods = {allprods}/>} >
+                    <Route path = "/konga/other-categories/sports-and-fitness" element = {<SportsandFitness />} >
                         <Route path = "/konga/other-categories/sports-and-fitness/boxing" element = {<Boxing />} />
                         <Route path = "/konga/other-categories/sports-and-fitness/fitness" element = {<Fitness />} />
                         <Route path = "/konga/other-categories/sports-and-fitness/football" element = {<Football />} />

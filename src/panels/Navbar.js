@@ -5,6 +5,7 @@ import "../navbar.scss"
 import {v4 as uuidv4} from "uuid";
 import { NavLink, Link } from "react-router-dom";
 import { useState } from "react";
+import { mainNav } from "../pages/Konga/Konga";
 
 //IMPORTED SVGs
 import homeicon from "../SVGs/home_icon.svg"
@@ -31,12 +32,12 @@ export default function Navbar(props){
 
     // w-[70%] sm:w-[70%] md:w-[80%] lg:w-[85%]
 
-    const main_nav = props.mainNav;
+    // const main_nav = props.mainNav;
 
     return (
         <>
             {/* MOBILE AND TABLET NAVBAR BUTTON PANE */}
-            <div className="navbar w-auto flex flex-row items-center justify-start white_col z-[1] border-b-[1px] border-gray-300 xl:hidden">
+            <div className="navbar w-auto flex flex-row items-center justify-start white_col z-[1] xl:border-b-[1px] xl:border-gray-300 xl:hidden">
              
                 <div className="flex flex-row ">
                     {/* HOME ICON AND VENDOR LOGO IMAGE DIV */}
@@ -78,7 +79,7 @@ export default function Navbar(props){
                 {/* TABS DIV */}
                 <div className="flex w-full py-2 flex-row flex-wrap justify-center mx-2">
                     {
-                        main_nav.map((item)=>{
+                        mainNav.map((item)=>{
                             return (
                                 <NavLink 
                                 key = {uuidv4()}
@@ -126,7 +127,7 @@ export default function Navbar(props){
                 {/* TABS DIV */}
                 <div className="flex py-3 flex-row justify-between mx-2">
                     {
-                        main_nav.map((item)=>{
+                        mainNav.map((item)=>{
                             return (
                                 <NavLink 
                                 key = {uuidv4()}

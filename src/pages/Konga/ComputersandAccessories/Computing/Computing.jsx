@@ -6,7 +6,6 @@ import ProductArea from "../../../../panels/ProductArea"
 export default function Computing (props){
 
     const name = "Computing"
-
     const subsub = [
         {name : "Bags,cases,covers" ,href : KongaDefault("bags-cases-covers")},
         {name : "Computer Peripherals",href : KongaDefault("computer-peripherals")},
@@ -17,7 +16,7 @@ export default function Computing (props){
 
     return (
         <>
-            <ProductArea allprods = {props.allprods} subsub = {subsub} name = {name}/>
+            <ProductArea subsub = {subsub} name = {name}/>
             <Outlet  />
         </>
     )

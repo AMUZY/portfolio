@@ -8,6 +8,7 @@ import { NavLink, useNavigate } from "react-router-dom"
 import {v4 as uuidv4} from "uuid"
 import { useState } from "react"
 import { useMemo } from "react"
+import { useServeAllKongaItems } from "../Custom_Functions/ServeAllKongaItems"
 // import { useParams } from "react-router-dom"
 
 export var SEARCHED = {
@@ -17,7 +18,7 @@ export var SEARCHED = {
 
 
 export default function ProductArea (props){
-    const [prod,setProd] = useState(props.allprods);
+    const prod = useServeAllKongaItems(); 
     const subsub = props.subsub;
     const [search,setSearch] = useState("hidden")
     const [check,setCheck] = useState("");

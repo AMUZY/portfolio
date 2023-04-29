@@ -33,7 +33,7 @@ import { useEffect } from "react"
 export default function Home(props) {
     const vendors = [
         // {name : "JUMIA" , src : jumia , href : "/jumia",  alt : "jumia online shopping mall"},
-        // {name : "KONGA" , src : konga , href : KongaDefault("konga"),  alt : "konga online shopping mall"},
+        {name : "KONGA" , src : konga , href : KongaDefault("konga"),  alt : "konga online shopping mall"},
         // {name : "EXPERTNAIRE" , src : expertnaire , href : "/expertnaire/exp-products",  alt : "expertnaire, platform for digital products"},
         {name : "JVZOO" , src : jvzoo , href : "/expertnaire/exp-products",  alt : "jvzoo, platform for digital products"},
     ]

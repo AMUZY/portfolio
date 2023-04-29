@@ -1,7 +1,6 @@
 import "../konga.scss"
 import KongaDefault from "../kongaDefault"
-import SubCat from "../../../panels/SubCat"
-import Cat_Template from "../Cat_Template"
+import KongaPageFormat from "../../../Custom_Functions/KongaPageFormat"
 
 export default function HomeandKitchen (props) {
 
@@ -15,9 +14,6 @@ export default function HomeandKitchen (props) {
     ]
 
     return (
-        <>
-            <SubCat sub_cat = {sub_cat}/>
-            <Cat_Template />
-        </>
+        <KongaPageFormat sub_cat = {sub_cat} />
     )
 }

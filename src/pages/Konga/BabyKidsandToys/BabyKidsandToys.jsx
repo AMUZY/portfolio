@@ -1,6 +1,6 @@
-import { Outlet } from "react-router-dom"
+import "../konga.scss"
 import KongaDefault from "../kongaDefault"
-import SubCat from "../../../panels/SubCat"
+import KongaPageFormat from "../../../Custom_Functions/KongaPageFormat"
 
 export default function BabyKidsandToys (props) {
 
@@ -15,11 +15,6 @@ export default function BabyKidsandToys (props) {
     ]
 
     return (
-        <>
-            <SubCat sub_cat = {sub_cat}/>
-            <div className="w-full h-full flex flex-col">
-                <Outlet />
-            </div>
-        </>
+        <KongaPageFormat sub_cat = {sub_cat} />
     )
 }

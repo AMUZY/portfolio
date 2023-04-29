@@ -1,8 +1,6 @@
 import "../konga.scss"
 import KongaDefault from "../kongaDefault"
-import SubCat from "../../../panels/SubCat"
-import Cat_Template from "../Cat_Template"
-// import { useOutletContext } from "react-router-dom"
+import KongaPageFormat from "../../../Custom_Functions/KongaPageFormat"
 
 export default function ComputersandAccessories (props) {
 
@@ -15,9 +13,6 @@ export default function ComputersandAccessories (props) {
     
 
     return (
-        <>
-            <SubCat sub_cat = {sub_cat}/>
-            <Cat_Template />
-        </>
+        <KongaPageFormat sub_cat = {sub_cat} />
     )
 }

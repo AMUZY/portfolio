@@ -31,7 +31,7 @@ export default function SubCat(props){
     return (
         <>
             {/* MOBILE SUB CATEGORIES BUTTON PANE*/}
-            <div className="navbar absolute px-4 top-0 right-0 w-auto flex flex-row items-center justify-start white_col z-[1] border-b-[1px] border-gray-300 xl:hidden">
+            <div className="navbar px-4 w-auto flex flex-row items-center justify-start white_col z-[1] xl:hidden">
                 {/* SUB CATEGORIES BUTTON DIV */}
                 <button type = "button" className = "flex flex-col items-center w-max h-max my-auto"
                     onClick = {()=>{OpenCat()}}>

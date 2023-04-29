@@ -42,7 +42,6 @@ export const expColRef = collection(product_db, "exp")
 var products = []
 var exp_prod = []
 
-
 // export var exp_prod = [({...doc.data() ,id: doc.id})]
 
 onSnapshot(colRef, (snapshot)=>{
@@ -51,7 +50,6 @@ onSnapshot(colRef, (snapshot)=>{
         })
     // console.log(products)
 })
-
 
 
 onSnapshot(expColRef, (snapshot)=>{
@@ -63,10 +61,10 @@ onSnapshot(expColRef, (snapshot)=>{
 
 
 
-
 const UPDATEINFO = {
     UPDATETITLE : "updatetitle",
     UPDATESUBTITLE : "updatesubtitle",
+    UPDATEGROUP : "updategroup",
     UPDATEWHY : "updatewhy",
     UPDATEIMG : "updateimg",
     UPDATEPRICE : "updateprice",
@@ -76,9 +74,38 @@ const UPDATEINFO = {
     UPDATE_ID : "updateid",
 }
 
-// ALL PRODUCT FEATURES
+// ALL GROUPNAMES
+const GROUPNAMES = ["BabyfoodandFormula", "BibsandBurpCloths", "BottleFeeding", "BreastFeeding", "FeedingandNursing", 
+"PacifiersandTeethers", "BathtimeEssentials", "DailyCare", "DiaperBagsandChangingMats", "DiapersandBabyWipes",
+"PottyTraining", "BoyBodysuitsandPlaysuits", "BoySet", "BoyShoes", "BoySleepwear", "BoyUnderwearandSocks", "BoyWatches",
+"DenimTrousers", "GirlBodysuitsandPlaysuits", "GirlSets", "GirlShoes", "GirlSleepwear", "GirlUnderwearandSocks",
+"GirlWatches", "Bedding", "DecorAccessories", "Furniture", "BagsandBackpacks", "LunchboxesandWaterbottles", "SchoolShoes",
+"Activities", "BicyclesandRideOn", "BouncersRockersandSwingers", "EductaionalToys", "TabletsForKids", "BagsCasesCovers",
+"ComputerPeripherals", "LaptopandDesktopAccessories", "StorageDevices", "HybridPCs", "Macbooks", "MiniLaptopsandNetbooks",
+"Notebooks", "Ultrabooks", "PCGames", "PCGamingAccessories", "GamingAccessories", "HeadPhones", "OtherAccessories", "TelevisionAccessories",
+"TVAudio", "CamcordersandVideoCameras", "CameraLensesandAccessories", "CCTVCameras", "DigitalCameras", "ProffandSLRCameras",
+"PS3", "PS4", "PSVita", "SonyPSP", "Xbox360", "XboxOne", "HifiSystems", "HomeTheatre", "MP3PlayersandSpeakers",
+"CurvedTVs", "LedTVs", "OledTVs", "PlasmaTVs", "SmartTVs", "BedroomFurniture", "KitchenandDiningFurniture", "LivingRoomFurniture",
+"OfficeFurniture", "BedandBathroomFurnishings", "CurtainandBlinds", "Decor", "LightFixtures", "RugsandCarpets",
+"CookandBakeware", "Dining", "KitchenUtensils", "AirConditionersandCoolers", "CookersandOvens", "Fans", "Freezers",
+"Refrigerators", "VacuumCleaners", "WaterDispensers", "BlendersJuicersandMixers", "ElectricKettles", "HotPlatesandBurners",
+"IronsandSteamers", "Microwaves", "ProcessorsandMincers", "Hisense", "LG", "Polystar", "Samsung", "Scanfrost",
+"BeltsandWallets", "CapsandHats", "MenBags", "SocksandUnderwear", "TiesandCufflinks", "CasualShoes", "FormalShoes",
+"ShoeCareandAccessories", "SlippersandSandals", "Jeans", "Jerseys", "MenShirts", "Polos", "TrousersandShorts",
+"TShirts", "MenWatches","PursesandClutches", "Wallets", "WomenBags", "WomenBelts", "Heels", "ShoesandBags",
+"SportShoes", "Wedges", "WomenSandalsandSlippers", "Dresses", "LingerieandSleepwear", "Skirts", "Tops", "WomenTrousers",
+"AutocareandMaintenance", "AutomotiveToolsandAccessories", "SafetyandSecurity", "TyresandBatteries", "ContraceptivesandLubricants",
+"Fragrances", "HairCentre", "Health", "MakeUp", "SexualWellness", "SkinCare", "AudioBooks", "Books", "KeyboardPianosandDrums", "MusicalEquipments",
+"StringInstruments", "ConstructionMaterials", "PlumbingMaterials", "SewingMachinesandAccessories", "Tools", "GeneratorsandAccessories", "Inverters",
+"SolarAlternativeEnergy", "UPSandSurgeProtectors", "Boxing", "Fitness", "Football", "OutdoorsandIndoorGames", "Sportswear", "Swimming", "FeaturePhones",
+"SmartPhones", "Batteries", "Cables", "CasesandCovers", "ChargersandPowerBanks", "EarphonesandHeadsets", "ScreenProtectors", "SmartWatchesandBands", 
+"Android", "IOS", "OtherOS", "Windows" 
+]
+
+// ALL KONGA PRODUCT FEATURES
 let title = "";
 let subtitle = "";
+let group = "";
 let spec = "";
 let image = "";
 let price = "";
@@ -105,6 +132,8 @@ export default function MyFirebase (){
         dispatch({type : UPDATEINFO.UPDATETITLE , payload : title})
         subtitle = "";
         dispatch({type : UPDATEINFO.UPDATESUBTITLE , payload : subtitle})
+        group = "";
+        dispatch({type : UPDATEINFO.UPDATEGROUP , payload : group})
         image = "";
         dispatch({type : UPDATEINFO.UPDATEIMG , payload : image})
         price = "";
@@ -147,6 +176,9 @@ export default function MyFirebase (){
             }
             case UPDATEINFO.UPDATESUBTITLE : {
                 return {...state, subtitle : action.payload }
+            }
+            case UPDATEINFO.UPDATEGROUP : {
+                return {...state, group : action.payload }
             }
             case UPDATEINFO.UPDATEIMG : {
                 return {...state, image : action.payload }
@@ -193,7 +225,7 @@ export default function MyFirebase (){
     }
 
     // USE REDUCER INITIALIZATION
-    const [product, dispatch] = useReducer(reducer, {title, subtitle, image, price, star, spec, link, id})
+    const [product, dispatch] = useReducer(reducer, {title, subtitle, group, image, price, star, spec, link, id})
     const [exp_product, exp_dispatch] = useReducer(exp_reducer, {exp_title, exp_subtitle, exp_why, exp_image, exp_link, exp_id})
 
     // DIV, LABALE AND INPUT STYLES
@@ -205,6 +237,7 @@ export default function MyFirebase (){
     addDoc(colRef, {
       title : product.title,
       subtitle : product.subtitle,
+      group : product.group,
       image : product.image,
       price : product.price,
       star : product.star,
@@ -255,19 +288,24 @@ export default function MyFirebase (){
 //   const [name, setName] = useState("");
   const [search,setSearch] = useState("hidden")
   const [expsearch,setExpSearch] = useState("hidden")
+  const [groupsearch,setGroupSearch] = useState("hidden")
   const [check,setCheck] = useState("");
+  const [groupcheck,setGroupcheck] = useState("");
   const [expcheck,setExpCheck] = useState("");
   const [xbtn,setXbtn] = useState("hidden");
   const [filtereditems,setFiltereditems] = useState([]);
   const [expfiltereditems,setexpFiltereditems] = useState([]);
+  const [groupfiltereditems,setGroupfiltereditems] = useState([]);
 
 
 //   final search
   let finalsearch = [...new Set(filtereditems.map((item)=>{return item }))];
-
+// GROUP SEARCH
+let groupfinalsearch = [...new Set(groupfiltereditems.map((item)=>{return item }))];
   
 // EXP final search
   let expfinalsearch = [...new Set(expfiltereditems.map((item)=>{return item }))];
+//   KONGA HANDLECHANGE
   const handleChange = (e) => {
     // 👇 Get input value from "event"
     e.preventDefault();
@@ -317,11 +355,35 @@ export default function MyFirebase (){
 
   };
 
+  //   GROUP HANDLE CHANGE
+  const grouphandleChange = (e) => {
+    // 👇 Get input value from "event"
+    e.preventDefault();
+    // setName(e.target.value);
+    setGroupcheck(e.target.value);
+    setGroupSearch("block");
+    if(e.target.value === "")
+    {
+        setGroupSearch("hidden")
+    }
+    if(groupcheck.length >= 0 && e.target.value !== ""){
+        setXbtn("inline-block")
+    }
+    else{
+        setXbtn("hidden")
+    }
+    setGroupfiltereditems(GROUPNAMES.filter((item)=>{
+        return(
+            item.toLowerCase().includes(groupcheck.toLowerCase())
+        )
+    }))
+  };
+
     return (
         <>
             <h1 className="mt-3 title text-red-500"> KONGA </h1>
 
-            <div className="p-3 mx-auto h-full flex flex-col justify-center items-start w-[90%] md:w-[50%]">
+            <div onClick={()=>{setGroupSearch("hidden"); setXbtn("hidden")}} className="p-3 mx-auto h-full flex flex-col justify-center items-start w-[90%] md:w-[70%] xl:w-[50%]">
                 <h1 className="text-xl font-bold mx-auto w-full flex flex-wrap underline"> CREATE </h1>
                 <form onSubmit={handlesubmit}
                 className="flex flex-col justify-between items-start mb-5 h-max w-full">
@@ -333,6 +395,28 @@ export default function MyFirebase (){
                     <div className={divstyle}>
                         <label className = {labelstyle} htmlFor = "subtitle"> Subtitle: </label>
                         <input className = {inputstyle} onChange={(e)=>{subtitle = e.target.value; dispatch({type : UPDATEINFO.UPDATESUBTITLE , payload : subtitle})}} type = "text" name = "subtitle" value={product.subtitle}/>
+                    </div>
+                    <div className={divstyle + " relative"}>
+                        <label className = {labelstyle} htmlFor = "group"> Group: </label>
+                        <input className = {inputstyle} onChange={grouphandleChange
+                            // group = e.target.value; dispatch({type : UPDATEINFO.UPDATEGROUP , payload : group})
+                        } type = "text" name = "group" value={groupcheck}/>
+                        {/* BUTTON TO CLEAR SEARCH BAR */}
+                        <button className = {"absolute h-[98%] top-0 right-1 bottom-0 nohightlight " + xbtn} onClick={()=>{setGroupcheck("");setXbtn("hidden");setGroupSearch("hidden")}}><img className = "bg-white w-[25px]" src = {x} alt = "delete button"/></button>
+                        {/* DIV WHERE ITEMS SHOW UP */}
+                        <div className={"absolute z-[1] searcheddiv overflow-y-scroll black_col rounded-lg p-2 flex flex-col flex-nowrap left-0 translate-y-[100%] right-0 bottom-[-10%] max-h-[412px] " + groupsearch}> 
+                            {
+                                groupfinalsearch.map((item)=>{
+                                    return (
+                                        <button type = "button" key = {uuidv4()} onClick = {()=>{
+                                            setGroupcheck(item);
+                                            setGroupSearch("hidden")
+                                            dispatch({type : UPDATEINFO.UPDATEGROUP , payload : item})
+                                        }} className="flex flex-row text text-white mx-1 my-2 xl:my-1"> {item} </button>
+                                    )
+                                })
+                            }
+                        </div>
                     </div>
                     <div className={divstyle}>
                         <label className = {labelstyle} htmlFor = "image"> image src: </label>
@@ -356,7 +440,7 @@ export default function MyFirebase (){
                     </div>
                     {/* CREATE OR DELETE BUTTONS */}
                     <div className="w-max mx-auto p-2 flex flex-row items-center">
-                        <button type = "reset" onClick = {()=>{AddProduct(); ResetAddform();}} className="min-w-[7rem] mr-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded-xl">
+                        <button type = "reset" onClick = {()=>{AddProduct(); setGroupcheck("");setXbtn("hidden"); ResetAddform();}} className="min-w-[7rem] mr-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded-xl">
                         Create Item
                         </button>
                     </div>
@@ -438,7 +522,7 @@ export default function MyFirebase (){
 
              */}
             <h1 className="mt-12 title text-red-500"> EXPERTNAIRE/JVZOO </h1>
-            <div className="p-3 mx-auto h-full flex flex-col justify-center items-start w-[90%] md:w-[50%]">
+            <div className="p-3 mx-auto h-full flex flex-col justify-center items-start w-[90%] md:w-[70%] xl:w-[50%]">
                 <h1 className="text-xl font-bold mx-auto w-full flex flex-wrap underline"> CREATE </h1>
                 <form onSubmit={handlesubmit}
                 className="flex flex-col justify-between items-start mb-5 h-max w-full">

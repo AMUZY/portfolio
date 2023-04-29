@@ -16,7 +16,7 @@ export default function BabyEssentials (props){
 
     return (
         <>
-            <ProductArea allprods = {props.allprods} subsub = {subsub} name = {name}/>
+            <ProductArea subsub = {subsub} name = {name}/>
             <Outlet />
         </>
     )
