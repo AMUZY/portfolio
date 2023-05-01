@@ -14,7 +14,7 @@ export default function ExpSearchCard (props){
         <div className="flex flex-col justify-center items-center">
             {/* <h1 className="w-max h-max subtitle_semibold">NAME:</h1> */}
             <h1 className="mb-4 title"> {props.title} </h1>
-            <div className="mb-4 overflow-x-scroll min-h-[50px] searchimgCont max-w-full h-auto px-8 flex flex-row items-center">
+            <div className="mb-4 min-h-[50px] searchimgCont max-w-full h-auto px-8 flex flex-row items-center">
                 <LazyLoadImage effect="blur" key = {uuidv4()} src = {props.image} placeholderSrc= {props.image} className="searchlazyimg"/>
             </div>
             <h1 className="w-max h-max subtitle_semibold">DESCRIPTION:</h1>
