@@ -312,7 +312,6 @@ export default function Card(props) {
               href={props.link}
               type="button"
               onClick={() => {
-                console.log(props.prodlink);
                 setAnimate("animate");
               }}
               onTouchEnd={() => {

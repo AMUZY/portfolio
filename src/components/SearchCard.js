@@ -104,7 +104,7 @@ export default function SearchCard (props){
             <h1 className="mb-4 subtitle grey"> {props.spec} </h1>
             {/* PURCHASE LINK */}
             <a
-              href={props.prodlink}
+              href={props.link}
               type="button"
               className="mt-[6px] w-full md:w-auto pur_btn theme_col white "
             >

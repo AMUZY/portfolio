@@ -100,7 +100,7 @@ export default function ExpSearched() {
                                         subtitle={state.subtitle}
                                         image={state.image}
                                         why = {state.why}
-                                        link = {state.prodlink}
+                                        link = {state.link}
                                     />
                                 </div>
 

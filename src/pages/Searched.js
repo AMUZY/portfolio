@@ -39,7 +39,7 @@ export default function Searched() {
             price: item.price,
             star: item.star,
             spec: item.spec,
-            prodlink : item.prodlink,
+            link : item.link,
             };
             state = newstuff;
         }
@@ -58,7 +58,7 @@ export default function Searched() {
                                         price = {state.price}
                                         star = {state.star}
                                         spec = {state.spec}
-                                        prodlink = {state.prodlink}
+                                        link = {state.link}
                                     />
                                 </div>
 

@@ -140,10 +140,9 @@ export default function ExpCard (props) {
           <div className="mt-[8px] mb-[2px] md:my-[3px] xl:my-[6px] flex flex-col items-start md:flex-row md:items-center justify-between">
             {/* PURCHASE BUTTON */}
             <a
-              href={props.prodlink}
+              href={props.link}
               type="button"
               onClick={() => {
-                console.log(props.prodlink);
                 setAnimate("animate");
               }}
               onTouchEnd={() => {
