@@ -6,7 +6,7 @@ export default function Watches (props){
     const name = "Watches"
 
     const subsub = [
-        {name : "Men's Watches" ,href : KongaDefault("menswatches")},
+        {name : "Watches" ,href : KongaDefault("menswatches")},
     ]
 
     return (

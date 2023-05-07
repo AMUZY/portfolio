@@ -92,7 +92,7 @@ const GROUPNAMES = ["BabyfoodandFormula", "BibsandBurpCloths", "BottleFeeding", 
 "IronsandSteamers", "Microwaves", "ProcessorsandMincers", "Hisense", "LG", "Polystar", "Samsung", "Scanfrost",
 "BeltsandWallets", "CapsandHats", "MenBags", "SocksandUnderwear", "TiesandCufflinks", "CasualShoes", "FormalShoes",
 "ShoeCareandAccessories", "SlippersandSandals", "Jeans", "Jerseys", "MenShirts", "Polos", "TrousersandShorts",
-"TShirts", "MenWatches","PursesandClutches", "Wallets", "WomenBags", "WomenBelts", "Heels", "ShoesandBags",
+"TShirts", "MensWatches","PursesandClutches", "Wallets", "WomenBags", "WomenBelts", "Heels", "ShoesandBags",
 "SportShoes", "Wedges", "WomenSandalsandSlippers", "Dresses", "LingerieandSleepwear", "Skirts", "Tops", "WomenTrousers",
 "AutocareandMaintenance", "AutomotiveToolsandAccessories", "SafetyandSecurity", "TyresandBatteries", "ContraceptivesandLubricants",
 "Fragrances", "HairCentre", "Health", "MakeUp", "SexualWellness", "SkinCare", "AudioBooks", "Books", "KeyboardPianosandDrums", "MusicalEquipments",
@@ -436,7 +436,7 @@ let groupfinalsearch = [...new Set(groupfiltereditems.map((item)=>{return item }
                     </div>
                     <div className={divstyle}>
                         <label className = {labelstyle} htmlFor = "link"> LInk: </label>
-                        <input className = {inputstyle} onChange={(e)=>{link = e.target.value; dispatch({type : UPDATEINFO.UPDATELINK , payload : link})}} type = "text" name = "link" value={product.link}/>
+                        <input className = {inputstyle} onChange={(e)=>{link = e.target.value + "?k_id=AMUZY"; dispatch({type : UPDATEINFO.UPDATELINK , payload : link})}} type = "text" name = "link" value={product.link}/>
                     </div>
                     {/* CREATE OR DELETE BUTTONS */}
                     <div className="w-max mx-auto p-2 flex flex-row items-center">
