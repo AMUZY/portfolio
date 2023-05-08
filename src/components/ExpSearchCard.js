@@ -18,17 +18,17 @@ export default function ExpSearchCard (props){
                 <LazyLoadImage effect="blur" key = {uuidv4()} src = {props.image} placeholderSrc= {props.image} className="searchlazyimg"/>
             </div>
             <h1 className="w-max h-max subtitle_semibold">DESCRIPTION:</h1>
-            <h1 className="mb-4 subtitle grey"> {props.subtitle} </h1>
+            <h1 className="mb-4 subtitle black"> {props.subtitle} </h1>
             
             <h1 className="w-max h-max subtitle_semibold">WHY YOU NEED THIS:</h1>
-            <h1 className="mb-4 subtitle grey"> {props.why} </h1>
+            <h1 className="mb-4 subtitle black"> {props.why} </h1>
             {/* PURCHASE LINK */}
             <a
               href={props.link}
               type="button"
               className="mt-[6px] w-full md:w-auto pur_btn theme_col white "
             >
-              <h2 className="w-full text-center subtitle_semibold">Get it Now</h2>
+              <h2 className="w-full text-center purchase_txt">Get it Now</h2>
             </a>
         </div>
     )
