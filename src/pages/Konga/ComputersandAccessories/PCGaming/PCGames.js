@@ -1,4 +1,5 @@
 import Products from "../../../../panels/Products"
+import { ServeGroupItems } from "../../../../Custom_Functions/ServeGroupItems";
 
 //IMPRTED PICTURES
 import product from "../../../../PICTURES/product.jpg"
@@ -16,10 +17,8 @@ import four_half from "../../../../SVGs/4_5_star.svg";
 import five from "../../../../SVGs/5_star.svg";
 
 export default function PCGames (props){
+    const products = ServeGroupItems("PCGames");
 
-    const products = [
-                
-    ]
     return (
             <Products products = {products} />
     )
