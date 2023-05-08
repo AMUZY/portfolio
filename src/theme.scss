@@ -25,6 +25,7 @@ $section_dark : #212121;
 
 .input:focus {
     outline-color: $theme_col;
+    outline-style: outset;
 }
 
 .input::selection {
