@@ -253,7 +253,7 @@ import MyFirebase from "./MyFirebase";
 export default function App() {
       const allprods = useServeAllKongaItems();
   return (
-    <div className="App w-full flex flex-col relative">
+    <div className="App w-full white_col flex flex-col relative">
       <Router>
           <Routes>
               <Route path = "/" element = {<Home />} />

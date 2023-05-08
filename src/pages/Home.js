@@ -69,7 +69,7 @@ export default function Home(props) {
 
                 {/* IMAGE DIV */}
                 <div className="max-w-[92%] mt-10 mb-16">
-                        <LazyLoadImage src = {picdesktop} className="mx-auto rounded-md xl:rounded-xl white_col" placeholderSrc = {picdesktop} effect= "blur" alt = "home pic"/>
+                        <LazyLoadImage src = {picdesktop} className="mx-auto border-white border-2 rounded-md xl:rounded-xl white_col" placeholderSrc = {picdesktop} effect= "blur" alt = "home pic"/>
                 </div>
 
             <div className="w-full h-max flex flex-col items-center" >

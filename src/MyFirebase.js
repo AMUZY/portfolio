@@ -230,8 +230,8 @@ export default function MyFirebase (){
 
     // DIV, LABALE AND INPUT STYLES
     const divstyle = "w-full h-max flex flex-row justify-between items-center flex-grow"
-    const labelstyle = "mr-2 my-2 text-xl font-bold"
-    const inputstyle = "ml-1 px-2 my-2 input rounded-xs border-[1px] border-gray-300 flex-grow text-xl overflow-hidden"
+    const labelstyle = "mr-2 my-2 text-xl black font-bold"
+    const inputstyle = "ml-1 px-2 my-2 black input rounded-xs border-[1px] border-gray-300 flex-grow text-xl overflow-hidden"
   
   function AddProduct(){
     addDoc(colRef, {
@@ -402,7 +402,12 @@ let groupfinalsearch = [...new Set(groupfiltereditems.map((item)=>{return item }
                             // group = e.target.value; dispatch({type : UPDATEINFO.UPDATEGROUP , payload : group})
                         } type = "text" name = "group" value={groupcheck}/>
                         {/* BUTTON TO CLEAR SEARCH BAR */}
-                        <button className = {"absolute h-[98%] top-0 right-1 bottom-0 nohightlight " + xbtn} onClick={()=>{setGroupcheck("");setXbtn("hidden");setGroupSearch("hidden")}}><img className = "bg-white w-[25px]" src = {x} alt = "delete button"/></button>
+                        <button className = {"absolute h-[98%] top-0 right-1 bottom-0 nohightlight " + xbtn} onClick={()=>{setGroupcheck("");setXbtn("hidden");setGroupSearch("hidden")}}>
+                            <svg className = "bg-transparent black w-[25px]" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M26.25 15C26.25 8.78906 21.2109 3.75 15 3.75C8.78906 3.75 3.75 8.78906 3.75 15C3.75 21.2109 8.78906 26.25 15 26.25C21.2109 26.25 26.25 21.2109 26.25 15Z" stroke="currentColor" stroke-width="0.5" stroke-miterlimit="10"/>
+                                <path d="M18.75 18.75L11.25 11.25M11.25 18.75L18.75 11.25" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
                         {/* DIV WHERE ITEMS SHOW UP */}
                         <div className={"absolute z-[1] searcheddiv overflow-y-scroll black_col rounded-lg p-2 flex flex-col flex-nowrap left-0 translate-y-[100%] right-0 bottom-[-10%] max-h-[412px] " + groupsearch}> 
                             {
@@ -454,7 +459,12 @@ let groupfinalsearch = [...new Set(groupfiltereditems.map((item)=>{return item }
                         <label className = {labelstyle} htmlFor = "name"> NAME: </label>
                         <input className = {inputstyle} onChange={handleChange} placeholder="type in item name" type = "text" name = "name" value={check}/>
                         {/* BUTTON TO CLEAR SEARCH BAR */}
-                        <button className = {"absolute h-[98%] top-0 right-1 bottom-0 nohightlight " + xbtn} onClick={()=>{setCheck("");setXbtn("hidden");setSearch("hidden")}}><img className = "bg-white w-[25px]" src = {x} alt = "delete button"/></button>
+                        <button className = {"absolute h-[98%] top-0 right-1 bottom-0 nohightlight " + xbtn} onClick={()=>{setCheck("");setXbtn("hidden");setSearch("hidden")}}>
+                            <svg className = "bg-transparent black w-[25px]" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M26.25 15C26.25 8.78906 21.2109 3.75 15 3.75C8.78906 3.75 3.75 8.78906 3.75 15C3.75 21.2109 8.78906 26.25 15 26.25C21.2109 26.25 26.25 21.2109 26.25 15Z" stroke="currentColor" stroke-width="0.5" stroke-miterlimit="10"/>
+                                <path d="M18.75 18.75L11.25 11.25M11.25 18.75L18.75 11.25" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            </button>
                         {/* DIV WHERE ITEMS SHOW UP */}
                         <div className={"absolute z-[1] searcheddiv overflow-y-scroll black_col rounded-lg p-2 flex flex-col flex-nowrap left-0 translate-y-[100%] right-0 bottom-[-10%] max-h-[412px] " + search}> 
                             {
@@ -563,7 +573,12 @@ let groupfinalsearch = [...new Set(groupfiltereditems.map((item)=>{return item }
                         <label className = {labelstyle} htmlFor = "expname"> NAME: </label>
                         <input className = {inputstyle} onChange={exphandleChange} placeholder="type in item name" type = "text" name = "expname" value={expcheck}/>
                         {/* BUTTON TO CLEAR SEARCH BAR */}
-                        <button className = {"absolute h-[98%] top-0 right-1 bottom-0 nohightlight " + xbtn} onClick={()=>{setExpCheck("");setXbtn("hidden");setExpSearch("hidden")}}><img className = "bg-white w-[25px]" src = {x} alt = "delete button"/></button>
+                        <button className = {"absolute h-[98%] top-0 right-1 bottom-0 nohightlight " + xbtn} onClick={()=>{setExpCheck("");setXbtn("hidden");setExpSearch("hidden")}}>
+                            <svg className = "bg-transparent black w-[25px]" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M26.25 15C26.25 8.78906 21.2109 3.75 15 3.75C8.78906 3.75 3.75 8.78906 3.75 15C3.75 21.2109 8.78906 26.25 15 26.25C21.2109 26.25 26.25 21.2109 26.25 15Z" stroke="currentColor" stroke-width="0.5" stroke-miterlimit="10"/>
+                                <path d="M18.75 18.75L11.25 11.25M11.25 18.75L18.75 11.25" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            </button>
                         {/* DIV WHERE ITEMS SHOW UP */}
                         <div className={"absolute z-[1] searcheddiv overflow-y-scroll black_col rounded-lg p-2 flex flex-col flex-nowrap left-0 translate-y-[100%] right-0 bottom-[-10%] max-h-[412px] " + expsearch}> 
                             {
