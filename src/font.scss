@@ -27,7 +27,17 @@ $norm : 400;
     letter-spacing: -1.9%;
 }
 
+.name_semibold {
+    font-style: $style;
+    font-size: 16px;
+    font-weight: $s-bold;
+    text-align: $c_align;
+    line-height: 24px;
+    letter-spacing: -1.9%;
+}
+
 .subtitle_semibold {
+    @extend .black;
     font-style: $style;
     font-size: 16px;
     font-weight: $s-bold;
@@ -37,6 +47,7 @@ $norm : 400;
 }
 
 .price {
+    @extend .black;
     font-style: $style;
     font-size: 16px;
     font-weight: $s-bold;
@@ -46,6 +57,7 @@ $norm : 400;
 
 .text {
     @extend .decor_none;
+    @extend .black;
     font-style: $style;
     font-size: 12px;
     font-weight: $norm;
@@ -54,6 +66,16 @@ $norm : 400;
 }
 
 .text_semibold {
+    @extend .decor_none;
+    @extend .black;
+    font-style: $style;
+    font-size: 12px;
+    font-weight: $s_bold;
+    line-height: 18px;
+    letter-spacing: -0.6%;
+}
+
+.purchase_txt {
     font-style: $style;
     font-size: 12px;
     font-weight: $s_bold;
@@ -62,6 +84,7 @@ $norm : 400;
 }
 
 .desc {
+    @extend .black;
     font-style: $style;
     font-size: 10px;
     font-weight: $norm; 
@@ -78,6 +101,7 @@ $norm : 400;
 }
 
 .category {
+    @extend .black;
     font-style: $style;
     font-size: 10px;
     font-weight: $norm;
@@ -116,6 +140,15 @@ $norm : 400;
         letter-spacing: -1.9%;
     }
     
+    .name_semibold {
+        font-style: $style;
+        font-size: 20px;
+        font-weight: $s_bold;
+        text-align: $c_align;
+        line-height: 28px;
+        letter-spacing: -1.9%;
+    }
+
     .subtitle_semibold {
         font-style: $style;
         font-size: 20px;
@@ -142,6 +175,14 @@ $norm : 400;
     }
     
     .text_semibold {
+        font-style: $style;
+        font-size: 16px;
+        font-weight: $s_bold;
+        line-height: 20px;
+        letter-spacing: 0%;
+    }
+
+    .purchase_txt {
         font-style: $style;
         font-size: 16px;
         font-weight: $s_bold;
@@ -204,6 +245,15 @@ $norm : 400;
         line-height: 32px;
         letter-spacing: -1.9%;
     }
+
+    .name_semibold {
+        font-style: $style;
+        font-size: 24px;
+        font-weight: $s_bold;
+        text-align: $c_align;
+        line-height: 32px;
+        letter-spacing: -1.9%;
+    }
     
     .subtitle_semibold {
         font-style: $style;
@@ -237,7 +287,15 @@ $norm : 400;
         line-height: 24px;
         letter-spacing: -0.6%;
     }
-    
+
+    .purchase_txt {
+        font-style: $style;
+        font-size: 18px;
+        font-weight: $s_bold;
+        line-height: 24px;
+        letter-spacing: -0.6%;
+    }
+
     .desc {
         font-style: $style;
         font-size: 14px;

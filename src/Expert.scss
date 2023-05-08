@@ -1,4 +1,7 @@
+@use "theme";
+
 .mainkonga {
+    @extend .white_col;
     overflow : hidden;
     max-height : -webkit-fill-available;
     height : 100dvh;
@@ -10,6 +13,7 @@
 }
 
 .cat {
+    @extend .white_col;
     height : 99%;
 }
 

@@ -89,7 +89,7 @@ export default function ExpSearched() {
         }
     });
       return (
-            <div className="w-full h-full p-8">
+            <div className="w-full h-full white_col p-8">
                 {count.map(()=>{
                         if(state){
                             return (

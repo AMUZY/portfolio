@@ -6,7 +6,6 @@ import Subcatbtn from "../buttons/Subcatbtn"
 import { useState } from "react"
 
 //IMPORTED SVGs
-import menu from "../SVGs/menu.svg"
 
 import { NavLink, Link } from "react-router-dom"
 import {v4 as uuidv4} from "uuid"
@@ -35,7 +34,9 @@ export default function SubCat(props){
                 {/* SUB CATEGORIES BUTTON DIV */}
                 <button type = "button" className = "flex flex-col items-center w-max h-max my-auto"
                     onClick = {()=>{OpenCat()}}>
-                        <img className = "w-[20px] md:w-[25px] xl:w-[30px]" src = {menu} alt = "menu button" />
+                        <svg className = "w-[20px] md:w-[25px] xl:w-[30px] black" width="21" height="21" viewBox="0 0 21 21" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8.25H18M3 13.25H18M3 18.25H18" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+                        </svg>
                         <h2 className="category">
                             Sub Categories
                         </h2>

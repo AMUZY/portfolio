@@ -321,7 +321,7 @@ export default function Card(props) {
                 "mt-[6px] w-full md:w-auto pur_btn theme_col white " + animate
               }
             >
-              <h2 className="w-full text-center text_semibold">Purchase</h2>
+              <h2 className="w-full text-center purchase_txt">Purchase</h2>
             </a>
           </div>
         </div>

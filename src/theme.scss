@@ -4,13 +4,24 @@ $subcat_col : #00B2FF;
 $d_grey : #6E7C87;
 $black : #252C32;
 $white : #FFFFFF;
+$white_dark : #000;
 $clickbtn : #CACACA;
 $unclickbtn : #F1F2F4;
 $specs : #0090D8;
 $section : #F6F8F9;
+$section_dark : #212121;
 
 
 // FOR SUBCAT MOBILE HEADER
+.nohighlight {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
 .input:focus {
     outline-color: $theme_col;
@@ -25,16 +36,7 @@ $section : #F6F8F9;
     background: $theme_col; /* Gecko Browsers */
 }
 
-.nohighlight {
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
+//LIGHT AND DARK MODE COLOURS
 .section_col {
     background-color: $section;
     @extend .nohighlight;
@@ -53,6 +55,12 @@ $section : #F6F8F9;
     background-color: $black;
     @extend .nohighlight;
 }
+
+.icon_col {
+    background-color: $white;
+    @extend .nohighlight;
+}
+
 .subcat_col {
     background-color: $subcat_col;
     @extend .nohighlight;
@@ -96,11 +104,39 @@ $section : #F6F8F9;
 .specs {
     color : $specs;
 }
+.loadingsvg {
+    color : $theme_col;
+}
+
+@mixin dark_mode {
+    .section_col {
+        background-color: $section_dark;
+    }
+    .white_col {
+        background-color: $white_dark;
+    }
+    .black {
+        color : $white;
+    }
+    .input {
+        background-color: $white_dark;
+    }
+    .icon_col {
+        background-color: $black;
+    }
+}
+
+.dark_mode {
+    @include dark_mode();
+}
+
+
+@media (prefers-color-scheme : dark) {
+    body {
+        @include dark_mode();
+    }
+}
 
 .searcheddiv ::-webkit-scrollbar {
     display: none;
-}
-
-.loadingsvg {
-    color : $theme_col;
 }

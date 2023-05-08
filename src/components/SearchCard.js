@@ -26,14 +26,14 @@ export default function SearchCard (props){
     return (
         <div className="flex flex-col justify-center items-center">
             {/* <h1 className="w-max h-max subtitle_semibold">NAME:</h1> */}
-            <h1 className="mb-4 title"> {props.title} </h1>
+            <h1 className="mb-4 black title"> {props.title} </h1>
             <h1 className="w-max h-max subtitle_semibold">DESCRIPTION:</h1>
             <h1 className="mb-4 subtitle grey"> {props.subtitle} </h1>
             <div className="mb-4 min-h-[50px] searchimgCont max-w-full h-auto px-8 flex flex-row items-center">
               <LazyLoadImage effect="blur" src = {props.image} placeholderSrc= {props.image} className="z-[0] flex-shrink-0 w-[inherit] h-[inherit] "/>
             </div>
             <h1 className="w-max h-max subtitle_semibold">PRICE:</h1>
-            <h1 className="mb-4 subtitle"> {"₦" + props.price} </h1>
+            <h1 className="mb-4 black subtitle"> {"₦" + props.price} </h1>
             <h1 className="w-max h-max subtitle_semibold">RATING:</h1>
             {/* <img className = "mb-4 w-40 grey" src = {props.star} /> */}
             {

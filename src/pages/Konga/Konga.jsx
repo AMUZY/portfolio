@@ -1,5 +1,5 @@
 import "../../button.scss"
-import "./konga.scss"
+import "../../konga.scss"
 import Navbar from "../../panels/Navbar"
 import { Outlet } from "react-router-dom"
 import KongaDefault from "./kongaDefault"

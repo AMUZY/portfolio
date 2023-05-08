@@ -124,10 +124,15 @@ export default function ExpProductsPanel(props){
                             // setCheck("");    
                         }}
                         onChange={handleChange}
-                        className="w-full h-full input rounded-lg border-[1px] border-gray-300 px-4 py-2 text overflow-hidden" placeholder="Search All Products" />
+                        className="w-full h-full input rounded-lg border-[1px] border-gray-300 pl-3 pr-8 py-2 text overflow-hidden" placeholder="Search All Products" />
 
                     {/* BUTTON TO CLEAR SEARCH BAR */}
-                    <button className = {"absolute h-[98%] top-0 right-1 bottom-0 nohightlight " + xbtn} onClick={()=>{setCheck("");setXbtn("hidden")}}><img className = "bg-white w-[25px]" src = {x} alt = "delete button"/></button>
+                    <button className = {"absolute h-[98%] top-0 right-1 bottom-0 nohightlight " + xbtn} onClick={()=>{setCheck("");setXbtn("hidden")}}>
+                        <svg className = "bg-transparent black w-[25px]" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M26.25 15C26.25 8.78906 21.2109 3.75 15 3.75C8.78906 3.75 3.75 8.78906 3.75 15C3.75 21.2109 8.78906 26.25 15 26.25C21.2109 26.25 26.25 21.2109 26.25 15Z" stroke="currentColor" stroke-width="0.5" stroke-miterlimit="10"/>
+                            <path d="M18.75 18.75L11.25 11.25M11.25 18.75L18.75 11.25" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                    </button>
                 </div>
 
                 {/* DIV WHERE ITEMS SHOW UP */}

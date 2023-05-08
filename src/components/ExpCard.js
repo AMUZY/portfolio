@@ -3,6 +3,7 @@ import "../theme.scss";
 import "../font.scss";
 import "../navbar.scss";
 import "../card.scss";
+import LoaderComp from "../LoadingIcons/LoaderComp";
 
 import larrow from "../SVGs/l_arrow.svg";
 import rarrow from "../SVGs/r_arrow.svg";
@@ -82,6 +83,8 @@ export default function ExpCard (props) {
     }
   }
 
+  let imgcount = [1];
+
   return (
     // CARD DIV
     <div className="flex my-2 h-auto items-center reg_shadow white_col rounded-lg flex-col md:my-3 md:p-3 lg:my-4 xl:flex-row">
@@ -98,6 +101,13 @@ export default function ExpCard (props) {
                 slide
               }
             >
+              {imgcount.map(()=>{
+                while(props.image){
+                  return (
+                    <LoaderComp key = {uuidv4()} />
+                  )
+                }
+              })}
               <img
                 key={uuidv4()}
                 className="z-[0] flex-shrink-0 w-[inherit] h-[inherit] "

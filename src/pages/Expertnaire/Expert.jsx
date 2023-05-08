@@ -1,5 +1,5 @@
 import "../../button.scss"
-import "./Expert.scss"
+import "../../Expert.scss"
 import Navbar from "../../panels/Navbar"
 import { Outlet } from "react-router-dom"
 import { useLocation } from "react-router-dom"

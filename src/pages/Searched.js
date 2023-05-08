@@ -45,7 +45,7 @@ export default function Searched() {
         }
     });
       return (
-            <div className="w-full h-full p-8">
+            <div className="w-full white_col h-full p-8">
                 {count.map(()=>{
                         if(state){
                             return (

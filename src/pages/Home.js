@@ -40,7 +40,7 @@ export default function Home(props) {
 
 
     return (
-        <div className="relative overflow-hidden flex flex-col items-center py-8 md:py-12 xl:py-16">
+        <div className="relative overflow-hidden white_col flex flex-col items-center py-8 md:py-12 xl:py-16">
             {/* BACKGROUND IMAGE */}
             <div className = "z-[-1] w-full h-full absolute bg"></div>
                 {/* LOGO,AMUNATION,TITLE,SUBTITLE */}
@@ -50,14 +50,14 @@ export default function Home(props) {
                         {/* LOGO */}
                         <img src = {logo} className="mx-auto w-[30px] md:w-[40px] xl:w-[50px]" alt = "amunation logo"/>
                         {/* AMUNATION */}
-                        <h2 className="subtitle_semibold text-center theme">
+                        <h2 className="name_semibold text-center theme">
                             amunation
                         </h2>
                     </div>
                     {/* TITLE,SUBTITLE */}
                     <div className="w-full">
                         {/* TITLE */}
-                        <h1 className="title text-center mx-auto my-2">
+                        <h1 className="title text-center black mx-auto my-2">
                             Shop digital and physical products by online vendors all from one place 
                         </h1>
                         {/* SUBTITLE */}
@@ -69,23 +69,23 @@ export default function Home(props) {
 
                 {/* IMAGE DIV */}
                 <div className="max-w-[92%] mt-10 mb-16">
-                        <LazyLoadImage src = {picdesktop} className="mx-auto" placeholderSrc = {picdesktop} effect= "blur" alt = "home pic"/>
+                        <LazyLoadImage src = {picdesktop} className="mx-auto rounded-md xl:rounded-xl white_col" placeholderSrc = {picdesktop} effect= "blur" alt = "home pic"/>
                 </div>
 
             <div className="w-full h-max flex flex-col items-center" >
                 {/* MAKE AN ORDER */}
-                <div className="order-2 max-w-[80%] my-5 xl:my-16 xl:order-1">
+                <div className=" max-w-[80%] my-5 xl:my-16">
                     {/* HEADING DIV */}
                     <div className="flex flex-row justify-center">
                         {/* MAKE AN ORDER HEADING */}
-                        <h2 className="theme flex flex-row flex-wrap justify-center subtitle_semibold">MAKE AN ORDER IN THREE EASY STEPS</h2>
+                        <h2 className="theme flex flex-row flex-wrap justify-center name_semibold">MAKE AN ORDER IN THREE EASY STEPS</h2>
                     </div>
                     {/* ICONS DIV */}
                     <div className="my-5 flex justify-center flex-col xl:flex-row">
                         {/* CREATE */}
                         <div className = "mx-auto flex flex-col items-center">
                             {/* CREATE ICON */}
-                            <div className = "m-5 p-5 w-max rounded-xl icon_shadow">
+                            <div className = "m-5 p-5 w-max rounded-xl icon_col icon_shadow">
                                 <img className = "w-[20px] md:w-[30px] xl:w-[40px]" src= {createacc} alt = "create account"/>
                             </div>
                             {/* TITLE,SUBTITLE */}
@@ -107,7 +107,7 @@ export default function Home(props) {
                         {/* COME BACK */}
                         <div className = "mx-auto flex flex-col items-center">
                             {/* CREATE ICON */}
-                            <div className = "m-5 p-5 w-max rounded-xl icon_shadow">
+                            <div className = "m-5 p-5 w-max rounded-xl icon_col icon_shadow">
                                 <img className = "w-[20px] md:w-[30px] xl:w-[40px]" src= {getback} alt = "come back to amunation.io"/>
                             </div>
                             {/* TITLE,SUBTITLE */}
@@ -129,7 +129,7 @@ export default function Home(props) {
                         {/* CLICK PURCHASE */}
                         <div className = "mx-auto flex flex-col items-center">
                             {/* CREATE ICON */}
-                            <div className = "m-5 p-5 w-max rounded-xl icon_shadow">
+                            <div className = "m-5 p-5 w-max rounded-xl icon_col icon_shadow">
                                 <img className = "w-[20px] md:w-[30px] xl:w-[40px]" src= {clickpur} alt = "click purchase button"/>
                             </div>
                             {/* TITLE,SUBTITLE */}
@@ -159,7 +159,7 @@ export default function Home(props) {
                         {
                             vendors.map((item)=>{
                                 return (
-                                    <div className = "vendor p-3 m-5 white_col icon_shadow xl:mx-8"
+                                    <div className = "vendor white_col p-3 m-5 icon_shadow xl:mx-8"
                                         key = {uuidv4()}>
                                         {/* VENDOR NAME */}
                                         <div className = "m-2 p-2 w-max rounded-xl icon_shadow">
@@ -169,7 +169,7 @@ export default function Home(props) {
                                         </div>
                                         {/* VENDOR IMAGE */}
                                         <div className="w-full">
-                                            <img className = "mx-auto" src = {item.src} alt = {item.href} />
+                                            <img className = "mx-auto rounded-lg" src = {item.src} alt = {item.href} />
                                         </div>
                                         {/* VENDOR BUTTON */}
                                         <div>

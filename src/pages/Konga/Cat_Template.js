@@ -1,4 +1,4 @@
-import "./konga.scss"
+import "../../konga.scss"
 import { Outlet } from "react-router-dom"
 
 export default function Cat_Template (props){

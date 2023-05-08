@@ -1,4 +1,4 @@
-import "../konga.scss"
+import "../../../konga.scss"
 import KongaDefault from "../kongaDefault"
 import KongaPageFormat from "../../../Custom_Functions/KongaPageFormat"
 
