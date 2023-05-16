@@ -1,6 +1,6 @@
 @use "theme";
 
-$style : inter;
+$style : "inter";
 $c_align : center;
 $s_bold : 700;
 $norm : 400;
@@ -10,7 +10,7 @@ $norm : 400;
 }
 
 .title {
-    font-style: $style;
+    font-family: $style;
     font-size: 24px;
     font-weight: $s_bold;
     text-align: $c_align;
@@ -19,7 +19,7 @@ $norm : 400;
 }
 
 .subtitle {
-    font-style: $style;
+    font-family: $style;
     font-size: 16px;
     font-weight: $norm;
     text-align: $c_align;
@@ -28,7 +28,7 @@ $norm : 400;
 }
 
 .name_semibold {
-    font-style: $style;
+    font-family: $style;
     font-size: 16px;
     font-weight: $s-bold;
     text-align: $c_align;
@@ -38,7 +38,7 @@ $norm : 400;
 
 .subtitle_semibold {
     @extend .black;
-    font-style: $style;
+    font-family: $style;
     font-size: 16px;
     font-weight: $s-bold;
     text-align: $c_align;
@@ -48,7 +48,7 @@ $norm : 400;
 
 .price {
     @extend .black;
-    font-style: $style;
+    font-family: $style;
     font-size: 16px;
     font-weight: $s-bold;
     line-height: 24px;
@@ -58,7 +58,7 @@ $norm : 400;
 .text {
     @extend .decor_none;
     @extend .black;
-    font-style: $style;
+    font-family: $style;
     font-size: 12px;
     font-weight: $norm;
     line-height: 18px;
@@ -68,7 +68,7 @@ $norm : 400;
 .text_semibold {
     @extend .decor_none;
     @extend .black;
-    font-style: $style;
+    font-family: $style;
     font-size: 12px;
     font-weight: $s_bold;
     line-height: 18px;
@@ -76,7 +76,7 @@ $norm : 400;
 }
 
 .purchase_txt {
-    font-style: $style;
+    font-family: $style;
     font-size: 12px;
     font-weight: $s_bold;
     line-height: 18px;
@@ -85,7 +85,7 @@ $norm : 400;
 
 .desc {
     @extend .black;
-    font-style: $style;
+    font-family: $style;
     font-size: 10px;
     font-weight: $norm; 
     line-height: 16px;
@@ -93,7 +93,7 @@ $norm : 400;
 }
 
 .others {
-    font-style: $style;
+    font-family: $style;
     font-size: 12px;
     font-weight: $norm;
     line-height: 20px;
@@ -102,7 +102,7 @@ $norm : 400;
 
 .category {
     @extend .black;
-    font-style: $style;
+    font-family: $style;
     font-size: 10px;
     font-weight: $norm;
     text-align: $c_align;
@@ -111,7 +111,7 @@ $norm : 400;
 }
 
 .category_semibold {
-    font-style: $style;
+    font-family: $style;
     font-size: 10px;
     font-weight: $s_bold;
     text-align: $c_align;
@@ -123,7 +123,7 @@ $norm : 400;
 
 @media only screen and (min-width : 768px) {
     .title {
-        font-style: $style;
+        font-family: $style;
         font-size: 24px;
         font-weight: $s_bold;
         text-align: $c_align;
@@ -132,7 +132,7 @@ $norm : 400;
     }
     
     .subtitle {
-        font-style: $style;
+        font-family: $style;
         font-size: 20px;
         font-weight: $norm;
         text-align: $c_align;
@@ -141,7 +141,7 @@ $norm : 400;
     }
     
     .name_semibold {
-        font-style: $style;
+        font-family: $style;
         font-size: 20px;
         font-weight: $s_bold;
         text-align: $c_align;
@@ -150,7 +150,7 @@ $norm : 400;
     }
 
     .subtitle_semibold {
-        font-style: $style;
+        font-family: $style;
         font-size: 20px;
         font-weight: $s_bold;
         text-align: $c_align;
@@ -159,7 +159,7 @@ $norm : 400;
     }
 
     .price {
-        font-style: $style;
+        font-family: $style;
         font-size: 20px;
         font-weight: $s_bold;
         line-height: 28px;
@@ -167,7 +167,7 @@ $norm : 400;
     }
     
     .text {
-        font-style: $style;
+        font-family: $style;
         font-size: 16px;
         font-weight: $norm;
         line-height: 20px;
@@ -175,7 +175,7 @@ $norm : 400;
     }
     
     .text_semibold {
-        font-style: $style;
+        font-family: $style;
         font-size: 16px;
         font-weight: $s_bold;
         line-height: 20px;
@@ -183,7 +183,7 @@ $norm : 400;
     }
 
     .purchase_txt {
-        font-style: $style;
+        font-family: $style;
         font-size: 16px;
         font-weight: $s_bold;
         line-height: 20px;
@@ -191,7 +191,7 @@ $norm : 400;
     }
     
     .desc {
-        font-style: $style;
+        font-family: $style;
         font-size: 12px;
         font-weight: $norm;
         line-height: 18px;
@@ -199,7 +199,7 @@ $norm : 400;
     }
     
     .others {
-        font-style: $style;
+        font-family: $style;
         font-size: 12px;
         font-weight: $norm;
         line-height: 20px;
@@ -207,7 +207,7 @@ $norm : 400;
     }
     
     .category {
-        font-style: $style;
+        font-family: $style;
         font-size: 12px;
         font-weight: $norm;
         text-align: $c_align;
@@ -216,7 +216,7 @@ $norm : 400;
     }
     
     .category_semibold {
-        font-style: $style;
+        font-family: $style;
         font-size: 12px;
         font-weight: $s_bold;
         text-align: $c_align;
@@ -229,7 +229,7 @@ $norm : 400;
 
 @media only screen and (min-width : 1440px){
     .title {
-        font-style: $style;
+        font-family: $style;
         font-size: 48px;
         font-weight: $s_bold;
         text-align: $c_align;
@@ -238,7 +238,7 @@ $norm : 400;
     }
     
     .subtitle {
-        font-style: $style;
+        font-family: $style;
         font-size: 24px;
         font-weight: $norm;
         text-align: $c_align;
@@ -247,7 +247,7 @@ $norm : 400;
     }
 
     .name_semibold {
-        font-style: $style;
+        font-family: $style;
         font-size: 24px;
         font-weight: $s_bold;
         text-align: $c_align;
@@ -256,7 +256,7 @@ $norm : 400;
     }
     
     .subtitle_semibold {
-        font-style: $style;
+        font-family: $style;
         font-size: 24px;
         font-weight: $s_bold;
         text-align: $c_align;
@@ -265,7 +265,7 @@ $norm : 400;
     }
 
     .price {
-        font-style: $style;
+        font-family: $style;
         font-size: 24px;
         font-weight: $s_bold;
         line-height: 32px;
@@ -273,7 +273,7 @@ $norm : 400;
     }
     
     .text {
-        font-style: $style;
+        font-family: $style;
         font-size: 18px;
         font-weight: $norm;
         line-height: 24px;
@@ -281,7 +281,7 @@ $norm : 400;
     }
     
     .text_semibold {
-        font-style: $style;
+        font-family: $style;
         font-size: 18px;
         font-weight: $s_bold;
         line-height: 24px;
@@ -289,7 +289,7 @@ $norm : 400;
     }
 
     .purchase_txt {
-        font-style: $style;
+        font-family: $style;
         font-size: 18px;
         font-weight: $s_bold;
         line-height: 24px;
@@ -297,7 +297,7 @@ $norm : 400;
     }
 
     .desc {
-        font-style: $style;
+        font-family: $style;
         font-size: 14px;
         font-weight: $norm;
         line-height: 24px;
@@ -305,7 +305,7 @@ $norm : 400;
     }
     
     .others {
-        font-style: $style;
+        font-family: $style;
         font-size: 14px;
         font-weight: $norm;
         line-height: 22px;

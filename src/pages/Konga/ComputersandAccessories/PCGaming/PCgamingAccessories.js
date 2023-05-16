@@ -17,9 +17,9 @@ import four_half from "../../../../SVGs/4_5_star.svg";
 import five from "../../../../SVGs/5_star.svg";
 
 export default function PCgamingAccessories (props){
-    const products = ServeGroupItems("PCgamingAccessories");
+    const products = ServeGroupItems("PCGamingAccessories");
 
     return (
             <Products products = {products} />
     )
-}
+}   
