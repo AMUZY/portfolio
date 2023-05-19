@@ -17,7 +17,7 @@ export default function Other () {
     const [slide2, setSlide2] = useState(slideDown);
 
     return (
-        <div className="imgcont p-5">
+        <div className="imgcont pr-5 pl-5 pb-5 lg:p-5">
             <div onMouseEnter={()=>{
                     setSlide(slideUp)
                 }}

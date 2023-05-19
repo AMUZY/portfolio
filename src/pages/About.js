@@ -8,6 +8,7 @@ import dot from "../SVGs/white_dot.svg"
 import mail from "../SVGs/mail_black.svg"
 import arrow from "../SVGs/angle_arrow.svg"
 
+
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
@@ -36,12 +37,14 @@ AOS.init({
   
   });
 
+  export var aos_style = "fade-left"
+  export var aos_dur = "1200"
+  export var aos_once = "true"
+
 export default function About () {
     let skillstyle = "text underline leading-relaxed white mx-3";
     let iconstyle = "0.02rem"
-    let aos_style = "fade-left"
-    let aos_dur = "1200"
-    let aos_once = "true"
+    
 
     return (
         <div className="overflow-hidden w-full h-full flex flex-col md:flex-row pr-5 pl-5 pb-5 lg:p-5">
