@@ -57,14 +57,16 @@ $blue : #1F4EA9;
                 z-index: 1;
                 background-color: transparent;
             }
-            div:hover {
-                background-color: $blue;
-                opacity: 80%;
-            }
             .slide_txt{
                 position: absolute;
                 transition: .2s ease-out;
                 z-index: 2;
+            }
+        }
+        div:hover{
+            div{
+                background-color: $blue;
+                opacity: 80%;
             }
         }
     }
