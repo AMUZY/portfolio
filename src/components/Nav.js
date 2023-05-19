@@ -52,7 +52,7 @@ export default function Nav () {
     ]
 
     function Show_or_hide(){
-        if(count == true){
+        if(count === true){
             setBlur("block");
             setSlide("top-0 bottom-0 right-[0]")
             setMenu(" menu rotate-[135deg]")

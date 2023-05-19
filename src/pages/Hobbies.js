@@ -31,7 +31,7 @@ export default function Hobbies () {
                 }}
                 className="relative flex justify-center rounded-xl xl:rounded-3xl items-center overflow-hidden w-full h-auto">
                 <div ></div>
-                <LazyLoadImage src = {football} className={imgstyle} placeholderSrc = {football} effect= "blur" alt = "marketing"/>
+                <LazyLoadImage src = {football} className={imgstyle} placeholderSrc = {football} effect= "blur" alt = "football"/>
                 <h1 className={"card_title white slide_txt " + slide}>FOOTBALL</h1>
             </div>
             <div onMouseEnter={()=>{
@@ -42,7 +42,7 @@ export default function Hobbies () {
                 }}
                 className="divnest1 relative flex justify-center rounded-xl xl:rounded-3xl items-center overflow-hidden w-full h-auto">
                 <div ></div>
-                <LazyLoadImage src = {gaming} className={imgstyle} placeholderSrc = {gaming} effect= "blur" alt = "improvisation"/>
+                <LazyLoadImage src = {gaming} className={imgstyle} placeholderSrc = {gaming} effect= "blur" alt = "gaming"/>
                 <h1 className={"card_title white slide_txt " + slide2}>GAMING</h1>
             </div>
             <div onMouseEnter={()=>{
@@ -53,7 +53,7 @@ export default function Hobbies () {
                 }}
                 className="divnest1 relative flex justify-center rounded-xl xl:rounded-3xl items-center overflow-hidden w-full h-auto">
                 <div ></div>
-                <LazyLoadImage src = {run} className={imgstyle} placeholderSrc = {run} effect= "blur" alt = "improvisation"/>
+                <LazyLoadImage src = {run} className={imgstyle} placeholderSrc = {run} effect= "blur" alt = "running"/>
                 <h1 className={"card_title white slide_txt " + slide3}>RUNNING</h1>
             </div>
             <div onMouseEnter={()=>{
@@ -64,7 +64,7 @@ export default function Hobbies () {
                 }}
                 className="divnest1 relative flex justify-center rounded-xl xl:rounded-3xl items-center overflow-hidden w-full h-auto">
                 <div ></div>
-                <LazyLoadImage src = {research} className={imgstyle} placeholderSrc = {research} effect= "blur" alt = "improvisation"/>
+                <LazyLoadImage src = {research} className={imgstyle} placeholderSrc = {research} effect= "blur" alt = "research"/>
                 <h1 className={"card_title white slide_txt " + slide4}>RESEARCH</h1>
             </div>
         </div>
