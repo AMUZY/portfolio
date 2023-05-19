@@ -1,314 +1,113 @@
-@use "theme";
-
-$style : "inter";
-$c_align : center;
-$s_bold : 700;
-$norm : 400;
-
-.decor_none {
-    text-decoration: none;
-}
-
-.title {
-    font-family: $style;
-    font-size: 24px;
-    font-weight: $s_bold;
-    text-align: $c_align;
-    line-height: 32px;
-    letter-spacing: -2%;
-}
-
-.subtitle {
-    font-family: $style;
-    font-size: 16px;
-    font-weight: $norm;
-    text-align: $c_align;
-    line-height: 24px;
-    letter-spacing: -1.9%;
-}
-
-.name_semibold {
-    font-family: $style;
-    font-size: 16px;
-    font-weight: $s-bold;
-    text-align: $c_align;
-    line-height: 24px;
-    letter-spacing: -1.9%;
-}
-
-.subtitle_semibold {
-    @extend .black;
-    font-family: $style;
-    font-size: 16px;
-    font-weight: $s-bold;
-    text-align: $c_align;
-    line-height: 24px;
-    letter-spacing: -1.9%;
-}
-
-.price {
-    @extend .black;
-    font-family: $style;
-    font-size: 16px;
-    font-weight: $s-bold;
-    line-height: 24px;
-    letter-spacing: -1.9%;
-}
+$style : Arial, Helvetica, sans-serif;
+$s_bold : 800;
+$regular : 400;
+$medium : 500;
+$l_spacing : 0.05rem;
 
 .text {
-    @extend .decor_none;
-    @extend .black;
     font-family: $style;
+    font-weight: $regular;
     font-size: 12px;
-    font-weight: $norm;
-    line-height: 18px;
-    letter-spacing: -0.6%;
+    line-height : auto;
+    letter-spacing: $l_spacing;
 }
 
 .text_semibold {
-    @extend .decor_none;
-    @extend .black;
     font-family: $style;
-    font-size: 12px;
     font-weight: $s_bold;
-    line-height: 18px;
-    letter-spacing: -0.6%;
-}
-
-.purchase_txt {
-    font-family: $style;
     font-size: 12px;
+    line-height : auto;
+    letter-spacing: $l_spacing;
+}
+
+.text_title {
+    font-family: $style;
     font-weight: $s_bold;
-    line-height: 18px;
-    letter-spacing: -0.6%;
-}
-
-.desc {
-    @extend .black;
-    font-family: $style;
-    font-size: 10px;
-    font-weight: $norm; 
-    line-height: 16px;
-    letter-spacing: 0%;
-}
-
-.others {
-    font-family: $style;
     font-size: 12px;
-    font-weight: $norm;
-    line-height: 20px;
-    letter-spacing: 0%;
+    line-height : auto;
+    letter-spacing: $l_spacing;
 }
 
-.category {
-    @extend .black;
-    font-family: $style;
-    font-size: 10px;
-    font-weight: $norm;
-    text-align: $c_align;
-    line-height: 24px;
-    letter-spacing: -0.6%;
+.text_italic {
+    font-style: italic;
+    font-size: 12px;
+    line-height : auto;
+    letter-spacing: $l_spacing;
 }
 
-.category_semibold {
+.name_title {
     font-family: $style;
-    font-size: 10px;
+    font-weight: $medium;
+    font-size: 24px;
+    line-height : auto;
+    letter-spacing: $l_spacing;
+}
+
+.card_title {
+    font-family: $style;
     font-weight: $s_bold;
-    text-align: $c_align;
-    line-height: 24px;
-    letter-spacing: -0.6%;
+    font-size: 20px;
+    line-height : auto;
+    font-weight: $s_bold;
+    letter-spacing: $l_spacing;
 }
 
-//TABLET SCREEN SIZE
+.project_title {
+    font-family: $style;
+    font-weight: $medium;
+    font-size: 20px;
+    line-height : auto;
+    letter-spacing: $l_spacing;
+}
 
 @media only screen and (min-width : 768px) {
-    .title {
-        font-family: $style;
-        font-size: 24px;
-        font-weight: $s_bold;
-        text-align: $c_align;
-        line-height: 32px;
-        letter-spacing: -2%;
-    }
-    
-    .subtitle {
-        font-family: $style;
-        font-size: 20px;
-        font-weight: $norm;
-        text-align: $c_align;
-        line-height: 28px;
-        letter-spacing: -1.9%;
-    }
-    
-    .name_semibold {
-        font-family: $style;
-        font-size: 20px;
-        font-weight: $s_bold;
-        text-align: $c_align;
-        line-height: 28px;
-        letter-spacing: -1.9%;
-    }
-
-    .subtitle_semibold {
-        font-family: $style;
-        font-size: 20px;
-        font-weight: $s_bold;
-        text-align: $c_align;
-        line-height: 28px;
-        letter-spacing: -1.9%;
-    }
-
-    .price {
-        font-family: $style;
-        font-size: 20px;
-        font-weight: $s_bold;
-        line-height: 28px;
-        letter-spacing: -1.9%;
-    }
-    
     .text {
         font-family: $style;
+        font-weight: $regular;
         font-size: 16px;
-        font-weight: $norm;
-        line-height: 20px;
-        letter-spacing: 0%;
-    }
-    
-    .text_semibold {
-        font-family: $style;
-        font-size: 16px;
-        font-weight: $s_bold;
-        line-height: 20px;
-        letter-spacing: 0%;
+        line-height : auto;
     }
 
-    .purchase_txt {
+    .text_semibold {
         font-family: $style;
+        font-weight: $s_bold;
         font-size: 16px;
+        line-height : auto;
+    }
+    
+    .text_title {
+        font-family: $style;
         font-weight: $s_bold;
-        line-height: 20px;
-        letter-spacing: 0%;
+        font-size: 16px;
+        line-height : auto;
     }
     
-    .desc {
-        font-family: $style;
-        font-size: 12px;
-        font-weight: $norm;
-        line-height: 18px;
-        letter-spacing: 0%;
+    .text_italic {
+        font-style: italic;
+        font-size: 16px;
+        line-height : 24px;
     }
     
-    .others {
+    .name_title {
         font-family: $style;
-        font-size: 12px;
-        font-weight: $norm;
-        line-height: 20px;
-        letter-spacing: 0%;
+        font-weight: $medium;
+        font-size: 32px;
+        line-height : auto;
     }
     
-    .category {
+    .card_title {
         font-family: $style;
-        font-size: 12px;
-        font-weight: $norm;
-        text-align: $c_align;
-        line-height: 24px;
-        letter-spacing: -0.6%;
-    }
-    
-    .category_semibold {
-        font-family: $style;
-        font-size: 12px;
         font-weight: $s_bold;
-        text-align: $c_align;
-        line-height: 24px;
-        letter-spacing: -0.6%;
+        font-size: 24px;
+        line-height : auto;
+        font-weight: $s_bold;
+    }
+    
+    .project_title {
+        font-family: $style;
+        font-weight: $medium;
+        font-size: 24px;
+        line-height : auto;
     }
 }
 
-//DESKTOP SCREEN SIZE 
-
-@media only screen and (min-width : 1440px){
-    .title {
-        font-family: $style;
-        font-size: 48px;
-        font-weight: $s_bold;
-        text-align: $c_align;
-        line-height: 60px;
-        letter-spacing: -2%;
-    }
-    
-    .subtitle {
-        font-family: $style;
-        font-size: 24px;
-        font-weight: $norm;
-        text-align: $c_align;
-        line-height: 32px;
-        letter-spacing: -1.9%;
-    }
-
-    .name_semibold {
-        font-family: $style;
-        font-size: 24px;
-        font-weight: $s_bold;
-        text-align: $c_align;
-        line-height: 32px;
-        letter-spacing: -1.9%;
-    }
-    
-    .subtitle_semibold {
-        font-family: $style;
-        font-size: 24px;
-        font-weight: $s_bold;
-        text-align: $c_align;
-        line-height: 32px;
-        letter-spacing: -1.9%;
-    }
-
-    .price {
-        font-family: $style;
-        font-size: 24px;
-        font-weight: $s_bold;
-        line-height: 32px;
-        letter-spacing: -1.9%;
-    }
-    
-    .text {
-        font-family: $style;
-        font-size: 18px;
-        font-weight: $norm;
-        line-height: 24px;
-        letter-spacing: -0.6%;
-    }
-    
-    .text_semibold {
-        font-family: $style;
-        font-size: 18px;
-        font-weight: $s_bold;
-        line-height: 24px;
-        letter-spacing: -0.6%;
-    }
-
-    .purchase_txt {
-        font-family: $style;
-        font-size: 18px;
-        font-weight: $s_bold;
-        line-height: 24px;
-        letter-spacing: -0.6%;
-    }
-
-    .desc {
-        font-family: $style;
-        font-size: 14px;
-        font-weight: $norm;
-        line-height: 24px;
-        letter-spacing: 0%;
-    }
-    
-    .others {
-        font-family: $style;
-        font-size: 14px;
-        font-weight: $norm;
-        line-height: 22px;
-        letter-spacing: 0%;
-    }
-}

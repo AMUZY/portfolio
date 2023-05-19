@@ -1,0 +1,83 @@
+$blue : #1F4EA9;
+
+.imghobbie {
+    max-height : 100%;
+}
+
+.imgconthobbies {
+    height: 100%;
+    width : 100%;
+    display : grid;
+    gap: 1.5em;
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+
+    div{
+        position: relative;
+        div{
+            top : 0;
+            left : 0;
+            right : 0;
+            bottom : 0;
+            position: absolute;
+            z-index: 1;
+            background-color: transparent;
+        }
+        div:hover {
+            background-color: $blue;
+            opacity: 80%;
+        }
+        .slide_txt{
+            position: absolute;
+            transition: .2s ease-out;
+            z-index: 2;
+        }
+    }
+}
+
+@media only screen and (min-width : 768px) {
+    .imghobbie {
+        min-width : 190%;
+    }
+    .imgconthobbies {
+        height: 100%;
+        width : 100%;
+        display : grid;
+        gap: 1.5em;
+        grid-template-columns: repeat(2, minmax(48%, 1fr));
+        grid-template-rows: repeat(2, minmax(48%, 1fr));
+    
+        div{
+            position: relative;
+            div{
+                top : 0;
+                left : 0;
+                right : 0;
+                bottom : 0;
+                position: absolute;
+                z-index: 1;
+                background-color: transparent;
+            }
+            div:hover {
+                background-color: $blue;
+                opacity: 80%;
+            }
+            .slide_txt{
+                position: absolute;
+                transition: .2s ease-out;
+                z-index: 2;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width : 1200px) {
+    .imghobbie {
+        min-width : 150%;
+    }
+}
+
+@media only screen and (min-width : 1700px) {
+    .imghobbie {
+        min-width : 100%;
+    }
+}

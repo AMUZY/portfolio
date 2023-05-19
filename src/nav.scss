@@ -1,0 +1,94 @@
+@use "theme";
+$size : 3rem;
+$white : #ECEDFF;
+$black : #000000 ;
+
+.linkbox {
+    a {
+        display : flex;
+        flex-flow : row wrap;
+        justify-content: center;
+        align-items: center;
+        width: $size;
+        height : $size;
+        margin: 1%;  
+    }
+}
+
+.main_content {
+    overflow-y: scroll;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateZ(0);
+    }
+    100% {
+        transform: rotateZ(315deg);
+    }
+}
+@keyframes rotaterev {
+    0% {
+        transform: rotateZ(0);
+    }
+    100% {
+        transform: rotateZ(-315deg);
+    }
+}
+
+// .menu {
+//     animation: rotate .5s ease-out;
+// }
+
+.menu {
+    transition: .2s ease-out;
+}
+
+.menu_rev {
+    animation: rotaterev .2s ease-out;
+}
+
+.slider {
+    transition: .2s ease-out;
+    min-width : 50%;
+    padding : 20px 0px;
+    @extend .theme_col;
+    position: absolute;
+    z-index: 2;
+    display : flex;
+    flex-flow : column nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    @extend .theme_col;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    display: none;
+  }
+
+@media only screen and (min-width : 768px) {
+    // ::-webkit-scrollbar-track {
+    // background: $white;
+    // }
+    
+    // ::-webkit-scrollbar-thumb {
+    // background: $black;
+    // }
+    
+    // ::-webkit-scrollbar-thumb:hover {
+    // background: #86888c
+    // }
+    .slider {
+        min-width : 30%;
+    }
+}
+
+@media only screen and (min-width : 1200px) {
+    .navbar {
+        background-color: $white;
+    }
+}
