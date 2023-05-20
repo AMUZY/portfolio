@@ -76,7 +76,7 @@ export default function Nav () {
                 <button onClick={()=>{
                     Show_or_hide();
                 }}>
-                    <img src = {menu_icon} className={iconstyle + menu} alt = "menu icon" />
+                    <img src = {menu_icon} className={iconstyle + menu + " animenu"} alt = "menu icon" />
                 </button>
             </div>
             {/* TABLET/DESKTOP */}

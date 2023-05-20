@@ -2,7 +2,7 @@ $white : #ECEDFF;
 $black : #000000 ;
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
     }
 
 ::-webkit-scrollbar-track {
@@ -17,3 +17,9 @@ $black : #000000 ;
     ::-webkit-scrollbar-thumb:hover {
     background: #83ADFF;
     }
+
+@media only screen and (min-width : 480px) {
+    ::-webkit-scrollbar {
+        width: 10px;
+        }
+}

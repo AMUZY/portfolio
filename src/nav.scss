@@ -21,31 +21,25 @@ $black : #000000 ;
 
 @keyframes rotate {
     0% {
-        transform: rotateZ(0);
+        transform: rotateZ(0deg);
+        transform: scale(1);
     }
-    100% {
-        transform: rotateZ(315deg);
+    5%,95%{
+        transform: rotateZ(60deg);
+        transform: scale(1.2);
     }
-}
-@keyframes rotaterev {
-    0% {
-        transform: rotateZ(0);
+    10%,90%{
+        transform: rotateZ(-60deg);
     }
-    100% {
-        transform: rotateZ(-315deg);
+    15%,85% {
+        transform: rotateZ(0deg);
+        transform: scale(1);
     }
 }
 
-// .menu {
-//     animation: rotate .5s ease-out;
-// }
-
-.menu {
+.animenu {
+    animation: rotate 5s ease-in-out infinite reverse;
     transition: .2s ease-out;
-}
-
-.menu_rev {
-    animation: rotaterev .2s ease-out;
 }
 
 .slider {
