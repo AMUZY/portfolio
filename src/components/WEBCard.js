@@ -56,13 +56,13 @@ export default function WEBCard (props){
             {/* BUTTONS */}
             <div className="my-2">
                 {/* GITHUB BUTTON */}
-                <a href = {props.github} data-aos="fade-left" data-aos-duration={aos_dur} data-aos-offset= "50" data-aos-once= "true" data-aos-delay="" className = "white_col flex flex-row items-center rounded-md my-2 lg:my-4 px-3 py-2">
+                <a href = {props.github} data-aos="fade-left" data-aos-duration={aos_dur} data-aos-offset= "50" data-aos-once= "true" data-aos-delay="" className = "white_col flex flex-row items-center rounded-md my-2 lg:my-4 px-3 py-1">
                     <img src = {github} className={"mx-1 " + iconstyle} alt  = "github icon" />
                     <h3 className=""> View Github </h3>
                     <img src = {redirect} className={"mx-1 " + iconstyle} alt = "redirect icon" />
                 </a>
                 {/* VIEW WEBSITE BUTTON */}
-                <a href = {props.weblink} data-aos="fade-left" data-aos-duration={aos_dur} data-aos-offset= "50" data-aos-once= "true" data-aos-delay="" className = "white_col flex flex-row items-center rounded-md my-2 lg:my-4 px-3 py-2">
+                <a href = {props.weblink} data-aos="fade-left" data-aos-duration={aos_dur} data-aos-offset= "50" data-aos-once= "true" data-aos-delay="" className = "white_col flex flex-row items-center rounded-md my-2 lg:my-4 px-3 py-1">
                     <img src = {figma} className={"mx-1 " + iconstyle} alt  = "figma icon" />
                 </a>
             </div>

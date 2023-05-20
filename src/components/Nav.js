@@ -69,9 +69,9 @@ export default function Nav () {
     return (
         <div className="lg:pt-20 lg:pb-8 lg:pl-2 lg:pl-5 h-full flex flex-col justify-between">
             {/* MOBILE NAVBAR */}
-            <div className="px-5 z-[3] py-1 w-full flex flex-row items-center justify-between lg:hidden">
+            <div className="px-5 z-[3] py-2 w-full flex flex-row items-center justify-end lg:hidden">
                 {/* CHRISTIAN */}
-                <h1 className="white name_title"> Christian </h1>
+                {/* <h1 className="white name_title"> Christian </h1> */}
                 {/* MENU ICON */}
                 <button onClick={()=>{
                     Show_or_hide();
@@ -160,7 +160,7 @@ export default function Nav () {
                     }
                 </div>
                  {/* LINKS */}
-                <div className = "py-2 flex flex-col justify-evenly items-center">
+                <div className = "py-2 flex flex-col flex-wrap justify-evenly items-center">
                     <a href={fb_link}><img src = {fb_wh} className={mob_iconstyle} alt = "facebook icon"/></a>
                     <a href={wh_link}><img src = {wh_wh} className={mob_iconstyle} alt = "whatsapp icon"/></a>
                     <a href={tw_link}><img src = {tw_wh} className={mob_iconstyle} alt = "twitter icon"/></a>

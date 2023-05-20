@@ -27,7 +27,7 @@ export default function Other () {
                 className="relative flex justify-center rounded-xl xl:rounded-3xl items-center overflow-hidden w-full h-auto">
                 <div ></div>
                 <LazyLoadImage src = {marketing} className={imgstyle} placeholderSrc = {marketing} effect= "blur" alt = "marketing"/>
-                <h1 className={"card_title white slide_txt " + slide}>AFFILIATE MARKETING</h1>
+                <h1 className={"card_title white text-center slide_txt " + slide}>AFFILIATE MARKETING</h1>
             </div>
             <div onMouseEnter={()=>{
                     setSlide2(slideUp)
@@ -38,7 +38,7 @@ export default function Other () {
                 className="divnest1 relative flex justify-center rounded-xl xl:rounded-3xl items-center overflow-hidden w-full h-auto">
                 <div ></div>
                 <LazyLoadImage src = {improvise} className={imgstyle} placeholderSrc = {improvise} effect= "blur" alt = "improvisation"/>
-                <h1 className={"card_title white slide_txt " + slide2}>IMPROVISATION</h1>
+                <h1 className={"card_title white text-center slide_txt " + slide2}>IMPROVISATION</h1>
             </div>
         </div>
     )

@@ -50,7 +50,7 @@ export default function About () {
         <div className="overflow-hidden w-full h-full flex flex-col md:flex-row pr-5 pl-5 pb-5 lg:p-5">
             {/* CHRISTIAN PICTURE */}
             <div className="w-full h-1/2 md:h-auto overflow-hidden rounded-xl flex justify-center items-center md:items-flex lg:w-1/2 md:rounded-3xl">
-                <LazyLoadImage src = {christian} className="pic mx-auto rounded-xl xl:rounded-3xl" placeholderSrc = {christian} effect= "blur" alt = "christian"/>
+                <LazyLoadImage src = {christian} className="chrispic mx-auto rounded-xl xl:rounded-3xl" placeholderSrc = {christian} effect= "blur" alt = "christian"/>
             </div>
             {/* MAIN INFORMATION */}
             <div className="card_col mt-3 w-full h-1/2 md:h-auto flex justify-start items-center rounded-xl md:mt-0 lg:w-1/2 md:ml-[30px] md:rounded-3xl">

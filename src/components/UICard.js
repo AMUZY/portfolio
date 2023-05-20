@@ -1,5 +1,6 @@
 import "../font.scss"
 import "../theme.scss"
+import "../allcards.scss"
 
 import figma from "../SVGs/figma.png"
 import redirect from "../SVGs/angle_arrow.svg"
@@ -44,17 +45,19 @@ let iconstyle = "m-1 0.02rem";
 
 export default function UICard (props){
     return (
-        <div className="flex flex-col items-start pt-3 pb-3">
+        <div className="flex flex-col items-start pt-3 pb-3 m-1 md:m-3">
             {/* IMAGE */}
-            <LazyLoadImage src = {props.image} className="pic mx-auto rounded-xl xl:rounded-3xl" placeholderSrc = {props.image} effect= "blur" alt = {props.alt}/>
+            <div className="piccont rounded-xl xl:rounded-3xl flex justify-center items-center overflow-hidden mb-2">
+                <LazyLoadImage src = {props.image} className="pic mx-auto rounded-xl xl:rounded-3xl" placeholderSrc = {props.image} effect= "blur" alt = {props.alt}/>
+            </div>
             {/* TITLE */}
             <h1 className="white project_title my-2"> {props.title} </h1>
             {/* DESCRIPTION */}
             <h3 className="white text my-2"> {props.desc} </h3>
             {/* BUTTON */}
-            <a href = {props.uilink} data-aos="fade-left" data-aos-duration={aos_dur} data-aos-offset= "50" data-aos-once= "true" data-aos-delay="" className = "white_col flex flex-row items-center rounded-md my-2 lg:my-4 px-3 py-2">
+            <a href = {props.uilink} data-aos="fade-left" data-aos-duration={aos_dur} data-aos-offset= "50" data-aos-once= "true" data-aos-delay="" className = "white_col flex flex-row items-center rounded-md my-2 lg:my-4 px-3 py-1">
                 <img src = {figma} className={"mx-1 " + iconstyle} alt  = "figma icon" />
-                <h3 className=""> Go to figma </h3>
+                <h3 className="text"> Go to figma </h3>
                 <img src = {redirect} className={"mx-1 " + iconstyle} alt = "redirect icon" />
             </a>
         </div>

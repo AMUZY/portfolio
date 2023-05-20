@@ -1,0 +1,34 @@
+.piccont {
+    max-height : 8rem;
+}
+
+.pic {
+    min-width : 150%;
+}
+
+@media only screen and (min-width : 480px) {
+    .piccont {
+        max-height : 12rem;
+    }
+    .pic {
+        min-width : 150%;
+    }
+}
+
+@media only screen and (min-width : 768px) {
+    .piccont {
+        max-height : 20rem;
+    }
+    .pic {
+        min-width : 150%;
+    }
+}
+
+@media only screen and (min-width : 1200px) {
+    .piccont {
+        max-height : 30rem;
+    }
+    .pic {
+        min-width : 150%;
+    }
+}

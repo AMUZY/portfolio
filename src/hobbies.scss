@@ -22,21 +22,23 @@ $blue : #1F4EA9;
             z-index: 1;
             background-color: transparent;
         }
-        div:hover {
-            background-color: $blue;
-            opacity: 80%;
-        }
         .slide_txt{
             position: absolute;
             transition: .2s ease-out;
             z-index: 2;
         }
     }
+    div:hover{
+        div{
+            background-color: $blue;
+            opacity: 80%;
+        }
+    }
 }
 
 @media only screen and (min-width : 768px) {
     .imghobbie {
-        min-width : 190%;
+        min-width : 250%;
     }
     .imgconthobbies {
         height: 100%;
