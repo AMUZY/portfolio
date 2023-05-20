@@ -120,76 +120,78 @@ export default function Tech () {
                 {/* ALL SKILLSET */}
                 <div className="flex flex-row flex-wrap items-center justify-between md:justify-start mt-3 mb-2 lg:my-4">
                     <div className={skilldiv}>
-                        <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="10" data-aos-once= {aos_once} className  = {iconstyle} src={check} alt = "check"/>
+                        <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="10" className  = {iconstyle} src={check} alt = "check"/>
                         <h3 data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="50" data-aos-once= {aos_once} className={skillstyle}>HTML</h3>
                     </div>
                     <div className={skilldiv}>
-                        <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="100" data-aos-once= {aos_once} className  = {iconstyle} src={check} alt = "check"/>
+                        <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="100" className  = {iconstyle} src={check} alt = "check"/>
                         <h3 data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="150" data-aos-once= {aos_once} className={skillstyle}>C++</h3>
                     </div>
                     <div className={skilldiv}>
-                        <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="200" data-aos-once= {aos_once} className  = {iconstyle} src={check} alt = "check"/>
+                        <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="200" className  = {iconstyle} src={check} alt = "check"/>
                         <h3 data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="250" data-aos-once= {aos_once} className={skillstyle}>FIGMA</h3>
                     </div>
                     <div className={skilldiv}>
-                        <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="300" data-aos-once= {aos_once} className  = {iconstyle} src={check} alt = "check"/>
+                        <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="300" className  = {iconstyle} src={check} alt = "check"/>
                         <h3 data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="350" data-aos-once= {aos_once} className={skillstyle}>3D ANIMATION</h3>
                     </div>
                     <div className={skilldiv}>
-                        <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="300" data-aos-once= {aos_once} className  = {iconstyle} src={check} alt = "check"/>
-                        <h3 data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="350" data-aos-once= {aos_once} className={skillstyle}>REACT JS</h3>
+                        <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="400" className  = {iconstyle} src={check} alt = "check"/>
+                        <h3 data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="450" data-aos-once= {aos_once} className={skillstyle}>REACT JS</h3>
                     </div>
                     <div className={skilldiv}>
-                        <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="300" data-aos-once= {aos_once} className  = {iconstyle} src={check} alt = "check"/>
-                        <h3 data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="350" data-aos-once= {aos_once} className={skillstyle}>CSS</h3>
+                        <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="500" className  = {iconstyle} src={check} alt = "check"/>
+                        <h3 data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="550" data-aos-once= {aos_once} className={skillstyle}>CSS</h3>
                     </div>
                     <div className={skilldiv}>
-                        <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="300" data-aos-once= {aos_once} className  = {iconstyle} src={check} alt = "check"/>
-                        <h3 data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="350" data-aos-once= {aos_once} className={skillstyle}>JAVASCRIPT</h3>
+                        <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="600" className  = {iconstyle} src={check} alt = "check"/>
+                        <h3 data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="650" data-aos-once= {aos_once} className={skillstyle}>JAVASCRIPT</h3>
                     </div>
                     <div className={skilldiv}>
-                        <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="300" data-aos-once= {aos_once} className  = {iconstyle} src={check} alt = "check"/>
-                        <h3 data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="350" data-aos-once= {aos_once} className={skillstyle}>GRAPHICS DESIGN</h3>
+                        <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="700" className  = {iconstyle} src={check} alt = "check"/>
+                        <h3 data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="750" data-aos-once= {aos_once} className={skillstyle}>GRAPHICS DESIGN</h3>
                     </div>
                     <div className={skilldiv}>
-                        <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="300" data-aos-once= {aos_once} className  = {iconstyle} src={check} alt = "check"/>
-                        <h3 data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="350" data-aos-once= {aos_once} className={skillstyle}>GIT</h3>
+                        <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="800" className  = {iconstyle} src={check} alt = "check"/>
+                        <h3 data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="850" data-aos-once= {aos_once} className={skillstyle}>GIT</h3>
                     </div>
                     <div className={skilldiv}>
-                        <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="300" data-aos-once= {aos_once} className  = {iconstyle} src={check} alt = "check"/>
-                        <h3 data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="350" data-aos-once= {aos_once} className={skillstyle}>TAILWIND CSS</h3>
+                        <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="900" className  = {iconstyle} src={check} alt = "check"/>
+                        <h3 data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="950" data-aos-once= {aos_once} className={skillstyle}>TAILWIND CSS</h3>
                     </div>
                     <div className={skilldiv}>
-                        <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="300" data-aos-once= {aos_once} className  = {iconstyle} src={check} alt = "check"/>
-                        <h3 data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="350" data-aos-once= {aos_once} className={skillstyle}>SASS/SCSS</h3>
+                        <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1000" className  = {iconstyle} src={check} alt = "check"/>
+                        <h3 data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1050" data-aos-once= {aos_once} className={skillstyle}>SASS/SCSS</h3>
                     </div>
                     <div className={skilldiv}>
-                        <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="300" data-aos-once= {aos_once} className  = {iconstyle} src={check} alt = "check"/>
-                        <h3 data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="350" data-aos-once= {aos_once} className={skillstyle}>GITHUB</h3>
+                        <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1100" className  = {iconstyle} src={check} alt = "check"/>
+                        <h3 data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1150" data-aos-once= {aos_once} className={skillstyle}>GITHUB</h3>
                     </div>
                     <div className={skilldiv}>
-                        <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="300" data-aos-once= {aos_once} className  = {iconstyle} src={check} alt = "check"/>
-                        <h3 data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="350" data-aos-once= {aos_once} className={skillstyle}>3D GRAPHICS DESIGN</h3>
+                        <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1200" className  = {iconstyle} src={check} alt = "check"/>
+                        <h3 data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1250" data-aos-once= {aos_once} className={skillstyle}>3D GRAPHICS DESIGN</h3>
                     </div>
                 </div>
                 {/* MY CORE TECH STACK */}
                 <h1 className={titlestyle}> My core tech stack </h1>
                 {/* TECH STACK */}
                 <div className="flex flex-row flex-wrap items-center my-1 lg:my-4">
-                    <a href = "#uiux" data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="50" data-aos-once= {aos_once} className={anchorstyle}>ui/ux design</a>
-                    <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="100" data-aos-once= {aos_once} className  = {iconstyle} src={dot} alt = "dot"/>
-                    <a href = "#graphics" data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="150" data-aos-once= {aos_once} className={anchorstyle}>graphics design</a>
-                    <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="200" data-aos-once= {aos_once} className  = {iconstyle} src={dot} alt = "dot"/>
-                    <a href = "" data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="250" data-aos-once= {aos_once} className={anchorstyle}>3d animation</a>
-                    <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="300" data-aos-once= {aos_once} className  = {iconstyle} src={dot} alt = "dot"/>
-                    <a href = "" data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="350" data-aos-once= {aos_once} className={anchorstyle}>front end web development</a>
-                    <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="400" data-aos-once= {aos_once} className  = {iconstyle} src={dot} alt = "dot"/>
+                    <a href = "#uiux" data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1300"  className={anchorstyle}>ui/ux design</a>
+                    <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1350"  className  = {iconstyle} src={dot} alt = "dot"/>
+                    <a href = "#graphics" data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1400" data-aos-once= {aos_once} className={anchorstyle}>graphics design</a>
+                    <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1450"  className  = {iconstyle} src={dot} alt = "dot"/>
+                    <a href = "#graphics" data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1500" data-aos-once= {aos_once} className={anchorstyle}>3d graphics design</a>
+                    <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1550"  className  = {iconstyle} src={dot} alt = "dot"/>
+                    <a href = "" data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1650" className={anchorstyle}>3d animation</a>
+                    <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1700" data-aos-once= {aos_once} className  = {iconstyle} src={dot} alt = "dot"/>
+                    <a href = "" data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1750"  className={anchorstyle}>front end web development</a>
+                    <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1800"  className  = {iconstyle} src={dot} alt = "dot"/>
                 </div>
 
                 {/* UI/UX DESIGN */}
                 <h1 id = "uiux" className={titlestyle}> UI/UX DESIGN </h1>
                 {/* UI/UX DETAILS */}
-                <div className="card_col rounded-xl xl:rounded-3xl my-4 p-4 flex flex-col">
+                <div className="card_col rounded-xl xl:rounded-3xl my-4 py-4 px-2 flex flex-col">
                     {/* DETAILS DIV */}
                     <div className="flex flex-row flex-wrap justify-between">
                         {
@@ -218,7 +220,7 @@ export default function Tech () {
                 {/* GRAPHICS DESIGN */}
                 <h1 id = "graphics" className={titlestyle}> GRAPHICS DESIGN </h1>
                 {/* UI/UX DETAILS */}
-                <div className="card_col rounded-xl xl:rounded-3xl my-4 p-4 flex flex-col">
+                <div className="card_col rounded-xl xl:rounded-3xl my-4 py-4 px-2 flex flex-col">
                     {/* DETAILS DIV */}
                     <div className="flex flex-row flex-wrap justify-between">
                         {
@@ -248,6 +250,8 @@ export default function Tech () {
                         </image>
                     </div>
                 </div>
+                {/* GO BACK TO TOP */}
+                <a href = "#skillset" className="flex hover:underline flex-row text white items-center my-1 lg:my-4"><img className="mx-2" src = {dot} /> go back to top <img className="mx-2" src = {dot} /></a>
             </div>
         </div>
     )
