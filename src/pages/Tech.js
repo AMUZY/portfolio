@@ -115,7 +115,7 @@ export default function Tech () {
 
     return (
         <div className="pr-4 pl-4 pb-4 lg:p-5">
-            <div className="py-0 px-2">
+            <div className="py-0 px-2 overflow-hidden">
                 <h1 id = "skillset" className="white name_title mb-3"> My Skillset </h1>
                 {/* ALL SKILLSET */}
                 <div className="flex flex-row flex-wrap items-center justify-between md:justify-start mt-3 mb-2 lg:my-4">

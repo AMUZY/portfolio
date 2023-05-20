@@ -1,7 +1,7 @@
 import "./input.css"
 import "./font.scss"
 import "./theme.scss"
-import ServeLink from "./functions/ServeLink";
+import "./app.scss"
 
 // RESOURCES IMPORT
 import { 

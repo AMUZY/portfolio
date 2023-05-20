@@ -8,7 +8,7 @@ export default function Mainpage () {
             <div className="order-1 navbar h-auto lg:h-full lg:w-[12%]">
                 <Nav />
             </div>
-            <div className="order-2 overflow-scroll main_content theme_col flex-grow lg:h-full lg:w-[88%]">
+            <div className="order-2 overflow-y-scroll main_content theme_col flex-grow lg:h-full lg:w-[88%]">
                 <Outlet />
             </div>
         </div>

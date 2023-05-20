@@ -65,23 +65,9 @@ $black : #000000 ;
     @extend .theme_col;
 }
 
-::-webkit-scrollbar {
-    width: 10px;
-    display: none;
-  }
 
 @media only screen and (min-width : 768px) {
-    // ::-webkit-scrollbar-track {
-    // background: $white;
-    // }
-    
-    // ::-webkit-scrollbar-thumb {
-    // background: $black;
-    // }
-    
-    // ::-webkit-scrollbar-thumb:hover {
-    // background: #86888c
-    // }
+
     .slider {
         min-width : 30%;
     }
