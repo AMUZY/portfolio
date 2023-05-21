@@ -22,7 +22,7 @@ export default function Hobbies () {
     const [slide4, setSlide4] = useState(slideDown);
 
     return (
-        <div className="imgconthobbies pr-5 pl-5 pb-5 lg:p-5">
+        <div className="imgconthobbies pr-3 pl-3 pb-3 lg:p-5">
             <div onMouseEnter={()=>{
                     setSlide(slideUp)
                 }}

@@ -58,7 +58,7 @@ AOS.init({
   
   });
 
-  let titlestyle = "white name_title mt-3 mb-2";
+  let titlestyle = "white name_title mt-10 mb-2";
   let skillstyle = "text leading-relaxed white mx-3";
   let anchorstyle = "text hover:underline card_col px-2 py-1 rounded-full leading-relaxed white my-2 mr-3";
   let iconstyle = "0.02rem my-2 mr-3"
@@ -77,14 +77,14 @@ export default function Tech () {
     ]
 
     const ui_detail = [
-        {title : "Proficiency", answer : "Good"},
+        {title : "Proficiency", answer : "70%"},
         {title : "From", answer : "20/01/2023"},
         {title : "Softwares", answer : "Figma"},
         {title : "Projects" , answer : "Cookie web design, e-commerce web design"}
     ]
 
     const graphics_detail = [
-        {title : "Proficiency", answer : "Very Good"},
+        {title : "Proficiency", answer : "80%"},
         {title : "From", answer : "10/08/2022"},
         {title : "Softwares" , answer : "Figma, Blender"},
         {title : "Projects", answer : "voice over flyer, bakery flyer,valentine promo sales, kitchen services, youtube thumbnails, e.t.c."}
@@ -92,7 +92,7 @@ export default function Tech () {
 
     const threedgraphics_detail = [
         {title : "Brand name", answer : "amunation"},
-        {title : "Proficiency", answer : "Outstanding"},
+        {title : "Proficiency", answer : "90%"},
         {title : "From", answer : "08/01/2020"},
         {title : "Softwares" , answer : "Blender"},
         {title : "Projects", answer : "flyers, MockUps, 3d character design"}
@@ -100,21 +100,21 @@ export default function Tech () {
 
     const animation_detail = [
         {title : "Brand name", answer : "amunation"},
-        {title : "Proficiency", answer : "Very Good"},
+        {title : "Proficiency", answer : "90%"},
         {title : "From", answer : "15/02/2020"},
         {title : "Softwares" , answer : "Blender"},
         {title : "Projects", answer : "business ads, NFT animations for whitelist, product animations"}
     ]
 
     const webdev_detail = [
-        {title : "Proficiency", answer : "Very Good"},
+        {title : "Proficiency", answer : "80%"},
         {title : "From", answer : "22/10/2022"},
         {title : "Softwares" , answer : "Chrome, Microsoft Edge, visual studio code, React js"},
         {title : "Projects", answer : "Cookie web design, e-commerce, portfolio"}
     ]
 
     return (
-        <div className="pr-4 pl-4 pb-4 lg:p-5">
+        <div className="pr-3 pl-3 pb-3 lg:p-5">
             <div className="py-0 px-2 overflow-hidden">
                 <h1 id = "skillset" className="white name_title mb-3"> My Skillset </h1>
                 {/* ALL SKILLSET */}

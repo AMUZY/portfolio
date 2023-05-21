@@ -47,7 +47,7 @@ export default function About () {
     
 
     return (
-        <div className="overflow-hidden w-full h-full flex flex-col md:flex-row pr-5 pl-5 pb-5 lg:p-5">
+        <div className="overflow-hidden w-full h-full flex flex-col md:flex-row pr-3 pl-3 pb-3 lg:p-5">
             {/* CHRISTIAN PICTURE */}
             <div className="w-full h-1/2 md:h-auto overflow-hidden rounded-xl flex justify-center items-center md:items-flex lg:w-1/2 md:rounded-3xl">
                 <LazyLoadImage src = {christian} className="chrispic mx-auto rounded-xl xl:rounded-3xl" placeholderSrc = {christian} effect= "blur" alt = "christian"/>
@@ -68,12 +68,12 @@ export default function About () {
                         <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="200" data-aos-once= {aos_once} className  = {iconstyle} src={dot} alt = "dot"/>
                         <h3 data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="250" data-aos-once= {aos_once} className={skillstyle}>3d animator</h3>
                         <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="300" data-aos-once= {aos_once} className  = {iconstyle} src={dot} alt = "dot"/>
-                        <h3 data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="350" data-aos-once= {aos_once} className={skillstyle}>front end web developer</h3>
+                        <h3 data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="350" data-aos-once= {aos_once} className={skillstyle}>front end software engineer</h3>
                         <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="400" data-aos-once= {aos_once} className  = {iconstyle} src={dot} alt = "dot"/>
                     </div>
                     {/* OBJECTIVE */}
                     <h3 data-aos="fade-up" data-aos-duration={aos_dur} data-aos-delay="450" data-aos-once= {aos_once} className="white text_italic mx-3 my-4">
-                        I am a deep and critical thinker with problem solving skills, fascinated by technological advancements, always wanting to know how things are done in the background and not just admiring the finished work. I am a very good improviser, a fast learner and very practical. 
+                    I'm Christian, a front-end software engineer with 6 months of experience. I specialize in front end web development, UI/UX design, and graphics design. With proficiency in HTML, CSS, JavaScript, and frameworks like React.js, I create visually captivating interfaces that prioritize user experience. Check out my portfolio for examples of my work. Let's discuss how I can contribute to your team or project.
                     </h3>
                     {/* GET IN TOUCH BUTTON */}
                     <a href = "" data-aos="fade-left" data-aos-duration={aos_dur} data-aos-offset= "50" data-aos-once= "true" data-aos-delay="700" className = "white_col flex flex-row items-center rounded-md mx-3 my-2 lg:my-4 px-3 py-2">
