@@ -2,10 +2,27 @@
     display : flex;
     justify-content: center;
     align-items: center;
+    span {
+        min-width: 100%;
+        min-height: 100%;
+        img{
+            width : 100%;
+            // max-width : max-content;
+            height : 100%;
+        }
+    }
 }
 
-@media only screen and (min-width : 480px) {
+@media only screen and (min-width : 768px) {
     .chrispic {
-        min-width : 800px;
+        span {
+            width: 100%;
+            height: 100%;
+            img{
+                width : 100%;
+                // max-width : max-content;
+                height : 100%;
+            }
+        }
     }
 }

@@ -3,7 +3,7 @@ import "../font.scss"
 import "../about.scss"
 import { LazyLoadImage } from "react-lazy-load-image-component"
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import christian from "../IMAGES/christian.png"
+import christian from "../IMAGES/christian.jpg"
 import dot from "../SVGs/white_dot.svg"
 import mail from "../SVGs/mail_black.svg"
 import arrow from "../SVGs/angle_arrow.svg"
@@ -39,7 +39,7 @@ AOS.init({
 
   export var aos_style = "fade-left"
   export var aos_dur = "1200"
-  export var aos_once = "true"
+  export var aos_once = "false"
 
 export default function About () {
     let skillstyle = "text underline leading-relaxed white mx-3";
@@ -49,11 +49,11 @@ export default function About () {
     return (
         <div className="overflow-hidden w-full h-full flex flex-col md:flex-row pr-3 pl-3 pb-3 lg:p-5">
             {/* CHRISTIAN PICTURE */}
-            <div className="w-full h-1/2 md:h-auto overflow-hidden rounded-xl flex justify-center items-center md:items-flex lg:w-1/2 md:rounded-3xl">
-                <LazyLoadImage src = {christian} className="chrispic mx-auto rounded-xl xl:rounded-3xl" placeholderSrc = {christian} effect= "blur" alt = "christian"/>
+            <div className="w-full chrispic h-1/2 md:h-auto overflow-hidden rounded-xl flex justify-center items-center md:items-flex lg:w-1/2 xl:rounded-3xl">
+                <LazyLoadImage src = {christian} className="mx-auto rounded-xl xl:rounded-3xl" placeholderSrc = {christian} effect= "blur" alt = "christian"/>
             </div>
             {/* MAIN INFORMATION */}
-            <div className="card_col mt-3 w-full h-1/2 md:h-auto flex justify-start items-center rounded-xl md:mt-0 lg:w-1/2 md:ml-[30px] md:rounded-3xl">
+            <div className="card_col mt-3 w-full h-1/2 md:h-auto flex justify-start items-center rounded-xl md:mt-0 lg:w-1/2 md:ml-[20px] xl:rounded-3xl">
                 {/* INFORMATION */}
                 <div className="flex m-4 flex-col items-start">
                     {/* HI I'M CHRISTIAN */}

@@ -8,7 +8,7 @@ import {v4 as uuidv4} from "uuid";
 // IMPORTED IMAGES
 import cookieapp from "../IMAGES/cookie_ui.png"
 import amunation from "../IMAGES/amunation_ui.jpg"
-import favour from "../IMAGES/favour.png"
+import favour from "../IMAGES/favour.jpg"
 import bakery from "../IMAGES/bakery.png"
 import val from "../IMAGES/valentine.png"
 import mailergpt from "../IMAGES/mailergpt.jpg"
@@ -16,6 +16,9 @@ import ebook from "../IMAGES/ebook.jpg"
 import cookiemenu from "../IMAGES/MENU- COOKIES 2.png"
 import ecommerce from "../IMAGES/amunation.jpg"
 import portfolio from "../IMAGES/portfolio.jpg"
+import download from "../SVGs/download.svg"
+import arrow from "../SVGs/angle_arrow.svg"
+import ig from "../SVGs/ig_black.svg"
 
 // IMPORTED IMAGES AND SVGS
 import check from "../SVGs/check.svg"
@@ -25,6 +28,8 @@ import dot from "../SVGs/white_dot.svg"
 import UICard from "../components/UICard";
 import WEBCard from "../components/WEBCard";
 import Detail from "../components/Detail";
+import TechBtn from "../components/TechBtn";
+import TechBtn2 from "../components/TechBtn2";
 
 import { aos_style } from "./About";
 import { aos_once } from "./About";
@@ -113,6 +118,21 @@ export default function Tech () {
         {title : "Projects", answer : "Cookie web design, e-commerce, portfolio"}
     ]
 
+    // document.querySelectorAll('a[href^="#"]').forEach((anchor)=>{
+    //     anchor.addEventListener('click', function (e){
+    //         e.preventDefault();
+    //         document.querySelector(this.getAttribute("href")).scrollIntoView({
+    //             behavior : "smooth"
+    //         })
+    //     })
+    // })
+
+    function ScrollToTitle(href){
+        document.querySelector("#" + href).scrollIntoView({
+            behavior : "smooth"
+        })
+    }
+
     return (
         <div className="pr-3 pl-3 pb-3 lg:p-5">
             <div className="py-0 px-2 overflow-hidden">
@@ -176,15 +196,25 @@ export default function Tech () {
                 <h1 className={titlestyle}> My core tech stack </h1>
                 {/* TECH STACK */}
                 <div className="flex flex-row flex-wrap items-center my-1 lg:my-4">
-                    <a href = "#uiux" data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1300"  className={anchorstyle}>ui/ux design</a>
+                    <button onClick={()=>{
+                        ScrollToTitle("uiux")
+                    }}   data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1300"  className={anchorstyle}>ui/ux design</button>
                     <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1350"  className  = {iconstyle} src={dot} alt = "dot"/>
-                    <a href = "#graphics" data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1400" data-aos-once= {aos_once} className={anchorstyle}>graphics design</a>
+                    <button onClick={()=>{
+                        ScrollToTitle("graphics")
+                    }}  data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1400" data-aos-once= {aos_once} className={anchorstyle}>graphics design</button>
                     <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1450"  className  = {iconstyle} src={dot} alt = "dot"/>
-                    <a href = "#graphics" data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1500" data-aos-once= {aos_once} className={anchorstyle}>3d graphics design</a>
+                    <button onClick={()=>{
+                        ScrollToTitle("dgraphics")
+                    }}  data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1500" data-aos-once= {aos_once} className={anchorstyle}>3d graphics design</button>
                     <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1550"  className  = {iconstyle} src={dot} alt = "dot"/>
-                    <a href = "" data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1650" className={anchorstyle}>3d animation</a>
+                    <button onClick={()=>{
+                        ScrollToTitle("animation")
+                    }}  data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1650" className={anchorstyle}>3d animation</button>
                     <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1700" data-aos-once= {aos_once} className  = {iconstyle} src={dot} alt = "dot"/>
-                    <a href = "" data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1750"  className={anchorstyle}>front end web development</a>
+                    <button onClick={()=>{
+                        ScrollToTitle("webdev")
+                    }} data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1750"  className={anchorstyle}>front end web development</button>
                     <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="1800"  className  = {iconstyle} src={dot} alt = "dot"/>
                 </div>
 
@@ -203,7 +233,7 @@ export default function Tech () {
                         }
                     </div>
                     {/* UI CARD DIV */}
-                    <div className="flex flex-row justify-between">
+                    <div className="flex flex-row flex-wrap justify-between">
                         {
                             uiux.map((item)=>{
                                 return (
@@ -215,11 +245,11 @@ export default function Tech () {
                 </div>
 
                 {/* GO BACK TO TOP */}
-                <a href = "#skillset" className="flex hover:underline flex-row text white items-center my-1 lg:my-4"><img className="mx-2" src = {dot} /> go back to top <img className="mx-2" src = {dot} /></a>
+                <button onClick = {()=>{ ScrollToTitle("skillset")}} className="flex hover:underline flex-row text white items-center my-1 lg:my-4"><img className="mx-2" src = {dot} alt = "white dot"/> go back to top <img className="mx-2" src = {dot} alt = "white dot"/></button>
 
                 {/* GRAPHICS DESIGN */}
                 <h1 id = "graphics" className={titlestyle}> GRAPHICS DESIGN </h1>
-                {/* UI/UX DETAILS */}
+                {/* GRAPHICS DESIGN DETAILS */}
                 <div className="card_col rounded-xl xl:rounded-3xl my-4 py-4 px-2 flex flex-col">
                     {/* DETAILS DIV */}
                     <div className="flex flex-row flex-wrap justify-between">
@@ -250,8 +280,75 @@ export default function Tech () {
                         </image>
                     </div>
                 </div>
+
                 {/* GO BACK TO TOP */}
-                <a href = "#skillset" className="flex hover:underline flex-row text white items-center my-1 lg:my-4"><img className="mx-2" src = {dot} /> go back to top <img className="mx-2" src = {dot} /></a>
+                <button onClick = {()=>{ ScrollToTitle("skillset")}} className="flex hover:underline flex-row text white items-center my-1 lg:my-4"><img className="mx-2" src = {dot} alt = "white dot"/> go back to top <img className="mx-2" src = {dot} alt = "white dot"/></button>
+
+                {/* 3D GRAPHICS DESIGN */}
+                <h1 id = "dgraphics" className={titlestyle}> 3D GRAPHICS DESIGN </h1>
+                {/* 3D GRAPHICS DESIGN DETAILS */}
+                <div className="card_col rounded-xl xl:rounded-3xl my-4 py-4 px-2 flex flex-col">
+                    {/* DETAILS DIV */}
+                    <div className="flex flex-row flex-wrap justify-between">
+                        {
+                            threedgraphics_detail.map((item)=>{
+                                return(
+                                    <Detail key = {uuidv4()} title = {item.title} answer = {item.answer} />
+                                )
+                            })
+                        }
+                    </div>
+                    {/* BUTTON */}
+                    <TechBtn link = "" icon = {download} text = "Download 3D portfolio" alt = "download icon"/>
+                </div>
+
+                {/* 3D ANIMATION */}
+                <h1 id = "animation" className={titlestyle}> 3D ANIMATION </h1>
+                {/* 3D ANIMATION DETAILS */}
+                <div className="card_col rounded-xl xl:rounded-3xl my-4 py-4 px-2 flex flex-col">
+                    {/* DETAILS DIV */}
+                    <div className="flex flex-row flex-wrap justify-between">
+                        {
+                            animation_detail.map((item)=>{
+                                return(
+                                    <Detail key = {uuidv4()} title = {item.title} answer = {item.answer} />
+                                )
+                            })
+                        }
+                    </div>
+                    {/* BUTTON */}
+                    <TechBtn2 link = "" icon = {ig} icon2 = {arrow} text = "View on IG" alt = "download icon" alt2 = "download icon"/>
+                </div>
+
+                
+                {/* WEB DEVELOPMENT */}
+                <h1 id = "webdev" className={titlestyle}> FRONT END WEB DEVELOPMENT </h1>
+                {/* UWEB DEVELOPMENT */}
+                <div className="card_col rounded-xl xl:rounded-3xl my-4 py-4 px-2 flex flex-col">
+                    {/* DETAILS DIV */}
+                    <div className="flex flex-row flex-wrap justify-between">
+                        {
+                            webdev_detail.map((item)=>{
+                                return(
+                                    <Detail key = {uuidv4()} title = {item.title} answer = {item.answer} />
+                                )
+                            })
+                        }
+                    </div>
+                    {/* WEB DEV CARD DIV */}
+                    <div className="flex flex-row flex-wrap justify-between">
+                        {
+                            webdev.map((item)=>{
+                                return (
+                                    <WEBCard image = {item.image} title = {item.title} desc = {item.desc} github = {item.github} icon = {item.icon} weblink = {item.weblink} alt = {item.alt} />
+                                )
+                            })
+                        }
+                    </div>
+                </div>
+
+                {/* GO BACK TO TOP */}
+                <button onClick = {()=>{ ScrollToTitle("skillset")}} className="flex hover:underline flex-row text white items-center my-1 lg:my-4"><img className="mx-2" src = {dot} alt = "white dot"/> go back to top <img className="mx-2" src = {dot} alt = "white dot"/></button>
             </div>
         </div>
     )

@@ -1,7 +1,7 @@
 import "../font.scss"
 
 
-let title = "my-1 w-32 md:w-48 lg:w-56 mr-12 white text_title";
+let title = "my-1 w-20 md:w-48 lg:w-36 mr-12 white text_title";
 let answer = "w-auto white text_italic";
 
 export default function Detail (props) {
