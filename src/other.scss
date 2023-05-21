@@ -27,6 +27,14 @@ $blue : #1F4EA9;
             transition: .2s ease-out;
             z-index: 2;
         }
+        span {
+            min-width: 100%;
+            min-height: 100%;
+            img{
+                // width : 100%;
+                min-width : max-content;
+            }
+        }
     }
     div:hover{
         div{
