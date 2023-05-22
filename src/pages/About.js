@@ -5,8 +5,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component"
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import christian from "../IMAGES/christian.jpg"
 import dot from "../SVGs/white_dot.svg"
-import mail from "../SVGs/mail_black.svg"
-import arrow from "../SVGs/angle_arrow.svg"
+import download from "../SVGs/download.svg"
 
 
 import AOS from 'aos';
@@ -68,7 +67,7 @@ export default function About () {
                         <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="200" data-aos-once= {aos_once} className  = {iconstyle} src={dot} alt = "dot"/>
                         <h3 data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="250" data-aos-once= {aos_once} className={skillstyle}>3d animator</h3>
                         <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="300" data-aos-once= {aos_once} className  = {iconstyle} src={dot} alt = "dot"/>
-                        <h3 data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="350" data-aos-once= {aos_once} className={skillstyle}>front end software engineer</h3>
+                        <h3 data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="350" data-aos-once= {aos_once} className={skillstyle}>frontend software engineer</h3>
                         <img data-aos-duration={aos_dur} data-aos={aos_style} data-aos-delay="400" data-aos-once= {aos_once} className  = {iconstyle} src={dot} alt = "dot"/>
                     </div>
                     {/* OBJECTIVE */}
@@ -78,9 +77,8 @@ export default function About () {
                     {/* GET IN TOUCH BUTTON */}
                     <a href = "" data-aos="fade-left" data-aos-duration={aos_dur} data-aos-offset= "50" data-aos-once= "true" data-aos-delay="700" className = "white_col flex flex-row items-center rounded-md mx-3 my-2 lg:my-4 px-3 py-2">
                         {/* MAIN ICON */}
-                        <img className = {"mx-1 " + iconstyle} src = {mail} alt = "gmail icon"/>
-                        <h3 className="text_italic black mx-1" > Get in touch</h3>
-                        <img className = {"mx-1 " + iconstyle} src = {arrow} alt = "angled arrow"/>
+                        <img className = {"mx-1 " + iconstyle} src = {download} alt = "gmail icon"/>
+                        <h3 className="text_italic black mx-1" > Download CV </h3>
                     </a>
                 </div>
             </div>

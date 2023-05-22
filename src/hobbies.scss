@@ -1,8 +1,9 @@
 $blue : #1F4EA9;
 
-.imghobbie {
-    max-height : 100%;
-}
+// .imghobbie {
+//     max-height : 100%;
+//     object-fit: fill;
+// }
 
 .imgconthobbies {
     height: 100%;
@@ -12,16 +13,29 @@ $blue : #1F4EA9;
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
 
     div{
-        position: relative;
-        div{
-            top : 0;
-            left : 0;
-            right : 0;
-            bottom : 0;
-            position: absolute;
-            z-index: 1;
-            background-color: transparent;
+        .newdiv {
+            height: 100%;
+            width : 100%;
+            position: relative;
+            span {
+                min-width: 100%;
+                min-height: 100%;
+                img{
+                    min-width : 170%;
+                    object-fit: cover;
+                }
+            }
+            div{
+                top : 0;
+                left : 0;
+                right : 0;
+                bottom : 0;
+                position: absolute;
+                z-index: 1;
+                background-color: transparent;
+            }
         }
+    
         .slide_txt{
             position: absolute;
             transition: .2s ease-out;
@@ -37,9 +51,29 @@ $blue : #1F4EA9;
 }
 
 @media only screen and (min-width : 768px) {
-    .imghobbie {
-        min-width : 250%;
+    // .imghobbie {
+    //     min-width : 250%;
+    // }
+    .imgconthobbies {
+    div{
+        .newdiv {
+            span {
+                min-width: 100%;
+                min-height: 100%;
+                img{
+                    min-width : 170%;
+                    object-fit: cover;
+                    }
+                }
+            }
+        }
     }
+}
+
+@media only screen and (min-width : 1200px) {
+    // .imghobbie {
+    //     min-width : 250%;
+    // }
     .imgconthobbies {
         height: 100%;
         width : 100%;
@@ -48,8 +82,19 @@ $blue : #1F4EA9;
         grid-template-columns: repeat(2, minmax(48%, 1fr));
         grid-template-rows: repeat(2, minmax(48%, 1fr));
     
-        div{
+    div{
+        .newdiv {
+            height: 100%;
+            width : 100%;
             position: relative;
+            span {
+                min-width: 100%;
+                min-height: 100%;
+                img{
+                    max-width : 120%;
+                    object-fit: cover;
+                }
+            }
             div{
                 top : 0;
                 left : 0;
@@ -59,12 +104,14 @@ $blue : #1F4EA9;
                 z-index: 1;
                 background-color: transparent;
             }
-            .slide_txt{
-                position: absolute;
-                transition: .2s ease-out;
-                z-index: 2;
-            }
         }
+    
+        .slide_txt{
+            position: absolute;
+            transition: .2s ease-out;
+            z-index: 2;
+        }
+    }
         div:hover{
             div{
                 background-color: $blue;
@@ -74,14 +121,17 @@ $blue : #1F4EA9;
     }
 }
 
-@media only screen and (min-width : 1200px) {
-    .imghobbie {
-        min-width : 150%;
+@media only screen and (min-width : 1700px) {
+    .imgconthobbies {
+    div{
+        .newdiv {
+            span {
+                img{
+                    min-width : 100%;
+                    }
+                }
+            }
+        }
     }
 }
 
-@media only screen and (min-width : 1700px) {
-    .imghobbie {
-        min-width : 100%;
-    }
-}

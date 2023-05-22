@@ -32,7 +32,8 @@ $blue : #1F4EA9;
             min-height: 100%;
             img{
                 // width : 100%;
-                min-width : max-content;
+                max-width : max-content;
+                object-fit: cover;
             }
         }
     }
@@ -46,6 +47,7 @@ $blue : #1F4EA9;
 
 @media only screen and (min-width : 768px) {
     .img {
-        max-width : 100%;
+        // max-width : 100%;
+        width : 100%;
     }
 }

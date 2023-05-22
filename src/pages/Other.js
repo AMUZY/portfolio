@@ -3,8 +3,8 @@ import "../font.scss"
 import "../other.scss"
 import { LazyLoadImage } from "react-lazy-load-image-component"
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import marketing from "../IMAGES/marketing.png";
-import improvise from "../IMAGES/improvise.png"
+import marketing from "../IMAGES/marketing.jpg";
+import improvise from "../IMAGES/improvise.jpg"
 import { useState } from "react";
 
 let imgstyle = "img rounded-xl xl:rounded-3xl";
