@@ -5,6 +5,9 @@ import "../nav.scss"
 import {v4 as uuidv4 } from "uuid"
 import ServeLink from "../functions/ServeLink"
 
+// ALL LINKS IMPORT
+import { links } from "../App"
+
 // BLACK ICONS
 import fb from "../SVGs/fb_black.svg"
 import wh from "../SVGs/whatsapp_black.svg"
@@ -25,14 +28,6 @@ import github_wh from "../SVGs/github_white.svg"
 
 import { NavLink } from "react-router-dom"
 import { useState } from "react"
-
-let fb_link = "";
-let wh_link = "";
-let tw_link = "";
-let ig_link = "";
-let mail_link = "";
-let lkdn_link = "";
-let github_link = "";
 
 
 export default function Nav () {
@@ -118,13 +113,13 @@ export default function Nav () {
             </div>
             {/* LINKS */}
             <div className = "hidden linkbox flex-row flex-wrap justify-center pr-[20px] lg:flex">
-                <a href={fb_link}><img src = {fb} className={iconstyle} alt = "facebook icon" /></a>
-                <a href={wh_link}><img src = {wh} className={iconstyle} alt = "whatsapp icon" /></a>
-                <a href={tw_link}><img src = {tw} className={iconstyle} alt = "twitter icon" /></a>
-                <a href={ig_link}><img src = {ig} className={iconstyle} alt = "instagram icon"/></a>
-                <a href={lkdn_link}><img src = {lkdn} className={iconstyle} alt = "linkedin icon"/></a>
-                <a href={mail_link}><img src = {mail} className={iconstyle} alt = "gmail icon"/></a>
-                <a href={github_link}><img src = {github} className={iconstyle} alt = "github icon"/></a>
+                <a target="_blank" rel="noreferrer" href={links.fb}><img src = {fb} className={iconstyle} alt = "facebook icon" /></a>
+                <a target="_blank" rel="noreferrer" href={links.wh}><img src = {wh} className={iconstyle} alt = "whatsapp icon" /></a>
+                <a target="_blank" rel="noreferrer" href={links.tw}><img src = {tw} className={iconstyle} alt = "twitter icon" /></a>
+                <a target="_blank" rel="noreferrer" href={links.ig}><img src = {ig} className={iconstyle} alt = "instagram icon"/></a>
+                <a target="_blank" rel="noreferrer" href={links.lkdn}><img src = {lkdn} className={iconstyle} alt = "linkedin icon"/></a>
+                <a target="_blank" rel="noreferrer" href={links.mail}><img src = {mail} className={iconstyle} alt = "gmail icon"/></a>
+                <a target="_blank" rel="noreferrer" href={links.github}><img src = {github} className={iconstyle} alt = "github icon"/></a>
             </div>
 
             {/* BLUR BOX */}
@@ -161,13 +156,13 @@ export default function Nav () {
                 </div>
                  {/* LINKS */}
                 <div className = "py-2 flex flex-col flex-wrap justify-evenly items-center">
-                    <a href={fb_link}><img src = {fb_wh} className={mob_iconstyle} alt = "facebook icon"/></a>
-                    <a href={wh_link}><img src = {wh_wh} className={mob_iconstyle} alt = "whatsapp icon"/></a>
-                    <a href={tw_link}><img src = {tw_wh} className={mob_iconstyle} alt = "twitter icon"/></a>
-                    <a href={ig_link}><img src = {ig_wh} className={mob_iconstyle} alt = "instagram icon"/></a>
-                    <a href={lkdn_link}><img src = {lkdn_wh} className={mob_iconstyle} alt = "linkedin icon"/></a>
-                    <a href={mail_link}><img src = {mail_wh} className={mob_iconstyle} alt = "gmail icon"/></a>
-                    <a href={github_link}><img src = {github_wh} className={mob_iconstyle} alt = "github icon"/></a>
+                <a target="_blank" rel="noreferrer" href={links.fb}><img src = {fb_wh} className={mob_iconstyle} alt = "facebook icon" /></a>
+                <a target="_blank" rel="noreferrer" href={links.wh}><img src = {wh_wh} className={mob_iconstyle} alt = "whatsapp icon" /></a>
+                <a target="_blank" rel="noreferrer" href={links.tw}><img src = {tw_wh} className={mob_iconstyle} alt = "twitter icon" /></a>
+                <a target="_blank" rel="noreferrer" href={links.ig}><img src = {ig_wh} className={mob_iconstyle} alt = "instagram icon"/></a>
+                <a target="_blank" rel="noreferrer" href={links.lkdn}><img src = {lkdn_wh} className={mob_iconstyle} alt = "linkedin icon"/></a>
+                <a target="_blank" rel="noreferrer" href={links.mail}><img src = {mail_wh} className={mob_iconstyle} alt = "gmail icon"/></a>
+                <a target="_blank" rel="noreferrer" href={links.github}><img src = {github_wh} className={mob_iconstyle} alt = "github icon"/></a>
                 </div>
             </div>
         </div>

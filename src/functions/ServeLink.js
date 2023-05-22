@@ -6,13 +6,12 @@ export default function ServeLink (first) {
 
   const christian = [
     {
-        main : "christian",
-        sub : [
-            {href : "about"},
-            {href : "tech"},
-            {href : "other"},
-            {href : "hobbies"},
-        ]
+      sub : [
+          {href : "about"},
+          {href : "tech"},
+          {href : "other"},
+          {href : "hobbies"},
+      ]
     }
   ];
 
@@ -26,14 +25,10 @@ export default function ServeLink (first) {
             if (
               (
                 "/" +
-                christian[i].main +
-                "/" +
                 christian[i].sub[j].href
               ).includes("/"+first)
             ) {
               defaultlink =
-                "/" +
-                christian[i].main +
                 "/" +
                 christian[i].sub[j].href
               break outer;

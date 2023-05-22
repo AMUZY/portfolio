@@ -24,7 +24,7 @@ export default function UICard (props){
             {/* DESCRIPTION */}
             <h3 className="white text_italic my-2"> {props.desc} </h3>
             {/* BUTTON */}
-            <a href = {props.uilink} className = "white_col flex flex-row items-center justify-center rounded-md w-max my-2 lg:my-4 px-3 py-1">
+            <a href = {props.uilink} target="_blank" rel="noreferrer" className = "white_col flex flex-row items-center justify-center rounded-md w-max my-2 lg:my-4 px-3 py-1">
                 <img src = {figma} className={"mx-1 " + iconstyle} alt  = "figma icon" />
                 <h3 className="text"> View figma </h3>
                 <img src = {redirect} className={"mx-1 " + iconstyle} alt = "redirect icon" />

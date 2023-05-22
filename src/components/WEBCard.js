@@ -27,13 +27,13 @@ export default function WEBCard (props){
             {/* BUTTONS */}
             <div className="my-2 flex flex-row">
                 {/* GITHUB BUTTON */}
-                <a href = {props.github} className = "white_col flex flex-row items-center rounded-md my-2 lg:my-4 px-3 py-1">
+                <a href = {props.github} target="_blank" rel="noreferrer" className = "white_col flex flex-row items-center rounded-md my-2 lg:my-4 px-3 py-1">
                     <img src = {github} className={"mx-1 " + iconstyle} alt  = {props.alt} />
                     <h3 className="text"> View Github </h3>
                     <img src = {redirect} className={"mx-1 " + iconstyle} alt = "redirect icon" />
                 </a>
                 {/* VIEW WEBSITE BUTTON */}
-                <a href = {props.weblink} className = "white_col flex flex-row items-center rounded-md my-2 mx-2 lg:my-4 px-2 py-1">
+                <a href = {props.weblink} target="_blank" rel="noreferrer" className = "white_col flex flex-row items-center rounded-md my-2 mx-2 lg:my-4 px-2 py-1">
                     <img src = {eye} className={"mx-1 " + iconstyle} alt  = "link icon" />
                 </a>
             </div>

@@ -3,6 +3,8 @@ import "./font.scss"
 import "./theme.scss"
 import "./app.scss"
 
+import all_links from "./links.json"
+
 // RESOURCES IMPORT
 import { 
   BrowserRouter as Router,
@@ -18,18 +20,19 @@ import Hobbies from "./pages/Hobbies";
 import Other from "./pages/Other";
 import Tech from "./pages/Tech";
 
+export const links = all_links;
 
 export default function App() {
   return (
     <div className="App w-auto h-[100dvh]">
       <Router>
         <Routes>
-          <Route path = "/" element={<Navigate to = "/christian/about"/>} />
-          <Route path="/christian" element={<Mainpage />}>
-            <Route path="/christian/about" element = {<About />} />
-            <Route path="/christian/hobbies" element = {<Hobbies />} />
-            <Route path="/christian/other" element = {<Other />} />
-            <Route path="/christian/tech" element = {<Tech />} />
+          <Route path = "/" element={<Navigate to = "/about"/>} />
+          <Route path="/" element={<Mainpage />}>
+            <Route path="/about" element = {<About />} />
+            <Route path="/hobbies" element = {<Hobbies />} />
+            <Route path="/other" element = {<Other />} />
+            <Route path="/tech" element = {<Tech />} />
           </Route>
         </Routes>
       </Router>

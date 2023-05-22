@@ -5,15 +5,18 @@ import { LazyLoadImage } from "react-lazy-load-image-component"
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import {v4 as uuidv4} from "uuid";
 
+// ALL LINKS IMPORT
+import { links } from "../App";
+
 // IMPORTED IMAGES
-import cookieapp from "../IMAGES/cookie_ui.png"
+import cookieapp from "../IMAGES/cookie_ui.jpg"
 import amunation from "../IMAGES/amunation_ui.jpg"
 import favour from "../IMAGES/favour.jpg"
-import bakery from "../IMAGES/bakery.png"
-import val from "../IMAGES/valentine.png"
+import bakery from "../IMAGES/bakery.jpg"
+import val from "../IMAGES/valentine.jpg"
 import mailergpt from "../IMAGES/mailergpt.jpg"
 import ebook from "../IMAGES/ebook.jpg"
-import cookiemenu from "../IMAGES/MENU- COOKIES 2.png"
+import cookiemenu from "../IMAGES/MENU- COOKIES 2.jpg"
 import ecommerce from "../IMAGES/amunation.jpg"
 import portfolio from "../IMAGES/portfolio.jpg"
 import download from "../SVGs/download.svg"
@@ -71,14 +74,14 @@ AOS.init({
 
 export default function Tech () {
     const uiux = [
-        {image : cookieapp, title : "Cookie web design", desc : "Inspired by a friend of mine who started cookie baking and selling as a business. The cookie app was created to ease customer’s orders" , uilink : "" , alt : "cookie app ui"},
-        {image : amunation, title : "e-commerce web design", desc : "This website was created to be an affiliate website to market and sell best rated products of different online vendors. It also features a dark theme" , uilink : "" , alt : "ecommerce app ui"},
+        {image : cookieapp, title : "Cookie web design", desc : "Inspired by a friend of mine who started cookie baking and selling as a business. The cookie app was created to ease customer’s orders" , uilink : links.cookiefigma , alt : "cookie app ui"},
+        {image : amunation, title : "e-commerce web design", desc : "This website was created to be an affiliate website to market and sell best rated products of different online vendors. It also features a dark theme" , uilink : links.ecommercefigma , alt : "ecommerce app ui"},
     ]
 
     const webdev = [
-        {image : cookiemenu, title : "Cookie website", desc : "Inspired by a friend of mine who started cookie baking and selling as a business. The cookie app was created to ease customer’s orders" , github : "", weblink : "", alt : "cookie website"},
-        {image : ecommerce, title : "e-commerce website", desc : "This website was created to be an affiliate website to market and sell best rated products of different online vendors. It also features a dark theme" , github : "", weblink : "", alt : "ecommerce website"},
-        {image : portfolio, title : "portfolio", desc : "This is my portfolio you’re viewing right now. Built in React js. Made to be as simple as possible" , github : "", weblink : "", alt : "portfolio website"},
+        {image : cookiemenu, title : "Cookie website", desc : "Inspired by a friend of mine who started cookie baking and selling as a business. The cookie app was created to ease customer’s orders" , github : links.cookiegithub, weblink : links.cookieweb, alt : "cookie website"},
+        {image : ecommerce, title : "e-commerce website", desc : "This website was created to be an affiliate website to market and sell best rated products of different online vendors. It also features a dark theme" , github : links.ecommercegithub, weblink : links.ecommerceweb, alt : "ecommerce website"},
+        {image : portfolio, title : "portfolio", desc : "This is my portfolio you’re viewing right now. Built in React js. Made to be as simple as possible" , github : links.portfoliogithub, weblink : links.portfolioweb, alt : "portfolio website"},
     ]
 
     const ui_detail = [
@@ -252,7 +255,7 @@ export default function Tech () {
                         {
                             uiux.map((item)=>{
                                 return (
-                                    <UICard image = {item.image} title = {item.title} desc = {item.desc} uilink = {item.uilink} alt = {item.alt} />
+                                    <UICard key = {uuidv4()} image = {item.image} title = {item.title} desc = {item.desc} uilink = {item.uilink} alt = {item.alt} />
                                 )
                             })
                         }
@@ -278,21 +281,21 @@ export default function Tech () {
                     </div>
                     {/* GRAPHICS DESIGN PICTURES DIV */}
                     <div className="graphics">
-                        <image id = "pic-1">
+                        <picture id = "pic-1">
                             <LazyLoadImage src = {favour} className="mx-auto rounded-xl xl:rounded-3xl" placeholderSrc = {favour} effect= "blur" alt = "voice over graphics design"/>
-                        </image>
-                        <image id = "pic-2">
+                        </picture>
+                        <picture id = "pic-2">
                             <LazyLoadImage src = {bakery} className="mx-auto rounded-xl xl:rounded-3xl" placeholderSrc = {bakery} effect= "blur" alt = "bakery graphics design"/>
-                        </image>
-                        <image id = "pic-3">
+                        </picture>
+                        <picture id = "pic-3">
                             <LazyLoadImage src = {val} className="mx-auto rounded-xl xl:rounded-3xl" placeholderSrc = {val} effect= "blur" alt = "valentines package graphics design"/>
-                        </image>
-                        <image id = "pic-4">
+                        </picture>
+                        <picture id = "pic-4">
                             <LazyLoadImage src = {mailergpt} className="mx-auto rounded-xl xl:rounded-3xl" placeholderSrc = {mailergpt} effect= "blur" alt = "mailergpt thumbnail design"/>
-                        </image>
-                        <image id = "pic-5">
+                        </picture>
+                        <picture id = "pic-5">
                             <LazyLoadImage src = {ebook} className="mx-auto rounded-xl xl:rounded-3xl" placeholderSrc = {ebook} effect= "blur" alt = "ebook studio thumbnail design"/>
-                        </image>
+                        </picture>
                     </div>
                 </div>
 
@@ -314,7 +317,7 @@ export default function Tech () {
                         }
                     </div>
                     {/* BUTTON */}
-                    <TechBtn link = "" icon = {download} text = "Download 3D portfolio" alt = "download icon"/>
+                    <TechBtn link = {links["3dportfolio"]}  icon = {download} text = "Download 3D portfolio" alt = "download icon"/>
                 </div>
 
                 {/* 3D ANIMATION */}
@@ -332,7 +335,7 @@ export default function Tech () {
                         }
                     </div>
                     {/* BUTTON */}
-                    <TechBtn2 link = "" icon = {ig} icon2 = {arrow} text = "View on IG" alt = "download icon" alt2 = "download icon"/>
+                    <TechBtn2 link = {links.ig} icon = {ig} icon2 = {arrow} text = "View on IG" alt = "download icon" alt2 = "download icon"/>
                 </div>
 
                 
@@ -355,7 +358,7 @@ export default function Tech () {
                         {
                             webdev.map((item)=>{
                                 return (
-                                    <WEBCard image = {item.image} title = {item.title} desc = {item.desc} github = {item.github} icon = {item.icon} weblink = {item.weblink} alt = {item.alt} />
+                                    <WEBCard key = {uuidv4()} image = {item.image} title = {item.title} desc = {item.desc} github = {item.github} icon = {item.icon} weblink = {item.weblink} alt = {item.alt} />
                                 )
                             })
                         }
