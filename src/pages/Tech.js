@@ -11,6 +11,7 @@ import { links } from "../App";
 // IMPORTED IMAGES
 import cookieapp from "../IMAGES/cookie_ui.jpg"
 import amunation from "../IMAGES/amunation_ui.jpg"
+import portfolio_ui from "../IMAGES/portfolio_ui.jpg"
 import favour from "../IMAGES/favour.jpg"
 import bakery from "../IMAGES/bakery.jpg"
 import val from "../IMAGES/valentine.jpg"
@@ -76,6 +77,7 @@ export default function Tech () {
     const uiux = [
         {image : cookieapp, title : "Cookie web design", desc : "Inspired by a friend of mine who started cookie baking and selling as a business. The cookie app was created to ease customer’s orders" , uilink : links.cookiefigma , alt : "cookie app ui"},
         {image : amunation, title : "e-commerce web design", desc : "This website was created to be an affiliate website to market and sell best rated products of different online vendors. It also features a dark theme" , uilink : links.ecommercefigma , alt : "ecommerce app ui"},
+        {image : portfolio_ui, title : "portfolio ui design", desc : "This is the simple UI design of my portfolio" , uilink : links.portfoliofigma , alt : "portfolio ui"},
     ]
 
     const webdev = [
