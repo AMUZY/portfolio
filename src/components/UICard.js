@@ -14,7 +14,7 @@ let iconstyle = "m-1 0.02rem";
 
 export default function UICard (props){
     return (
-        <div className="flex flex-grow xl:w-[48%] md:flex-grow-0 flex-col items-start pt-3 pb-3 my-2 mx-2 md:m-3">
+        <div className="flex flex-grow xl:w-[48%] xl:flex-grow-0 flex-col items-start pt-3 pb-3 my-2 mx-2 md:m-3">
             {/* IMAGE */}
             <div className="piccont w-full rounded-xl xl:rounded-3xl flex justify-center items-center overflow-hidden mb-2">
                 <LazyLoadImage src = {props.image} className="pic mx-auto rounded-xl xl:rounded-3xl" placeholderSrc = {props.image} effect= "blur" alt = {props.alt}/>
