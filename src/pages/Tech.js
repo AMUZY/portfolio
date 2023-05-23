@@ -101,7 +101,7 @@ export default function Tech () {
     ]
 
     const threedgraphics_detail = [
-        {title : "Brand name", answer : "amunation"},
+        {title : "Brand name", answer : "chris_amunation"},
         {title : "Proficiency", answer : "90%"},
         {title : "From", answer : "08/01/2020"},
         {title : "Softwares" , answer : "Blender"},
@@ -109,7 +109,7 @@ export default function Tech () {
     ]
 
     const animation_detail = [
-        {title : "Brand name", answer : "amunation"},
+        {title : "Brand name", answer : "chris_amunation"},
         {title : "Proficiency", answer : "90%"},
         {title : "From", answer : "15/02/2020"},
         {title : "Softwares" , answer : "Blender"},
