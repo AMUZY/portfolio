@@ -53,7 +53,7 @@ export default function About () {
                 <LazyLoadImage src = {christian} className="mx-auto rounded-xl xl:rounded-3xl" placeholderSrc = {christian} effect= "blur" alt = "christian"/>
             </div>
             {/* MAIN INFORMATION */}
-            <div className="card_col mt-3 w-full h-1/2 md:h-auto flex justify-start items-center rounded-xl md:mt-0 lg:w-1/2 md:ml-[20px] xl:rounded-3xl">
+            <div className="card_col mt-3 w-full min-h-1/2 md:h-auto flex justify-start items-center rounded-xl md:mt-0 lg:w-1/2 md:ml-[20px] xl:rounded-3xl">
                 {/* INFORMATION */}
                 <div className="flex m-4 flex-col items-start">
                     {/* HI I'M CHRISTIAN */}
