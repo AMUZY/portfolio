@@ -4,10 +4,17 @@ $regular : 400;
 $medium : 500;
 $l_spacing : 0.05rem;
 
+@use "sass:math";
+
+@function torem ($pixels) {
+    $result : (math.div($pixels, 16)*1rem);
+    @return $result;
+}
+
 .text {
     font-family: $style;
     font-weight: $regular;
-    font-size: 12px;
+    font-size: torem(12);
     line-height : auto;
     letter-spacing: $l_spacing;
 }
@@ -15,7 +22,7 @@ $l_spacing : 0.05rem;
 .text_semibold {
     font-family: $style;
     font-weight: $s_bold;
-    font-size: 12px;
+    font-size: torem(12);
     line-height : auto;
     letter-spacing: $l_spacing;
 }
@@ -23,14 +30,14 @@ $l_spacing : 0.05rem;
 .text_title {
     font-family: $style;
     font-weight: $s_bold;
-    font-size: 12px;
+    font-size: torem(12);
     line-height : auto;
     letter-spacing: $l_spacing;
 }
 
 .text_italic {
     font-style: italic;
-    font-size: 12px;
+    font-size: torem(12);
     line-height : auto;
     letter-spacing: $l_spacing;
 }
@@ -38,7 +45,7 @@ $l_spacing : 0.05rem;
 .name_title {
     font-family: $style;
     font-weight: $medium;
-    font-size: 24px;
+    font-size: torem(24);
     line-height : auto;
     letter-spacing: $l_spacing;
 }
@@ -46,7 +53,7 @@ $l_spacing : 0.05rem;
 .card_title {
     font-family: $style;
     font-weight: $s_bold;
-    font-size: 20px;
+    font-size: torem(20);
     line-height : auto;
     font-weight: $s_bold;
     letter-spacing: $l_spacing;
@@ -55,7 +62,7 @@ $l_spacing : 0.05rem;
 .project_title {
     font-family: $style;
     font-weight: $medium;
-    font-size: 20px;
+    font-size: torem(20);
     line-height : auto;
     letter-spacing: $l_spacing;
 }
@@ -64,28 +71,28 @@ $l_spacing : 0.05rem;
     .text {
         font-family: $style;
         font-weight: $regular;
-        font-size: 16px;
+        font-size: torem(16);
         line-height : auto;
     }
 
     .text_semibold {
         font-family: $style;
         font-weight: $s_bold;
-        font-size: 16px;
+        font-size: torem(16);
         line-height : auto;
     }
     
     .text_title {
         font-family: $style;
         font-weight: $s_bold;
-        font-size: 16px;
+        font-size: torem(16);
         line-height : auto;
     }
     
     .text_italic {
         font-style: italic;
-        font-size: 16px;
-        line-height : 24px;
+        font-size: torem(16);
+        line-height : torem (24);
     }
     
     .name_title {
@@ -98,7 +105,7 @@ $l_spacing : 0.05rem;
     .card_title {
         font-family: $style;
         font-weight: $s_bold;
-        font-size: 24px;
+        font-size: torem(24);
         line-height : auto;
         font-weight: $s_bold;
     }
@@ -106,7 +113,7 @@ $l_spacing : 0.05rem;
     .project_title {
         font-family: $style;
         font-weight: $medium;
-        font-size: 24px;
+        font-size: torem(24);
         line-height : auto;
     }
 }
