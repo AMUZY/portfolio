@@ -55,7 +55,6 @@ $l_spacing : 0.05rem;
     font-weight: $s_bold;
     font-size: torem(20);
     line-height : auto;
-    font-weight: $s_bold;
     letter-spacing: $l_spacing;
 }
 
@@ -69,52 +68,32 @@ $l_spacing : 0.05rem;
 
 @media only screen and (min-width : 768px) {
     .text {
-        font-family: $style;
-        font-weight: $regular;
         font-size: torem(16);
-        line-height : auto;
     }
 
     .text_semibold {
-        font-family: $style;
-        font-weight: $s_bold;
         font-size: torem(16);
-        line-height : auto;
     }
     
     .text_title {
-        font-family: $style;
-        font-weight: $s_bold;
         font-size: torem(16);
-        line-height : auto;
     }
     
     .text_italic {
-        font-style: italic;
         font-size: torem(16);
         line-height : torem (24);
     }
     
     .name_title {
-        font-family: $style;
-        font-weight: $medium;
         font-size: torem(32);
-        line-height : auto;
     }
     
     .card_title {
-        font-family: $style;
-        font-weight: $s_bold;
         font-size: torem(24);
-        line-height : auto;
-        font-weight: $s_bold;
     }
     
     .project_title {
-        font-family: $style;
-        font-weight: $medium;
         font-size: torem(24);
-        line-height : auto;
     }
 }
 
